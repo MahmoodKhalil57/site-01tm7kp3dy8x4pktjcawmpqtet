@@ -1,0 +1,23 @@
+{
+	"$schema": "../.schemas/menu.schema.json",
+	"id": "menu:footer_product",
+	"name": "footer_product",
+	"label": "Footer: Product",
+	"items": [
+		{
+			"type": "custom",
+			"label": "Features",
+			"url": "/#features"
+		},
+		{
+			"type": "custom",
+			"label": "Pricing",
+			"url": "/pricing"
+		},
+		{
+			"type": "custom",
+			"label": "Changelog",
+			"url": "/changelog"
+		}
+	]
+}

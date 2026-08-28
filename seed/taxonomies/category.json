@@ -1,0 +1,11 @@
+{
+	"$schema": "../.schemas/taxonomy.schema.json",
+	"id": "tax:category",
+	"name": "category",
+	"label": "Categories",
+	"labelSingular": "Category",
+	"hierarchical": true,
+	"collections": [
+		"posts"
+	]
+}

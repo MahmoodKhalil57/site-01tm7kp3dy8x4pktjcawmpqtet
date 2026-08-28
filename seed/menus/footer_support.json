@@ -1,0 +1,23 @@
+{
+	"$schema": "../.schemas/menu.schema.json",
+	"id": "menu:footer_support",
+	"name": "footer_support",
+	"label": "Footer: Support",
+	"items": [
+		{
+			"type": "custom",
+			"label": "Documentation",
+			"url": "/docs"
+		},
+		{
+			"type": "custom",
+			"label": "Contact",
+			"url": "/contact"
+		},
+		{
+			"type": "custom",
+			"label": "Status",
+			"url": "/status"
+		}
+	]
+}

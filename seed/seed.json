@@ -1,0 +1,33 @@
+{
+	"$schema": "./.schemas/seed.schema.json",
+	"version": "1",
+	"defaultLocale": "en",
+	"meta": {
+		"name": "Exported Seed",
+		"description": "Exported from existing EmDash database"
+	},
+	"settings": {},
+	"order": {
+		"collections": [
+			"faq",
+			"pages"
+		],
+		"taxonomies": [
+			"category",
+			"tag"
+		],
+		"menus": [
+			"footer_company",
+			"footer_product",
+			"footer_support",
+			"primary"
+		],
+		"content": {
+			"pages": [
+				"contact",
+				"pricing",
+				"home"
+			]
+		}
+	}
+}

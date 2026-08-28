@@ -1,0 +1,19 @@
+{
+	"$schema": "../.schemas/collection.schema.json",
+	"slug": "faq",
+	"label": "FAQ",
+	"labelSingular": "FAQ entry",
+	"fields": [
+		{
+			"slug": "title",
+			"label": "Question",
+			"type": "string",
+			"required": true
+		},
+		{
+			"slug": "answer",
+			"label": "Answer",
+			"type": "text"
+		}
+	]
+}

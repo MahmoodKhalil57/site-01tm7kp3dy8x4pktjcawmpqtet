@@ -1,0 +1,18 @@
+{
+	"$schema": "../../.schemas/content-entry.schema.json",
+	"id": "pages:contact",
+	"slug": "contact",
+	"status": "published",
+	"data": {
+		"title": "Contact",
+		"content": [
+			{
+				"_type": "marketing.hero",
+				"_key": "contact-hero",
+				"headline": "Get in touch",
+				"subheadline": "Have questions? Want a demo? We'd love to hear from you.",
+				"centered": true
+			}
+		]
+	}
+}

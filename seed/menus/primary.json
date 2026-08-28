@@ -1,0 +1,23 @@
+{
+	"$schema": "../.schemas/menu.schema.json",
+	"id": "menu:primary",
+	"name": "primary",
+	"label": "Primary Navigation",
+	"items": [
+		{
+			"type": "custom",
+			"label": "Features",
+			"url": "/#features"
+		},
+		{
+			"type": "custom",
+			"label": "Pricing",
+			"url": "/pricing"
+		},
+		{
+			"type": "custom",
+			"label": "Contact",
+			"url": "/contact"
+		}
+	]
+}

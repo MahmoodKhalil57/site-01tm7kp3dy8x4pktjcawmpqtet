@@ -1,0 +1,70 @@
+{
+	"$schema": "../../.schemas/content-entry.schema.json",
+	"id": "pages:pricing",
+	"slug": "pricing",
+	"status": "published",
+	"data": {
+		"title": "Pricing",
+		"content": [
+			{
+				"_type": "marketing.hero",
+				"_key": "pricing-hero",
+				"headline": "Simple, transparent pricing",
+				"subheadline": "No hidden fees. No surprises. Start free and scale as you grow.",
+				"centered": true
+			},
+			{
+				"_type": "marketing.pricing",
+				"_key": "pricing-plans",
+				"plans": [
+					{
+						"name": "Starter",
+						"price": "$0",
+						"period": "/month",
+						"description": "Perfect for trying things out",
+						"features": "Up to 3 team members\n5 projects\nBasic analytics\nCommunity support\n1GB storage",
+						"ctaLabel": "Get Started",
+						"ctaUrl": "/signup"
+					},
+					{
+						"name": "Pro",
+						"price": "$29",
+						"period": "/user/month",
+						"description": "For growing teams",
+						"features": "Unlimited team members\nUnlimited projects\nAdvanced analytics\nPriority support\n100GB storage\nCustom integrations\nAPI access",
+						"ctaLabel": "Start Free Trial",
+						"ctaUrl": "/signup?plan=pro",
+						"highlighted": true
+					},
+					{
+						"name": "Enterprise",
+						"price": "Custom",
+						"description": "For large organizations",
+						"features": "Everything in Pro\nDedicated support\nCustom contracts\nSLA guarantee\nUnlimited storage",
+						"ctaLabel": "Contact Sales",
+						"ctaUrl": "/contact"
+					}
+				]
+			},
+			{
+				"_type": "marketing.faq",
+				"_key": "pricing-faq",
+				"headline": "Pricing FAQ",
+				"items": [
+					{
+						"question": "Can I change plans later?",
+						"answer": "Yes, you can upgrade or downgrade at any time. Changes take effect immediately and we'll prorate your billing."
+					},
+					{
+						"question": "What payment methods do you accept?",
+						"answer": "We accept all major credit cards, and Enterprise customers can pay via invoice with NET 30 terms."
+					},
+					{
+						"question": "Is there a discount for annual billing?",
+						"answer": "Yes, annual plans receive a 20% discount compared to monthly billing."
+					}
+				]
+			}
+		]
+	}
+}
