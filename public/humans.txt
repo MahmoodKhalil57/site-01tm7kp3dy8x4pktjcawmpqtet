@@ -5,3 +5,6 @@ Site: Saastemly
 Standards: HTML5, CSS3
 Components: Astro
 Last update: 2026/08/29
+
+/* THANKS */
+Fonts: system-ui
