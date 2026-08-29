@@ -13,3 +13,4 @@ Icons: none
 /* NOTES */
 Language: English
 Doctype: HTML5
+Hosting: PremiumCMS
