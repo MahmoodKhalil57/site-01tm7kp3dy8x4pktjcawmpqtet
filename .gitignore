@@ -3,3 +3,8 @@ dist
 snapshot.db
 .astro
 saastemlysaastarter
+
+# Local development
+.env
+.env.*
+!.env.example
