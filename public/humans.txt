@@ -15,3 +15,4 @@ Language: English
 Doctype: HTML5
 Hosting: PremiumCMS
 Runtime: instance
+Merge-policy: human
