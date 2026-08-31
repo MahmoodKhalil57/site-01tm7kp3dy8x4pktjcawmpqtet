@@ -12,8 +12,12 @@ export async function getStaticPaths() {
 	return posts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
 }
 
-const { post } = Astro.props as { post: Post };
 const allPosts = await getPosts();
+// In dev, live-refreshed content can leave getStaticPaths' cached props empty
+// even though the params match — fall back to resolving the post by slug.
+const propPost = (Astro.props as { post?: Post }).post;
+const post = propPost ?? allPosts.find((p) => p.slug === Astro.params.slug && !p.upcoming);
+if (!post) return Astro.redirect("/404");
 const next = findNext(allPosts, post);
 
 const siteTitle = "SaaSTEMLY";

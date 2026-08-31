@@ -345,7 +345,8 @@ export async function getLivePosts(): Promise<Post[]> {
 }
 
 /** The post published right after `post`, or the next upcoming one. */
-export function nextPost(posts: Post[], post: Post): Post | null {
+export function nextPost(posts: Post[], post: Post | undefined): Post | null {
+	if (!post) return null;
 	const later = posts
 		.filter((p) => p.slug !== post.slug && (p.publishedAt ?? "") > (post.publishedAt ?? ""))
 		.sort((a, b) => (a.publishedAt ?? "").localeCompare(b.publishedAt ?? ""));
