@@ -1,0 +1,1 @@
+"use client";import{t as e}from"./noir-page-hero.DSrY1Wuh.js";export{e as NoirPageHero};

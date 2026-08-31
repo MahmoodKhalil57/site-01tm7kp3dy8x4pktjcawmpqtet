@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime.Dshd5hIJ.js";import{t}from"./utils.CUd4gW-k.js";var n=e();function r({src:e,alt:r,fill:i,priority:a,className:o,sizes:s,...c}){return(0,n.jsx)(`img`,{src:e,alt:r,loading:a?`eager`:`lazy`,decoding:`async`,className:t(i&&`absolute inset-0 h-full w-full`,o),...c})}export{r as t};
