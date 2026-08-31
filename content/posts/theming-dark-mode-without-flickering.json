@@ -1,0 +1,2443 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "theming-dark-mode-without-flickering",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-02-14T10:00:00.000Z",
+	"data": {
+		"title": "The Holy Trinity of Theming: Dark Mode Without Flickering, Radial Animations, and a 40-Theme Color Picker",
+		"excerpt": "Your dark mode flickers on page load. Your theme toggle is a sad checkbox. Your color scheme picker reloads the entire page. Let us fix all three, and let us make it look absurdly good while we are at it.",
+		"cover_image": "https://images.pexels.com/photos/6474450/pexels-photo-6474450.jpeg?auto=compress&cs=tinysrgb&w=1920",
+		"cover_image_alt": "Hands holding a colorful fan of swatches on a gray backdrop, representing theme and color scheme selection",
+		"content": [
+			{
+				"_type": "block",
+				"_key": "k006o",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k006n",
+						"text": "Let me paint a picture. You have spent three weeks building a gorgeous landing page. The colors are perfect. The typography sings. You deploy it. You send the link to your designer. They open it. And for exactly 0.3 seconds, the entire page flashes white before settling into dark mode.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k006q",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k006p",
+						"text": "\"What was that flash?\" they Slack you. You close your laptop. You open it again. You pretend you did not see the message. You know exactly what the flash was. It was your hopes and dreams buffering.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k006u",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k006r",
+						"text": "This, friends, is ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k006s",
+						"text": "The Flicker",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k006t",
+						"text": ". The unstyled milliseconds between server-rendered HTML and your JavaScript finally deciding what theme the user wants. It haunts frontend developers the way goto statements haunt computer science professors. And like goto, everyone says they have solved it, but half the solutions on Stack Overflow just move the problem somewhere else.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k006w",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k006v",
+						"text": "Today we are going to fix The Flicker, build a radial dark-mode animation so slick it should be illegal, and top it off with a 40-theme color scheme picker that does not make your users wait for a page reload. Buckle up. We are going deep into CSS territory, and we are bringing snacks.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k006y",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k006x",
+						"text": "The Stack (Or: Standing on the Shoulders of Very Stylish Giants)",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k007a",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k006z",
+						"text": "Before we dive in, let me lay out the tools. We are running ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0070",
+						"text": "Next.js",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0071",
+						"text": " with the App Router — server components, server-side cookies, the whole shebang. Our component library is ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0072",
+						"text": "Shadcn UI",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0073",
+						"text": ", which gives us a beautiful CSS-variable-based theming system out of the box. Every Shadcn component — buttons, dialogs, cards, inputs — reads colors from CSS custom properties like ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0074",
+						"text": "--primary",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0075",
+						"text": ", ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0076",
+						"text": "--background",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0077",
+						"text": ", and ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0078",
+						"text": "--accent",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0079",
+						"text": ". Change the variables, change the entire UI. It is the kind of architecture that makes you wonder why anyone does theming any other way.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k007g",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k007b",
+						"text": "And where do our 40+ themes come from? ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k007c",
+						"text": "tweakcn.com",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k007d",
+						"text": " — an open-source visual theme editor for Shadcn that exports complete OKLCH color palettes, font stacks, border radii, and shadow definitions. Each theme ships as a standalone CSS file that redefines every Shadcn variable. We did not hand-craft a single palette. We downloaded them, dropped them in ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k007e",
+						"text": "public/colorSchemes/",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k007f",
+						"text": ", and wired them up. The tweakcn team did the hard design work. We just connected the plumbing. (Shoutout to them. Seriously. They saved us weeks.)",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k007q",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k007h",
+						"text": "One critical gotcha if you are using tweakcn themes: they export dark mode selectors as ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k007i",
+						"text": ".dark",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k007j",
+						"text": ". If you are using ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k007k",
+						"text": "next-themes",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k007l",
+						"text": " or a data-attribute strategy (like we are), you ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k007m",
+						"text": "must",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k007n",
+						"text": " rewrite those to ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k007o",
+						"text": "html[data-theme=\"dark\"]",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k007p",
+						"text": ". Otherwise your dark mode will not work and you will spend two hours debugging before realizing the selector is wrong. Ask me how I know.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0082",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k007r",
+						"text": "With ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k007s",
+						"text": "Tailwind v4",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k007t",
+						"text": " tying it all together via ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k007u",
+						"text": "@theme inline",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k007v",
+						"text": ", these CSS variables become first-class Tailwind utilities. ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k007w",
+						"text": "bg-primary",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k007x",
+						"text": ", ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k007y",
+						"text": "text-foreground",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k007z",
+						"text": ", ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0080",
+						"text": "border-accent",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0081",
+						"text": " — all reactive to whichever theme is loaded. No JavaScript color manipulation. No runtime recalculation. Just CSS doing what CSS was born to do.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0084",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0083",
+						"text": "Part 1: Why Your Dark Mode Flickers (And Why It Is Not Your Fault)",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k008a",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0085",
+						"text": "The classic dark mode implementation goes something like this: store the user's preference in ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0086",
+						"text": "localStorage",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0087",
+						"text": ", read it on mount with ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0088",
+						"text": "useEffect",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0089",
+						"text": ", and toggle a class on the document. Sounds reasonable. Is catastrophically wrong.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k008g",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k008b",
+						"text": "Here is why. Server-Side Rendering happens on the server (I know, shocking). The server does not have ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k008c",
+						"text": "localStorage",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k008d",
+						"text": ". So it renders the default theme — usually light. The HTML arrives at the browser, painted in pristine white. Then React hydrates. ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k008e",
+						"text": "useEffect",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k008f",
+						"text": " fires. JavaScript reads the stored preference. \"Oh, they wanted dark mode!\" it gasps, scrambling to apply the class. For a brief, horrible moment, your user sees a white flash brighter than a thousand suns. The Flicker has struck again.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k008i",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k008h",
+						"text": "The fix is deceptively simple: do not let JavaScript handle it. Let a cookie handle it.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k008k",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k008j",
+						"text": "The Cookie Strategy",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k008o",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k008l",
+						"text": "Cookies, unlike localStorage, travel with every HTTP request. Your server can read them. This means the server knows the theme ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k008m",
+						"text": "before",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k008n",
+						"text": " it renders a single byte of HTML. No flash. No guessing. No existential dread.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k008s",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k008p",
+						"text": "In our implementation, the dark mode toggle writes a cookie with a simple ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k008q",
+						"text": "document.cookie",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k008r",
+						"text": " call:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k008t",
+				"code": "document.cookie = `payload-theme=${modeValue};path=/;max-age=${60 * 60 * 24 * 365};samesite=lax`;",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k008x",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k008u",
+						"text": "The server reads this cookie and sets ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k008v",
+						"text": "data-theme",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k008w",
+						"text": " on the HTML element during SSR. By the time the browser paints the first pixel, the correct theme is already baked into the markup. The Flicker never had a chance.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0093",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k008y",
+						"text": "And here is the kicker: we also set ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k008z",
+						"text": "document.documentElement.dataset.theme",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0090",
+						"text": " on the client side immediately inside a synchronous ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0091",
+						"text": "flushSync",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0092",
+						"text": " call — not in a useEffect, not in a callback, not in a setTimeout. Synchronously. Before React has time to even think about re-rendering. The theme change is instant because we do not give the browser a single frame to show the wrong state.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0095",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0094",
+						"text": "The Tailwind v4 Dark Variant",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0099",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0096",
+						"text": "Tailwind v4 lets you define a custom dark variant. Instead of relying on the system ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0097",
+						"text": "prefers-color-scheme",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0098",
+						"text": " media query (which you cannot control from JavaScript), we define our own:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k009a",
+				"code": "@custom-variant dark (&:is([data-theme='dark'] *));",
+				"language": "css"
+			},
+			{
+				"_type": "block",
+				"_key": "k009e",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k009b",
+						"text": "Now every ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k009c",
+						"text": "dark:",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k009d",
+						"text": " utility in Tailwind responds to our cookie-driven data attribute instead of the OS setting. Full control. No flicker. The crowd goes wild.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k009g",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k009f",
+						"text": "Part 2: The Radial Dark Mode Animation (AKA \"The Circle of Life\")",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k009i",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k009h",
+						"text": "Okay, so your dark mode does not flicker anymore. Great. But now your toggle just... snaps. Light. Dark. Light. Dark. Like a light switch in a haunted house. Functional? Yes. Inspiring? About as inspiring as a default Windows screensaver.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k009m",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k009j",
+						"text": "What if, instead, a circle expanded from the toggle button, sweeping the new theme across the screen like an ink drop in water? What if it looked like something out of a Pixar transition? What if your users actually ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k009k",
+						"text": "enjoyed",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k009l",
+						"text": " toggling dark mode?",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k009q",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k009n",
+						"text": "Enter ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k009o",
+						"text": "document.startViewTransition",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k009p",
+						"text": " — the CSS View Transitions API. It is the browser's way of saying \"I will take a screenshot of what the page looks like now, let you change things, and then I will animate between the two states.\" It is absurdly powerful, and we are going to abuse it.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k009s",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k009r",
+						"text": "The Implementation",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k009w",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k009t",
+						"text": "Here is the core of our ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k009u",
+						"text": "AnimatedDarkModeToggle",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k009v",
+						"text": " component. Read it slowly. Savor it. This is the good stuff.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k009x",
+				"code": "const toggleDarkMode = useCallback(async () => {\n  if (!buttonRef.current) return;\n\n  // Step 1: Start the view transition, apply theme inside flushSync\n  await document.startViewTransition(() => {\n    flushSync(() => {\n      const newMode = !isDark;\n      setIsDark(newMode);\n      const modeValue = newMode ? \"dark\" : \"light\";\n      document.documentElement.dataset.theme = modeValue;\n      localStorage.setItem(\"theme\", modeValue);\n      document.cookie = `payload-theme=${modeValue};path=/;max-age=${60 * 60 * 24 * 365}`;\n    });\n  }).ready;\n\n  // Step 2: Calculate the circle origin from the button's position\n  const { top, left, width, height } =\n    buttonRef.current.getBoundingClientRect();\n  const x = left + width / 2;\n  const y = top + height / 2;\n  const maxRadius = Math.hypot(\n    Math.max(left, window.innerWidth - left),\n    Math.max(top, window.innerHeight - top),\n  );\n\n  // Step 3: Animate a clip-path circle expanding from the button\n  document.documentElement.animate(\n    {\n      clipPath: [\n        `circle(0px at ${x}px ${y}px)`,\n        `circle(${maxRadius}px at ${x}px ${y}px)`,\n      ],\n    },\n    {\n      duration: 400,\n      easing: \"ease-in-out\",\n      pseudoElement: \"::view-transition-new(root)\",\n    },\n  );\n}, [isDark]);",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k009z",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k009y",
+						"text": "Let me walk you through the three steps because each one is doing something clever.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00a1",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00a0",
+						"text": "Step 1: flushSync Inside startViewTransition",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00a3",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00a2",
+						"text": "The View Transitions API works like this: the browser captures the \"before\" state as a snapshot, you make your DOM changes inside the callback, and then it captures the \"after\" state. It animates between them using CSS pseudo-elements.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00a9",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00a4",
+						"text": "But here is the trap. React batches state updates. If you call ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00a5",
+						"text": "setIsDark",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00a6",
+						"text": " normally, React might not apply the change immediately. The browser's \"after\" snapshot could capture the ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00a7",
+						"text": "old",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00a8",
+						"text": " state. Your animation would transition from dark to... dark. Very zen. Not useful.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00af",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00aa",
+						"text": "That is why we use ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00ab",
+						"text": "flushSync",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00ac",
+						"text": " from ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00ad",
+						"text": "react-dom",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00ae",
+						"text": ". It forces React to synchronously apply the state update and flush the DOM changes right then and there. No batching. No deferring. The browser captures the correct \"after\" state, and the animation works perfectly.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ah",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ag",
+						"text": "Step 2: The Geometry (Math.hypot Is Your Friend)",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00an",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ai",
+						"text": "We need to know where to start the circle and how big it needs to grow. The circle starts at the center of the toggle button — we get that from ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00aj",
+						"text": "getBoundingClientRect()",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00ak",
+						"text": ". The maximum radius needs to reach the farthest corner of the viewport. ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00al",
+						"text": "Math.hypot",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00am",
+						"text": " gives us the hypotenuse — the diagonal distance from the button to the farthest edge. This ensures the circle covers the entire screen no matter where the button is positioned.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ar",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ao",
+						"text": "Fun fact: if your toggle button is in the top-right corner (which it often is), the circle has to travel all the way to the bottom-left. That is a long trip. The ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00ap",
+						"text": "Math.hypot",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00aq",
+						"text": " calculation handles it elegantly. Geometry class finally paid off. Tell your math teacher.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00at",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00as",
+						"text": "Step 3: Animating the Pseudo-Element",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00az",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00au",
+						"text": "The magic is in the ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00av",
+						"text": "pseudoElement",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00aw",
+						"text": " option. We are not animating any real DOM element. We are animating ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00ax",
+						"text": "::view-transition-new(root)",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00ay",
+						"text": " — a browser-generated pseudo-element that holds the \"after\" snapshot of the page. We clip it to a circle that starts at zero radius and expands to cover the full viewport.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00b1",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00b0",
+						"text": "The visual result: the new theme \"bleeds\" outward from the button in a perfect circle. The old theme is still visible behind it, shrinking as the circle grows. It looks expensive. It costs nothing. It is pure CSS wizardry with a little JavaScript orchestration.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00b3",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00b2",
+						"text": "One Critical CSS Rule",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00b5",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00b4",
+						"text": "For this to work, you need to disable the default view transition animations. Otherwise the browser applies its own fade, and things get weird:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00b6",
+				"code": "::view-transition-old(root),\n::view-transition-new(root) {\n  animation: none;\n  mix-blend-mode: normal;\n}",
+				"language": "css"
+			},
+			{
+				"_type": "block",
+				"_key": "k00ba",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00b7",
+						"text": "This tells the browser: \"Thank you for the pseudo-elements. I will take it from here.\" Without this rule, you get a fight between your ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00b8",
+						"text": "clip-path",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00b9",
+						"text": " animation and the browser's default crossfade. Nobody wins that fight. Especially not the user.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00bc",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00bb",
+						"text": "Part 3: A 40-Theme Color Scheme Picker (Without the Reload of Shame)",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00be",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00bd",
+						"text": "Dark mode is a toggle. Two states. Easy. But what if you want to offer 40 complete color schemes — each with their own light and dark variants, custom fonts, unique shadows, and their own personality? Now you are in a different league. Now you are building a theme engine.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00bg",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00bf",
+						"text": "The naive approach: dynamically swap CSS variables at runtime with JavaScript. You can write a monstrous function that sets 30+ CSS variables on the document root. It works. It also turns every theme switch into a JavaScript operation, makes SSR useless (the server does not know the variables), and re-introduces The Flicker on page load. We fought too hard to let The Flicker back in.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00bi",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00bh",
+						"text": "The Architecture: Static CSS Files + Server Cookies",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00bk",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00bj",
+						"text": "Our approach leans into what Next.js does best: server rendering. Here is the full architecture.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00bs",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00bl",
+						"text": "Step 1: Each tweakcn theme lives as a standalone CSS file in ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00bm",
+						"text": "public/colorSchemes/",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00bn",
+						"text": ". We have 43 of them. Each file redefines the complete set of Shadcn CSS variables under ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00bo",
+						"text": ":root",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00bp",
+						"text": " for light mode and ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00bq",
+						"text": "html[data-theme=\"dark\"]",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00br",
+						"text": " for dark mode. Here is what a theme file looks like (abbreviated):",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00bt",
+				"code": "/* public/colorSchemes/graphite.css */\n:root {\n  --background: oklch(0.9551 0 0);\n  --foreground: oklch(0.3211 0 0);\n  --primary: oklch(0.4891 0 0);\n  --primary-foreground: oklch(1 0 0);\n  --accent: oklch(0.8078 0 0);\n  --border: oklch(0.8576 0 0);\n  --font-sans: Montserrat, sans-serif;\n  --font-serif: Georgia, serif;\n  --font-mono: Fira Code, monospace;\n  --radius: 0.35rem;\n  --shadow-lg: 0px 2px 0px 0px hsl(0 0% 20% / 0.15), 0px 4px 6px -1px hsl(0 0% 20% / 0.15);\n  /* ... 25+ more variables */\n}\n\nhtml[data-theme=\"dark\"] {\n  --background: oklch(0.2178 0 0);\n  --foreground: oklch(0.8853 0 0);\n  --primary: oklch(0.7058 0 0);\n  /* ... matching dark variants */\n}\n\n@theme inline {\n  --color-background: var(--background);\n  --color-foreground: var(--foreground);\n  --color-primary: var(--primary);\n  --font-sans: var(--font-sans);\n  --radius-lg: var(--radius);\n  /* Maps CSS variables to Tailwind v4 theme values */\n}",
+				"language": "css"
+			},
+			{
+				"_type": "block",
+				"_key": "k00c1",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00bu",
+						"text": "Notice the ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00bv",
+						"text": "@theme inline",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00bw",
+						"text": " block at the bottom. That is Tailwind v4's way of saying \"these CSS variables are your design tokens.\" It bridges the gap between raw CSS custom properties and Tailwind utility classes. When you write ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00bx",
+						"text": "bg-primary",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00by",
+						"text": ", Tailwind resolves it to ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00bz",
+						"text": "var(--primary)",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00c0",
+						"text": " which resolves to the OKLCH value from whichever theme file is loaded. The chain is elegant: tweakcn theme -> CSS variables -> Tailwind utilities -> your components. Zero runtime cost.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00c9",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00c2",
+						"text": "Also notice: each theme defines its own ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00c3",
+						"text": "--font-sans",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00c4",
+						"text": ", ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00c5",
+						"text": "--font-serif",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00c6",
+						"text": ", and ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00c7",
+						"text": "--font-mono",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00c8",
+						"text": ". The cyberpunk theme uses Outfit. The notebook theme uses Architects Daughter. The graphite theme uses Montserrat. Switching themes does not just change colors — it changes the entire typographic personality. This is where tweakcn themes go from \"nice\" to \"this feels like a completely different product.\"",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00cb",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ca",
+						"text": "Step 2: The Next.js Layout (Where the Magic Connects)",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ch",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00cc",
+						"text": "This is the part that makes it all work. Our root layout is a ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00cd",
+						"text": "server component",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00ce",
+						"text": ". It reads cookies, determines the active theme, and injects the correct ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00cf",
+						"text": "<link>",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00cg",
+						"text": " tag — all before a single byte of HTML reaches the browser:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00ci",
+				"code": "// app/(my-app)/layout.tsx\nimport { cookies } from \"next/headers\";\nimport { getGoogleFontsUrl } from \"@/lib/color-scheme-fonts\";\nimport type { ColorSchemeName } from \"@/components/ui/color-scheme-selector-modal\";\n\nexport default async function RootLayout({ children }) {\n  const cookieStore = await cookies();\n  const darkMode = cookieStore.get(\"payload-theme\")?.value;\n  const colorSchemeName =\n    (cookieStore.get(\"colorScheme\")?.value as ColorSchemeName) || \"graphite\";\n  const googleFontsUrl = getGoogleFontsUrl(colorSchemeName);\n\n  return (\n    <html\n      lang=\"en\"\n      data-theme={darkMode === \"dark\" ? \"dark\" : \"light\"}\n      suppressHydrationWarning\n    >\n      <head>\n        {/* Preconnect to Google Fonts for faster font loading */}\n        {googleFontsUrl && (\n          <>\n            <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />\n            <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossOrigin=\"anonymous\" />\n            <link rel=\"stylesheet\" href={googleFontsUrl} />\n          </>\n        )}\n\n        {/* THE KEY LINE: dynamically load the correct theme CSS */}\n        <link rel=\"stylesheet\" href={`/colorSchemes/${colorSchemeName}.css`} />\n      </head>\n      <body className=\"font-sans antialiased\">\n        {children}\n      </body>\n    </html>\n  );\n}",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k00cy",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00cj",
+						"text": "Read that ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00ck",
+						"text": "<link>",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00cl",
+						"text": " tag carefully. It is a single line of code and it is doing ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00cm",
+						"text": "everything",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00cn",
+						"text": ". The server reads the ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00co",
+						"text": "colorScheme",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00cp",
+						"text": " cookie, interpolates the theme name into the href, and the browser loads exactly one CSS file. If the cookie says ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00cq",
+						"text": "cyberpunk",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00cr",
+						"text": ", the browser loads ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00cs",
+						"text": "/colorSchemes/cyberpunk.css",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00ct",
+						"text": ". If it says ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00cu",
+						"text": "graphite",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00cv",
+						"text": ", it loads ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00cw",
+						"text": "/colorSchemes/graphite.css",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00cx",
+						"text": ". First paint is correct. No flash. No intermediate state. The Flicker never even gets invited to the party.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00d6",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00cz",
+						"text": "And look at the ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00d0",
+						"text": "data-theme",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00d1",
+						"text": " attribute on the ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00d2",
+						"text": "<html>",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00d3",
+						"text": " tag — it reads the ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00d4",
+						"text": "payload-theme",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00d5",
+						"text": " cookie and sets it server-side. Both cookies, both themes, both correct on first render. This is the double-cookie strategy in action: one cookie for light/dark, one for the color scheme. Two cookies, zero flicker.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00d8",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00d7",
+						"text": "Step 3: Per-Theme Font Loading",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00da",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00d9",
+						"text": "Here is a detail that most theme systems skip entirely: fonts. Each tweakcn theme specifies its own font stack. If you load all 43 themes' fonts upfront, your users download megabytes of typefaces they will never see. Instead, we maintain a mapping of which theme needs which Google Fonts:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00db",
+				"code": "// lib/color-scheme-fonts.ts\nconst colorSchemeFonts: Record<ColorSchemeName, string[]> = {\n  graphite: [\"Montserrat\", \"Inter\", \"Fira Code\"],\n  cyberpunk: [\"Outfit\", \"Fira Code\"],\n  notebook: [\"Architects Daughter\", \"Fira Code\"],\n  \"neo-brutalism\": [\"DM Sans\", \"Space Mono\"],\n  vercel: [\"Geist\", \"Geist Mono\"],\n  // ... 38 more themes\n};\n\nexport function getGoogleFontsUrl(schemeName: ColorSchemeName): string | null {\n  const fontNames = colorSchemeFonts[schemeName];\n  if (!fontNames || fontNames.length === 0) return null;\n\n  const families = fontNames\n    .map((name) => {\n      const encoded = name.replace(/ /g, \"+\");\n      return `family=${encoded}:wght@300..900`;\n    })\n    .join(\"&\");\n\n  return `https://fonts.googleapis.com/css2?${families}&display=swap`;\n}",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k00dh",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00dc",
+						"text": "The layout calls ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00dd",
+						"text": "getGoogleFontsUrl(colorSchemeName)",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00de",
+						"text": " and injects the result as a ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00df",
+						"text": "<link>",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00dg",
+						"text": " tag. If you are on the graphite theme, you download Montserrat, Inter, and Fira Code. If you are on cyberpunk, you download Outfit and Fira Code. Only the fonts you need. The cafeteria is open, but you only take what is on your plate.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00dj",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00di",
+						"text": "The Reload Is Intentional (And That Is Okay)",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00dl",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00dk",
+						"text": "\"Wait,\" you say. \"The user clicks a theme and the page reloads?\" Yes. Here is the nuance.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00dp",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00dm",
+						"text": "Switching a color scheme is not like toggling dark mode. Dark mode changes a ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00dn",
+						"text": "data-theme",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00do",
+						"text": " attribute — every CSS variable already has both light and dark values loaded in the current theme file. The switch is instant because both states are already in the CSS.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00dv",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00dq",
+						"text": "A color scheme swap replaces ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00dr",
+						"text": "every",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00ds",
+						"text": " CSS variable — background, foreground, primary, secondary, accent, muted, card, border, fonts, shadows, radii — the entire design system. Plus it needs to load different Google Fonts. The cleanest way to do this is to swap which CSS file the ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00dt",
+						"text": "<link>",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00du",
+						"text": " tag points to. And that requires a reload.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00dz",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00dw",
+						"text": "But the reload does not flicker. The cookie is already set before ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00dx",
+						"text": "window.location.reload()",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00dy",
+						"text": " fires. The server reads it on the next request and serves the correct stylesheet from the first byte. The user clicks a swatch, sees a brief navigation, and lands on a page that is already correct. No intermediate state. No The Flicker. The Flicker is not even allowed in the building.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00e1",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00e0",
+						"text": "The Preview Grid (40 Themes, Zero Extra Stylesheets)",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00e3",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00e2",
+						"text": "How do you preview 40 themes inside a modal without loading 40 stylesheets? Simple: you do not use the actual CSS variables. Instead, you store a lightweight preview object — just three OKLCH colors per mode (background, primary, accent):",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00e4",
+				"code": "const schemePreviewColors = {\n  \"amber-minimal\": {\n    light: [\n      \"oklch(1 0 0)\",           // background\n      \"oklch(0.7686 0.1647 70.0804)\", // primary\n      \"oklch(0.9869 0.0214 95.2774)\", // accent\n    ],\n    dark: [\n      \"oklch(0.2046 0 0)\",\n      \"oklch(0.7686 0.1647 70.0804)\",\n      \"oklch(0.4732 0.1247 46.2007)\",\n    ],\n  },\n  cyberpunk: { /* ... */ },\n  // ... 38 more themes\n};",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k00e8",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00e5",
+						"text": "Each theme card renders six tiny circles — three for light, three for dark. The circles use inline ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00e6",
+						"text": "style={{ backgroundColor: color }}",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00e7",
+						"text": " — no dynamic CSS needed. Forty themes, 240 circles, zero stylesheet bloat. Your bundle size thanks you. Your Lighthouse score thanks you. Your users, who just want to pick a pretty color, definitely thank you.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ea",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00e9",
+						"text": "Reading the Active Scheme (Without useState Gymnastics)",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ec",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00eb",
+						"text": "Here is a pattern I see developers get wrong. They try to read the active color scheme from a React context, a global store, or a URL parameter. All of these introduce unnecessary complexity. The cookie is the source of truth. Just read the cookie:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00ed",
+				"code": "function getActiveColorScheme(): ColorSchemeName {\n  if (typeof document === \"undefined\") return \"graphite\";\n  const match = document.cookie\n    .split(\"; \")\n    .find((row) => row.startsWith(\"colorScheme=\"));\n  return (match?.split(\"=\")[1] as ColorSchemeName) || \"graphite\";\n}",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k00eh",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ee",
+						"text": "The ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00ef",
+						"text": "typeof document === \"undefined\"",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00eg",
+						"text": " guard handles SSR gracefully — if we are on the server, we fall back to the default. On the client, we parse the cookie. Done. No context providers. No prop drilling. No state management library that costs more bytes than the feature itself.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ej",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ei",
+						"text": "Part 4: How It All Fits in the Header",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00el",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ek",
+						"text": "In our header component, the dark mode toggle and color scheme picker sit side by side in the actions bar. The toggle fires the radial animation and writes the theme cookie. The picker opens a dialog with the 40-theme grid and writes the scheme cookie. Both cookies are read by the server on next render.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00en",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00em",
+						"text": "The architecture is symmetrical:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00eq",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ep",
+						"text": "Dark mode: cookie (payload-theme) -> data-theme attribute -> @custom-variant dark -> every dark: utility responds. No reload needed.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00eo"
+			},
+			{
+				"_type": "block",
+				"_key": "k00es",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00er",
+						"text": "Color scheme: cookie (colorScheme) -> server reads it -> correct CSS file imported -> every CSS variable is correct from first paint. Reload needed, but flicker-free.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00eo"
+			},
+			{
+				"_type": "block",
+				"_key": "k00eu",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00et",
+						"text": "Two cookies. Zero flicker. Forty themes. One radial animation that makes your designer weep with joy. This is the setup. This is the way.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ew",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ev",
+						"text": "Bonus: The Hydration Dance",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00f0",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ex",
+						"text": "One more thing. When the page first loads, we need to show the correct auth state — is the user signed in or not? But the server does not have the full session data. It only has a ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00ey",
+						"text": "hasSession",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00ez",
+						"text": " boolean passed from the layout.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00f2",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00f1",
+						"text": "Our header handles this with a simple hydration pattern:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00f3",
+				"code": "const [isHydrated, setIsHydrated] = useState(false);\nconst { data: session } = authClient.useSession();\n\nuseEffect(() => {\n  setIsHydrated(true);\n}, []);\n\n// Use hasSession for SSR, then switch to actual session after hydration\nconst isSignedIn = isHydrated ? !!session : (hasSession ?? false);",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k00f9",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00f4",
+						"text": "Before hydration, we trust the server's ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00f5",
+						"text": "hasSession",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00f6",
+						"text": " prop. After hydration, we trust the client's ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00f7",
+						"text": "authClient.useSession()",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00f8",
+						"text": ". The transition is seamless because both should agree (a logged-in user on the server is still logged in on the client). No flash of \"Sign In\" button for authenticated users. No flash of user avatar for anonymous visitors.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00fb",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00fa",
+						"text": "The Flicker does not discriminate. It attacks themes. It attacks auth state. It attacks anything that differs between server and client. The defense is always the same: make the server and client agree on the initial render, and defer the client-only truth until after hydration.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00fd",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00fc",
+						"text": "The Checklist",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ff",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00fe",
+						"text": "If your theming setup does not check all of these boxes, you have work to do:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00fi",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00fh",
+						"text": "Dark mode preference stored in a cookie, not just localStorage. The server must know the theme before rendering.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00fg"
+			},
+			{
+				"_type": "block",
+				"_key": "k00fk",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00fj",
+						"text": "Custom Tailwind dark variant using data-theme attribute, not prefers-color-scheme.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00fg"
+			},
+			{
+				"_type": "block",
+				"_key": "k00fm",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00fl",
+						"text": "Dark mode toggle uses View Transitions API with flushSync for instant, synchronous DOM updates.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00fg"
+			},
+			{
+				"_type": "block",
+				"_key": "k00fo",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00fn",
+						"text": "Radial clip-path animation on ::view-transition-new(root) for that premium feel.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00fg"
+			},
+			{
+				"_type": "block",
+				"_key": "k00fq",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00fp",
+						"text": "Default view transition animations disabled (animation: none on the pseudo-elements).",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00fg"
+			},
+			{
+				"_type": "block",
+				"_key": "k00fs",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00fr",
+						"text": "Color scheme stored in a separate cookie. Server imports the correct CSS file at render time.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00fg"
+			},
+			{
+				"_type": "block",
+				"_key": "k00fu",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ft",
+						"text": "Theme preview uses lightweight inline color swatches, not dynamically loaded stylesheets.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00fg"
+			},
+			{
+				"_type": "block",
+				"_key": "k00fw",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00fv",
+						"text": "Hydration-safe auth state: SSR prop for initial render, client session after hydration.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00fg"
+			},
+			{
+				"_type": "block",
+				"_key": "k00fy",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00fx",
+						"text": "The Flicker is dead. The radial animation is alive. Your users have 40 themes to play with. And you — you beautiful, detail-obsessed frontend developer — did not take a single shortcut to get here.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00g0",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00fz",
+						"text": "Now go toggle your dark mode. Watch that circle expand. You earned it.",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			}
+		],
+		"author": "Omar Majed",
+		"category": "engineering",
+		"tags": "React\nTailwind\nDark Mode\nTheming",
+		"publish_date": "2026-02-14T10:00:00.000Z"
+	}
+}

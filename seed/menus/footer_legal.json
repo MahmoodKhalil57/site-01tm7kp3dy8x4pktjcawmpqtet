@@ -1,0 +1,28 @@
+{
+	"$schema": "../.schemas/menu.schema.json",
+	"id": "menu:footer_legal",
+	"name": "footer_legal",
+	"label": "Footer — Legal",
+	"items": [
+		{
+			"type": "custom",
+			"label": "Terms of Service",
+			"url": "/terms"
+		},
+		{
+			"type": "custom",
+			"label": "Privacy Policy",
+			"url": "/privacy"
+		},
+		{
+			"type": "custom",
+			"label": "License",
+			"url": "/license"
+		},
+		{
+			"type": "custom",
+			"label": "Contact Us",
+			"url": "/contact"
+		}
+	]
+}

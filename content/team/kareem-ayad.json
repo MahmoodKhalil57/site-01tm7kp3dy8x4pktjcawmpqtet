@@ -1,0 +1,26 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "kareem-ayad",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "Kareem Ayad",
+		"role": "AI Engineer & AI Division Manager",
+		"department": "Software Development",
+		"bio": "3+ years building production AI systems — from RAG pipelines and LLM fine-tuning to enterprise ML infrastructure.",
+		"full_bio": "Kareem leads our AI division, specializing in machine learning, natural language processing, and cybersecurity automation. He has designed and deployed advanced RAG systems, custom dataset pipelines, and LoRA fine-tuning frameworks using tools like Apple MLX, ChromaDB, and hybrid retrieval architectures. He focuses on building efficient, privacy-preserving AI systems that deliver real enterprise value.",
+		"experience": "3+ years in AI engineering, model fine-tuning, and cybersecurity automation",
+		"image": "/team/Kareem_Ayad.jpg",
+		"image_position": "50% 15%",
+		"location": "Brighton, UK & Cairo, Egypt",
+		"join_date": "March 2023",
+		"skills": "AI Engineering\nMachine Learning\nRAG Systems\nLLM Fine-tuning\nCybersecurity Automation\nPython\nChromaDB\nMLX Framework\nData Engineering",
+		"linkedin": "https://www.linkedin.com/in/kareem-ayad-62433227b/",
+		"github": "https://github.com/Kareemayad",
+		"home_page": true,
+		"order": 6
+	}
+}

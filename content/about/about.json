@@ -1,0 +1,92 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "about",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "About",
+		"meta_title": "About SaaSTEMLY — Team, Mission & Track Record",
+		"meta_description": "A focused team of engineers, designers, and strategists delivering custom software across Europe and the Middle East since 2020.",
+		"page_title": "About SaaSTEMLY",
+		"page_subtitle": "A focused team of engineers, designers, and strategists who build software that works — and ship it on time.",
+		"mission_title": "Our mission",
+		"mission_description": "We exist to turn ambitious ideas into production-ready software. From first sketch to live product, we partner with businesses that need reliable engineering — and deliver solutions that drive measurable growth.",
+		"stats": [
+			{
+				"value": "15+",
+				"label": "Projects delivered"
+			},
+			{
+				"value": "7",
+				"label": "Team members"
+			},
+			{
+				"value": "8+",
+				"label": "Countries served"
+			},
+			{
+				"value": "2020",
+				"label": "Founded"
+			}
+		],
+		"values_title": "How we operate",
+		"values": [
+			{
+				"icon": "Lightbulb",
+				"title": "Rigorous engineering",
+				"description": "Clean architecture, thorough testing, and code built to last. We don't cut corners — every system we ship is designed to scale."
+			},
+			{
+				"icon": "ShieldCheck",
+				"title": "Radical transparency",
+				"description": "Honest timelines, clear communication, and no hidden costs. You know exactly where your project stands at every milestone."
+			},
+			{
+				"icon": "Eye",
+				"title": "Outcome-driven",
+				"description": "We measure success by your results, not our hours. Every decision — from tech stack to design — is made to move your business forward."
+			},
+			{
+				"icon": "Heart",
+				"title": "Partnership, not just delivery",
+				"description": "We invest in understanding your business, your users, and your market. The software we build reflects that context — not just a spec."
+			}
+		],
+		"team_title": "Meet the team",
+		"team_subtitle": "A distributed team across Europe and the Middle East — united by a shared standard for quality and reliability.",
+		"timeline_title": "Our journey",
+		"timeline": [
+			{
+				"year": "2020",
+				"description": "SaaSTEMLY founded in Copenhagen, Denmark"
+			},
+			{
+				"year": "2021",
+				"description": "Delivered first major client project — Newcastle School"
+			},
+			{
+				"year": "2022",
+				"description": "Expanded into e-commerce with Maqsad Clothing"
+			},
+			{
+				"year": "2023",
+				"description": "Grew team to 7 members across 4 countries"
+			},
+			{
+				"year": "2024",
+				"description": "Launched AI division and Kamerly platform"
+			},
+			{
+				"year": "2025",
+				"description": "9+ projects delivered across Europe and the Middle East"
+			}
+		],
+		"cta_title": "Let's build something that matters",
+		"cta_description": "Have a project in mind? Tell us what you are working on — we will respond within 24 hours with an honest assessment and next steps.",
+		"cta_button": "Get in touch",
+		"cta_url": "/contact"
+	}
+}

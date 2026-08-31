@@ -1,0 +1,113 @@
+{
+	"$schema": "../.schemas/collection.schema.json",
+	"slug": "team",
+	"label": "Team",
+	"labelSingular": "Team member",
+	"storage": "git",
+	"description": "Team members shown on the About page (all) and the home page (those flagged).",
+	"admin": {
+		"listColumns": [
+			"role",
+			"department",
+			"home_page",
+			"order"
+		]
+	},
+	"sortOrder": 4,
+	"fields": [
+		{
+			"slug": "title",
+			"label": "Name",
+			"type": "string",
+			"required": true
+		},
+		{
+			"slug": "role",
+			"label": "Role",
+			"type": "string",
+			"required": true
+		},
+		{
+			"slug": "department",
+			"label": "Department",
+			"type": "select",
+			"required": false,
+			"validation": {
+				"options": [
+					"Executive",
+					"Software Development",
+					"Business Development",
+					"Finance"
+				]
+			}
+		},
+		{
+			"slug": "bio",
+			"label": "Short bio",
+			"type": "text",
+			"required": false
+		},
+		{
+			"slug": "full_bio",
+			"label": "Full bio",
+			"type": "text",
+			"required": false
+		},
+		{
+			"slug": "experience",
+			"label": "Experience",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "image",
+			"label": "Photo URL (e.g. /team/name.jpg)",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "image_position",
+			"label": "Photo focal point (CSS object-position, e.g. 50% 30%)",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "location",
+			"label": "Location",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "join_date",
+			"label": "Joined",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "skills",
+			"label": "Skills (one per line)",
+			"type": "text",
+			"required": false
+		},
+		{
+			"slug": "linkedin",
+			"label": "LinkedIn URL",
+			"type": "url"
+		},
+		{
+			"slug": "github",
+			"label": "GitHub URL",
+			"type": "url"
+		},
+		{
+			"slug": "home_page",
+			"label": "Show on the home page",
+			"type": "boolean"
+		},
+		{
+			"slug": "order",
+			"label": "Display order",
+			"type": "integer"
+		}
+	]
+}

@@ -1,0 +1,20 @@
+---
+import Site from "@/layouts/Site.astro";
+import { AboutPage } from "@/components/pages/about-page";
+import { getAbout, getTeam } from "@/lib/content";
+
+const [about, team] = await Promise.all([getAbout(), getTeam()]);
+---
+
+<Site title={about?.metaTitle || "About"} description={about?.metaDescription || undefined}>
+	{
+		about ? (
+			<AboutPage client:load data={{ ...about, team }} />
+		) : (
+			<div class="mx-auto max-w-3xl px-6 pt-48 pb-32 text-center">
+				<h1 class="text-4xl font-bold tracking-tighter">About</h1>
+				<p class="mt-4 text-muted-foreground">Publish the <code>about</code> entry in the admin to fill this page.</p>
+			</div>
+		)
+	}
+</Site>

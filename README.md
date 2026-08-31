@@ -1,18 +1,18 @@
-# PremiumCMS static frontend
+# SaaSTEMLY — site repository
 
-This repo is the **Astro frontend + seed** for a PremiumCMS site. The public
-site is a **static build on GitHub Pages** — the Astro frontend is never hosted
-on Cloudflare. Only the backend (admin panel + REST API + media) runs on
-Cloudflare.
+The SaaSTEMLY company website (landing, About, Portfolio, Blog, FAQ, Contact,
+Terms / Privacy / License) as a PremiumCMS site: an Astro frontend plus the
+content the CMS keeps in git. Ported from the Next.js `saastemlysaastarter`
+app — same React/shadcn components, Payload admin replaced by the PremiumCMS
+admin, no login / e-commerce.
 
-On every push / content-publish, GitHub Actions:
-1. fetches a content **snapshot** from the backend (`bin/snapshot-to-sqlite.mjs`),
-2. builds the site to static HTML against that snapshot (`astro.config.static.mjs`),
-3. applies `seed.json` to the backend (`bin/apply-seed.mjs`),
-4. deploys `dist/` to GitHub Pages.
+- `src/` — Astro pages + React components (Tailwind v4, `motion`, lucide).
+- `seed/` — collection schema, menus and site settings (applied on every roll).
+- `content/` — the entries, one JSON file each; saving in the admin commits here.
+- `.agents/skills/site-conventions/SKILL.md` — the full map and the rules.
 
-Secrets (set by the platform): `BACKEND_URL`, `SITE_URL`, `EMDASH_PREVIEW_SECRET`,
-`SEED_SECRET`.
+The platform builds the site in a container on every push and serves
+`static/main`; pull requests get a preview at `https://<site>--pr-<N>.premium-cms.com`.
 
 ## Local development
 
@@ -23,9 +23,10 @@ fresh from the backend's `/_emdash/api/snapshot`, and `/_emdash/*` requests
 are proxied to the backend (http://localhost:4321).
 
 ```sh
-cp .env.example .env   # fill in EMDASH_API_TOKEN
 bun install
-bun dev
+node bin/snapshot-to-sqlite.mjs https://<site>.premium-cms.com snapshot.db   # env EMDASH_PREVIEW_SECRET
+SITE_URL=https://<domain> bunx astro build                                    # → dist/
+bun run check:cf                                                              # JSON + astro check
 ```
 
 A site admin gets the token (and the ready-made `env` block) from

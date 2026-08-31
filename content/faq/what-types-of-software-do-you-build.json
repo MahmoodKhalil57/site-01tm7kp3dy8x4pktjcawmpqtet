@@ -1,0 +1,15 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "what-types-of-software-do-you-build",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "What types of software do you build?",
+		"answer": "Custom web applications, SaaS platforms, mobile apps, AI-powered features, and e-commerce systems. We work with React, Next.js, Vue, Node.js, Python, and modern cloud platforms.",
+		"order": 1,
+		"is_active": true
+	}
+}

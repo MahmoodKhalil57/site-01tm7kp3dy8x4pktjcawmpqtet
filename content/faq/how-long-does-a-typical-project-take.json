@@ -1,0 +1,15 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "how-long-does-a-typical-project-take",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "How long does a typical project take?",
+		"answer": "Simple apps take 2–4 weeks. Complex platforms take 3–6 months. We scope every project with a clear timeline before work begins.",
+		"order": 2,
+		"is_active": true
+	}
+}

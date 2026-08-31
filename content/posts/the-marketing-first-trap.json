@@ -1,0 +1,195 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "the-marketing-first-trap",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-03-07T10:00:00.000Z",
+	"data": {
+		"title": "The Marketing-First Trap",
+		"excerpt": "Modern startup culture has a hierarchy: marketing at the top, product quality somewhere in the middle. The marketing-first mindset optimises for the top of the funnel at the expense of the bottom. Marketing should be the megaphone for quality — not the substitute for it.",
+		"cover_image": "https://images.pexels.com/photos/7661590/pexels-photo-7661590.jpeg?auto=compress&cs=tinysrgb&w=1920",
+		"cover_image_alt": "Visual representation of branding, identity, and marketing strategies on paper",
+		"content": [
+			{
+				"_type": "block",
+				"_key": "k00wi",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00wh",
+						"text": "Modern startup culture has a hierarchy. Marketing sits at the top. Product quality is somewhere in the middle. Ethics — well, that's something you address in the About page.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00wk",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00wj",
+						"text": "This is not a conspiracy. It's the natural output of an environment where attention is currency, and where the loudest voice in the room usually wins the most customers, regardless of what they're actually selling.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00wo",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00wl",
+						"text": "The marketing-first mindset says: ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00wm",
+						"text": "get them in the door, worry about delivering later",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00wn",
+						"text": ". It optimises for the top of the funnel at the expense of the bottom. It invests in making the promise look beautiful and cuts the budget on fulfilling it.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00wq",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00wp",
+						"text": "We've all experienced the product that looked incredible in the demo. The agency that sent a gorgeous proposal and then ghosted after the invoice cleared. The SaaS tool that launched with twenty features in the pitch deck and shipped with four.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ws",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00wr",
+						"text": "The tragedy isn't just that customers get burned. It's that the entire industry gradually shifts its expectations downward. People start assuming mediocrity. They stop expecting to be delighted. They pre-negotiate for disappointment.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00wu",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00wt",
+						"text": "The Alternative",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00x2",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00wv",
+						"text": "SaaSTEMLY exists to push back against this. We are a software development agency. Our job is to ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00ww",
+						"text": "build things that work and feel alive",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00wx",
+						"text": " — not to sell dreams we've half-decided to deliver. When a client reads our testimonials and sees phrases like ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00wy",
+						"text": "\"truly understands our needs\"",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00wz",
+						"text": " and ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00x0",
+						"text": "\"dedicated to getting us to market quickly and efficiently,\"",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00x1",
+						"text": " those words weren't manufactured. They were earned, line by line, in the actual work.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00x4",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00x3",
+						"text": "Marketing should be the megaphone for quality. Not the substitute for it.",
+						"marks": []
+					}
+				]
+			}
+		],
+		"author": "Mahmood Ibrahim",
+		"category": "company",
+		"tags": "Marketing\nAgency\nValues\nProduct",
+		"publish_date": "2026-03-07T10:00:00.000Z"
+	}
+}

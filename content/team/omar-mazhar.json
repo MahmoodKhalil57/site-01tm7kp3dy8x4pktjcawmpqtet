@@ -1,0 +1,26 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "omar-mazhar",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "Omar Mazhar",
+		"role": "Technical Product Analyst",
+		"department": "Software Development",
+		"bio": "4+ years managing products and projects — translating business needs into clear technical requirements.",
+		"full_bio": "Omar bridges the gap between business goals and engineering execution. With experience across multiple lines of business, he ensures that development stays aligned with commercial objectives — applying structured, efficient approaches to deliver results on time and on target.",
+		"experience": "4+ years in product management and project management",
+		"image": "/team/Omar_Mazhar.png",
+		"image_position": "50% 50%",
+		"location": "Edinburgh, UK",
+		"join_date": "March 2023",
+		"skills": "Product Management\nCritical Thinking\nScrum Master\nLogical Thinking\nSoftware Development\nData Science\nCommunication Skills\nLeadership",
+		"linkedin": "https://www.linkedin.com/in/oslmazhar/",
+		"github": "https://github.com/omar2381",
+		"home_page": false,
+		"order": 5
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "contact",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "Contact",
+		"meta_title": "Contact Us",
+		"meta_description": "Reach out to SaaSTEMLY — whether it's a new project, a partnership inquiry, or a question about our work.",
+		"page_title": "Get in touch.",
+		"page_subtitle": "Whether it's a new project, a question about our process, or a partnership inquiry — we're here to help.",
+		"email": "contact@saastemly.com",
+		"email_note": "We aim to respond within 24 hours.",
+		"location": "Copenhagen, Denmark",
+		"location_note": "Working remotely, shipping globally.",
+		"hours": "Mon – Fri, 9am – 6pm CET",
+		"hours_note": "Support available during business hours.",
+		"note": "Enterprise clients receive priority support through dedicated channels. For general questions, check our",
+		"note_link_label": "FAQ",
+		"note_link_url": "/faq",
+		"form_title": "Send a message",
+		"form_subtitle": "Fill out the form and we'll get back to you shortly."
+	}
+}

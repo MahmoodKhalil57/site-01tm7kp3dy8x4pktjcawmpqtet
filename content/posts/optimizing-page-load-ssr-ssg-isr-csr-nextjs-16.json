@@ -1,0 +1,1987 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "optimizing-page-load-ssr-ssg-isr-csr-nextjs-16",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-02-14T10:00:00.000Z",
+	"data": {
+		"title": "The Rendering Menu: SSR, SSG, ISR, CSR (and Why Next.js 16 Made the Waiter Disappear)",
+		"excerpt": "Next.js 16 rewrote the rendering rulebook. Everything is dynamic by default, 'use cache' replaced revalidate, and Partial Prerendering lets you serve static and dynamic from the same route. Here is the survival guide.",
+		"cover_image": "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1920",
+		"cover_image_alt": "Close-up of a computer screen displaying programming code in a dark environment",
+		"content": [
+			{
+				"_type": "block",
+				"_key": "k00g2",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00g1",
+						"text": "It is 3am. Your Lighthouse score is 34. Your manager Slacked you a screenshot of the homepage taking eleven seconds to load on his phone — which, to be fair, is a 2019 Android device running Chrome with forty-seven open tabs, but that is beside the point. You are now debugging your rendering strategy.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ga",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00g3",
+						"text": "You open the Next.js docs. You see SSR. SSG. ISR. CSR. PPR. You see ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00g4",
+						"text": "use cache",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00g5",
+						"text": ", ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00g6",
+						"text": "cacheLife",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00g7",
+						"text": ", ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00g8",
+						"text": "cacheTag",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00g9",
+						"text": ". Somewhere in the back of your mind, a meme plays: \"I just wanted to render a div.\"",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ge",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00gb",
+						"text": "Welcome to ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00gc",
+						"text": "The Rendering Menu",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00gd",
+						"text": " — a restaurant where the food is HTML, the chefs are servers (literally), and every time you think you have picked the right dish, the framework changes the entire menu. Next.js 16 just did exactly that. Let us figure out what to order.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00gg",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00gf",
+						"text": "The Plot Twist: Everything Is Dynamic Now",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00gk",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00gh",
+						"text": "If you are coming from Next.js 14 or 15, brace yourself. The biggest philosophical shift in Next.js 16 is this: ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00gi",
+						"text": "all pages are dynamic by default",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00gj",
+						"text": ". No caching. No static generation. Every request hits the server fresh, like a customer walking into a restaurant and demanding their steak be cooked from scratch.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00gu",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00gl",
+						"text": "Remember ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00gm",
+						"text": "export const dynamic = 'force-dynamic'",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00gn",
+						"text": "? Gone. Remember ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00go",
+						"text": "cache: 'no-store'",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00gp",
+						"text": " on fetch? Unnecessary. The old implicit caching behavior that made your pages magically fast (and also magically stale at the worst possible moment) has been evicted. You now opt ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00gq",
+						"text": "into",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00gr",
+						"text": " caching with the new ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00gs",
+						"text": "\"use cache\"",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00gt",
+						"text": " directive. Which, yes, is a string literal at the top of a function. The React team really said \"we liked 'use client' so much, let us make directives a genre.\"",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00gw",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00gv",
+						"text": "To unlock the full rendering menu, you flip one switch in your config:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00gx",
+				"code": "// next.config.ts\nimport type { NextConfig } from \"next\";\n\nconst nextConfig: NextConfig = {\n  cacheComponents: true, // Unlocks \"use cache\" + PPR\n};\n\nexport default nextConfig;",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k00h5",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00gy",
+						"text": "One flag. ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00gz",
+						"text": "cacheComponents: true",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00h0",
+						"text": ". It replaces the old ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00h1",
+						"text": "experimental.ppr",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00h2",
+						"text": " and ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00h3",
+						"text": "experimental.dynamicIO",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00h4",
+						"text": " flags. The Next.js team merged two experimental features into one stable toggle, which is the framework equivalent of combining shampoo and conditioner. Controversial, but efficient.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00h7",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00h6",
+						"text": "SSR: The Default (You Are Already Using It)",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00h9",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00h8",
+						"text": "Server-Side Rendering in Next.js 16 is what happens when you do nothing. Write a Server Component. Fetch some data. Return some JSX. Congratulations, you have SSR. The server renders fresh HTML on every request, streams it to the client, and moves on with its life.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00ha",
+				"code": "// app/dashboard/page.tsx\n// No special exports. No config. Just vibes.\n\nexport default async function DashboardPage() {\n  // This runs on EVERY request — fresh data, every time\n  const res = await fetch(\"https://api.example.com/user-stats\");\n  const stats = await res.json();\n\n  return (\n    <main>\n      <h1>Dashboard</h1>\n      <p>Active users: {stats.activeUsers}</p>\n      <p>Revenue today: ${stats.revenue}</p>\n    </main>\n  );\n}",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k00hc",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00hb",
+						"text": "No magic. No gotchas. The page is rendered on the server, sent as HTML, and hydrated on the client. If your data changes every second (stock tickers, live dashboards, that one analytics page your CEO refreshes obsessively), SSR is your friend.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00hi",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00hd",
+						"text": "One important Next.js 16 quirk: ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00he",
+						"text": "params and searchParams are now Promises",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00hf",
+						"text": ". Yes, really. You must ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00hg",
+						"text": "await",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00hh",
+						"text": " them:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00hj",
+				"code": "// Next.js 16: params are async now\nexport default async function ProductPage({\n  params,\n  searchParams,\n}: {\n  params: Promise<{ slug: string }>;\n  searchParams: Promise<{ sort?: string }>;\n}) {\n  const { slug } = await params;       // Must await!\n  const { sort } = await searchParams;  // Must await!\n\n  const product = await getProduct(slug);\n  return <ProductView product={product} sort={sort} />;\n}",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k00hl",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00hk",
+						"text": "If you forget the await, TypeScript will not save you and the error message will make you question your career choices. Ask me how I know.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00hn",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00hm",
+						"text": "When to use SSR:",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00hq",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00hp",
+						"text": "Personalized dashboards (user-specific data)",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00ho"
+			},
+			{
+				"_type": "block",
+				"_key": "k00hs",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00hr",
+						"text": "Real-time data that must be fresh on every load",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00ho"
+			},
+			{
+				"_type": "block",
+				"_key": "k00hu",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ht",
+						"text": "Pages that read cookies, headers, or searchParams",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00ho"
+			},
+			{
+				"_type": "block",
+				"_key": "k00hw",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00hv",
+						"text": "Auth-gated content where stale data is a liability",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00ho"
+			},
+			{
+				"_type": "block",
+				"_key": "k00hy",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00hx",
+						"text": "SSG: The Speed Demon (When Your Content Sits Still)",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00i0",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00hz",
+						"text": "Static Site Generation is the art of doing all the work once and then never doing it again. The HTML is generated at build time, uploaded to a CDN, and served to every user faster than they can blink. It is the drive-through of rendering strategies — pre-made, wrapped, and ready.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00i4",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00i1",
+						"text": "In Next.js 16, any Server Component that does not access network resources, runtime APIs, or async data is ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00i2",
+						"text": "automatically static",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00i3",
+						"text": ". You do not need to export anything. You do not need to configure anything. The framework looks at your component and says, \"This is boring. I can prerender it.\"",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00i5",
+				"code": "// app/about/page.tsx\n// No fetching, no cookies, no drama. Automatically static.\n\nexport default function AboutPage() {\n  return (\n    <main>\n      <h1>About Us</h1>\n      <p>We are a team that argues about rendering strategies at 3am.</p>\n      <p>Founded in 2024. Refactored in 2025. Existential crisis in 2026.</p>\n    </main>\n  );\n}",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k00i9",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00i6",
+						"text": "For dynamic routes (like blog posts), you use ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00i7",
+						"text": "generateStaticParams",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00i8",
+						"text": " to tell Next.js which paths to pre-build:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00ia",
+				"code": "// app/blog/[slug]/page.tsx\n\nexport async function generateStaticParams() {\n  const posts = await getAllPosts();\n  return posts.map((post) => ({ slug: post.slug }));\n}\n\nexport default async function BlogPost({\n  params,\n}: {\n  params: Promise<{ slug: string }>;\n}) {\n  const { slug } = await params;\n  const post = await getPostBySlug(slug);\n\n  return (\n    <article>\n      <h1>{post.title}</h1>\n      <div dangerouslySetInnerHTML={{ __html: post.content }} />\n    </article>\n  );\n}",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k00ig",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ib",
+						"text": "With ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00ic",
+						"text": "cacheComponents: true",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00id",
+						"text": ", you can also force dynamic data into the static shell using ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00ie",
+						"text": "\"use cache\"",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00if",
+						"text": ":",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00ih",
+				"code": "// app/products/page.tsx\nimport { cacheLife } from \"next/cache\";\n\nexport default async function ProductsPage() {\n  \"use cache\";\n  cacheLife(\"max\"); // Cached for as long as possible\n\n  const products = await fetch(\"https://api.example.com/products\")\n    .then((res) => res.json());\n\n  return (\n    <section>\n      <h1>All Products</h1>\n      {products.map((p: { id: string; name: string }) => (\n        <div key={p.id}>{p.name}</div>\n      ))}\n    </section>\n  );\n}",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k00ij",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ii",
+						"text": "When to use SSG:",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00im",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00il",
+						"text": "Marketing and landing pages",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00ik"
+			},
+			{
+				"_type": "block",
+				"_key": "k00io",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00in",
+						"text": "Blog posts and documentation",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00ik"
+			},
+			{
+				"_type": "block",
+				"_key": "k00iq",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ip",
+						"text": "Product catalogs that change infrequently",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00ik"
+			},
+			{
+				"_type": "block",
+				"_key": "k00is",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ir",
+						"text": "Any page that is identical for every user (the universal truth pages)",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00ik"
+			},
+			{
+				"_type": "block",
+				"_key": "k00iu",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00it",
+						"text": "ISR: The Best of Both Worlds (Or: Schrödinger's Cache)",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00iw",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00iv",
+						"text": "Incremental Static Regeneration was always the weird middle child. \"I want the speed of static, but I also want my data to update sometimes.\" It is like wanting a frozen pizza that also tastes freshly baked. And somehow, it works.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00j4",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ix",
+						"text": "In Next.js 16, ISR has evolved. The old ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00iy",
+						"text": "export const revalidate = 60",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00iz",
+						"text": " still works if you are not using Cache Components, but the new hotness is ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00j0",
+						"text": "\"use cache\"",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00j1",
+						"text": " with ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00j2",
+						"text": "cacheLife",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00j3",
+						"text": ":",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00j5",
+				"code": "// app/news/page.tsx\nimport { cacheLife, cacheTag } from \"next/cache\";\n\nexport default async function NewsPage() {\n  \"use cache\";\n  cacheLife(\"hours\"); // Revalidates every hour\n  cacheTag(\"news\");   // Tag for on-demand invalidation\n\n  const news = await fetch(\"https://api.example.com/news\")\n    .then((res) => res.json());\n\n  return (\n    <section>\n      <h1>Latest News</h1>\n      {news.map((item: { id: string; title: string }) => (\n        <article key={item.id}>\n          <h2>{item.title}</h2>\n        </article>\n      ))}\n    </section>\n  );\n}",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k00j9",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00j6",
+						"text": "The ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00j7",
+						"text": "cacheLife",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00j8",
+						"text": " function accepts built-in profiles or custom objects. Here is the menu (see, I told you this was a restaurant):",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00jc",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00jb",
+						"text": "\"default\" — stale after 5 min, revalidates at 15 min",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00ja"
+			},
+			{
+				"_type": "block",
+				"_key": "k00je",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00jd",
+						"text": "\"hours\" — revalidates every hour",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00ja"
+			},
+			{
+				"_type": "block",
+				"_key": "k00jg",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00jf",
+						"text": "\"days\" — revalidates daily",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00ja"
+			},
+			{
+				"_type": "block",
+				"_key": "k00ji",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00jh",
+						"text": "\"weeks\" — revalidates weekly",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00ja"
+			},
+			{
+				"_type": "block",
+				"_key": "k00jk",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00jj",
+						"text": "\"max\" — cached for as long as humanly possible",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00ja"
+			},
+			{
+				"_type": "block",
+				"_key": "k00jm",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00jl",
+						"text": "Or you can go full control freak with a custom object:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00jn",
+				"code": "\"use cache\";\ncacheLife({\n  stale: 3600,     // 1 hour: client considers content fresh\n  revalidate: 7200, // 2 hours: server regenerates in background\n  expire: 86400,   // 1 day: hard expiry, must regenerate\n});",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k00jr",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00jo",
+						"text": "The killer feature is ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00jp",
+						"text": "on-demand revalidation",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00jq",
+						"text": ". Instead of waiting for the timer to expire, you can invalidate specific cached entries from a Server Action. Imagine your CMS editor publishes a new blog post and the page updates instantly without a full rebuild:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00js",
+				"code": "// app/actions.ts\n\"use server\";\n\nimport { revalidateTag } from \"next/cache\";\n\nexport async function publishPost() {\n  await db.posts.publish(postId);\n  revalidateTag(\"news\"); // Boom. Cache invalidated. Page regenerates.\n}",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k00k2",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00jt",
+						"text": "Next.js 16 also introduced ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00ju",
+						"text": "updateTag",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00jv",
+						"text": " for immediate invalidation (read-your-writes consistency) versus ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00jw",
+						"text": "revalidateTag",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00jx",
+						"text": " which uses stale-while-revalidate (eventual consistency). The difference? ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00jy",
+						"text": "revalidateTag",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00jz",
+						"text": " serves the old page while regenerating. ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00k0",
+						"text": "updateTag",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00k1",
+						"text": " blocks until the new page is ready. Choose your fighter.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00k4",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00k3",
+						"text": "When to use ISR:",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00k7",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00k6",
+						"text": "Blog posts with periodic updates",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00k5"
+			},
+			{
+				"_type": "block",
+				"_key": "k00k9",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00k8",
+						"text": "E-commerce product pages with price changes",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00k5"
+			},
+			{
+				"_type": "block",
+				"_key": "k00kb",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ka",
+						"text": "News feeds that can tolerate slight staleness",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00k5"
+			},
+			{
+				"_type": "block",
+				"_key": "k00kd",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00kc",
+						"text": "CMS-driven content with webhook-based revalidation",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00k5"
+			},
+			{
+				"_type": "block",
+				"_key": "k00kf",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ke",
+						"text": "CSR: The Client-Side Cowboy",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00kl",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00kg",
+						"text": "Ah, Client-Side Rendering. The OG. The ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00kh",
+						"text": "useState",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00ki",
+						"text": " and ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00kj",
+						"text": "useEffect",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00kk",
+						"text": " power couple. The rendering strategy that says, \"The server? Never heard of her. I do everything in the browser.\"",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00kp",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00km",
+						"text": "In Next.js 16, CSR is what happens when you slap ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00kn",
+						"text": "\"use client\"",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00ko",
+						"text": " at the top of a component. The component still gets server-rendered for the initial HTML (so your SEO is not completely doomed), but all the interactive logic — state, effects, event handlers — runs in the browser after hydration.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00kr",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00kq",
+						"text": "Here is our actual header component as an example of CSR done right. Notice how it manages scroll state, mobile menu toggles, and hydration awareness all on the client:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00ks",
+				"code": "// components/layout/header.tsx\n\"use client\";\n\nimport { useState, useEffect } from \"react\";\nimport { usePathname } from \"next/navigation\";\n\nexport function Header({ hasSession, darkMode }: HeaderProps) {\n  const [isHydrated, setIsHydrated] = useState(false);\n  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);\n  const pathname = usePathname();\n\n  // Hydration guard: avoid SSR/client mismatch\n  useEffect(() => {\n    setIsHydrated(true);\n  }, []);\n\n  // Use server-provided value until hydrated, then switch to live data\n  const isSignedIn = isHydrated ? !!session : (hasSession ?? false);\n\n  // Close mobile menu on resize (desktop breakpoint)\n  useEffect(() => {\n    const handleResize = () => {\n      if (window.innerWidth >= 1024) setIsMobileMenuOpen(false);\n    };\n    window.addEventListener(\"resize\", handleResize);\n    return () => window.removeEventListener(\"resize\", handleResize);\n  }, []);\n\n  return (\n    <header className=\"header-scroll fixed top-0 z-50 bg-background/80 backdrop-blur-xl\">\n      {/* Navigation, mobile menu, auth buttons... */}\n    </header>\n  );\n}",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k00ky",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00kt",
+						"text": "Notice the hydration pattern: we pass ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00ku",
+						"text": "hasSession",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00kv",
+						"text": " from the server as a prop, use it for the initial render, then switch to the live session data after hydration. This prevents the dreaded flash where the \"Login\" button appears for a split second before switching to the user avatar. The ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00kw",
+						"text": "Hydration Blink of Shame",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00kx",
+						"text": ", as I affectionately call it.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00l2",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00kz",
+						"text": "The golden rule of CSR in Next.js 16: ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00l0",
+						"text": "push the client boundary as low as possible",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00l1",
+						"text": ". Do not mark your entire layout as a Client Component. That is like putting the entire restaurant in a to-go box. Keep the shell on the server and only wrap the interactive leaves:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00l3",
+				"code": "// BAD: \"use client\" at the layout level. Everything is client-rendered.\n// Your server components weep silently.\n\n// GOOD: Server layout wrapping client islands\n// app/layout.tsx (Server Component — no \"use client\")\nimport { Header } from \"@/components/layout/header\";\nimport { Footer } from \"@/components/layout/footer\";\n\nexport default function RootLayout({ children }: { children: React.ReactNode }) {\n  return (\n    <html>\n      <body>\n        <Header hasSession={!!session} />  {/* Client island */}\n        {children}                          {/* Server-rendered content */}\n        <Footer />                          {/* Static, server-rendered */}\n      </body>\n    </html>\n  );\n}",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k00l5",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00l4",
+						"text": "When to use CSR:",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00l8",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00l7",
+						"text": "Interactive UI: forms, modals, dropdowns, accordions",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00l6"
+			},
+			{
+				"_type": "block",
+				"_key": "k00la",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00l9",
+						"text": "Browser APIs: window, localStorage, navigator",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00l6"
+			},
+			{
+				"_type": "block",
+				"_key": "k00lc",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00lb",
+						"text": "State management: useState, useReducer, useContext",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00l6"
+			},
+			{
+				"_type": "block",
+				"_key": "k00le",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ld",
+						"text": "Event handlers: onClick, onChange, onSubmit",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00l6"
+			},
+			{
+				"_type": "block",
+				"_key": "k00lg",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00lf",
+						"text": "Third-party libraries that demand the browser (analytics, maps, rich text editors)",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00l6"
+			},
+			{
+				"_type": "block",
+				"_key": "k00li",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00lh",
+						"text": "PPR: The Plot Twist Nobody Saw Coming",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ll",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00lj",
+						"text": "Alright, here is where Next.js 16 gets genuinely interesting. Partial Prerendering — PPR — is the headline feature, and it solves a problem that has haunted frontend developers for years: ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00lk",
+						"text": "what if a page is both static AND dynamic?",
+						"marks": [
+							"strong",
+							"em"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00lp",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00lm",
+						"text": "Think about a typical e-commerce product page. The product name, description, and images? Static — they barely change. The price? Maybe ISR. The user's cart icon showing 3 items? Dynamic — that is per-user, per-session. In the old world, you had to pick ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00ln",
+						"text": "one",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00lo",
+						"text": " rendering strategy for the whole route. PPR says: why not all of them?",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00lt",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00lq",
+						"text": "Here is how it works. The static parts of your page are prerendered into an instant shell. Dynamic parts are wrapped in ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00lr",
+						"text": "<Suspense>",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00ls",
+						"text": " boundaries with fallbacks. The shell ships immediately, and the dynamic holes stream in as the data resolves:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00lu",
+				"code": "// app/product/[id]/page.tsx\nimport { Suspense } from \"react\";\nimport { cacheLife, cacheTag } from \"next/cache\";\n\nexport default function ProductPage() {\n  return (\n    <main>\n      {/* STATIC: Instant. Prerendered. Zero latency. */}\n      <nav>\n        <a href=\"/\">Home</a> / <a href=\"/products\">Products</a>\n      </nav>\n\n      {/* CACHED: Fetches data but included in static shell */}\n      <ProductDetails />\n\n      {/* DYNAMIC: Streams in per-request. User-specific. */}\n      <Suspense fallback={<CartSkeleton />}>\n        <UserCart />\n      </Suspense>\n    </main>\n  );\n}\n\n// This component is cached (ISR-style) — same for everyone\nasync function ProductDetails() {\n  \"use cache\";\n  cacheLife(\"hours\");\n  cacheTag(\"products\");\n\n  const product = await getProduct();\n  return (\n    <section>\n      <h1>{product.name}</h1>\n      <p>{product.description}</p>\n      <p className=\"text-2xl font-bold\">${product.price}</p>\n    </section>\n  );\n}\n\n// This component is dynamic — runs on every request\nasync function UserCart() {\n  const cart = await getUserCart(); // reads cookies internally\n  return (\n    <aside>\n      <p>Your cart: {cart.itemCount} items</p>\n    </aside>\n  );\n}",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k00lw",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00lv",
+						"text": "The result? The user sees the page skeleton in milliseconds. The product details fill in from cache almost instantly. The cart streams in as the server reads cookies and queries the database. Three rendering strategies, one route, zero compromises. It is like a restaurant that serves your appetizer before you even order the main course.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00m6",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00lx",
+						"text": "One important gotcha: if a dynamic component is ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00ly",
+						"text": "not",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00lz",
+						"text": " wrapped in ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00m0",
+						"text": "<Suspense>",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00m1",
+						"text": " and is not marked with ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00m2",
+						"text": "\"use cache\"",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00m3",
+						"text": ", Next.js 16 will throw an error: ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00m4",
+						"text": "Uncached data was accessed outside of <Suspense>",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00m5",
+						"text": ". This is intentional. The framework is forcing you to be explicit about your rendering boundaries. It is like a waiter refusing to take your order until you actually look at the menu. Annoying? Slightly. Correct? Absolutely.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00m8",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00m7",
+						"text": "The Decision Matrix (What to Order)",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ma",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00m9",
+						"text": "Here is the cheat sheet. Clip it. Bookmark it. Tattoo it on your forearm. I will not judge.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00md",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00mc",
+						"text": "Static content, same for everyone → SSG (automatic, or \"use cache\" + cacheLife(\"max\"))",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00mb"
+			},
+			{
+				"_type": "block",
+				"_key": "k00mf",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00me",
+						"text": "Content that updates periodically → ISR (\"use cache\" + cacheLife(\"hours\" / \"days\"))",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00mb"
+			},
+			{
+				"_type": "block",
+				"_key": "k00mh",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00mg",
+						"text": "Personalized or real-time data → SSR (default, no config needed)",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00mb"
+			},
+			{
+				"_type": "block",
+				"_key": "k00mj",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00mi",
+						"text": "Interactive UI, browser APIs, state → CSR (\"use client\" directive)",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00mb"
+			},
+			{
+				"_type": "block",
+				"_key": "k00ml",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00mk",
+						"text": "Page with both static and dynamic parts → PPR (Suspense boundaries + \"use cache\")",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00mb"
+			},
+			{
+				"_type": "block",
+				"_key": "k00mn",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00mm",
+						"text": "Migrating From Old Next.js (The Rosetta Stone)",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00mp",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00mo",
+						"text": "If you are upgrading from Next.js 14 or 15, here is your translation guide. Think of it as the Duolingo of rendering strategies, minus the passive-aggressive owl:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ms",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00mr",
+						"text": "export const dynamic = 'force-dynamic' → Delete it. Dynamic is the default now.",
+						"marks": []
+					}
+				],
+				"listItem": "number",
+				"level": 1,
+				"listId": "k00mq"
+			},
+			{
+				"_type": "block",
+				"_key": "k00mu",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00mt",
+						"text": "export const dynamic = 'force-static' → Replace with \"use cache\" + cacheLife(\"max\")",
+						"marks": []
+					}
+				],
+				"listItem": "number",
+				"level": 1,
+				"listId": "k00mq"
+			},
+			{
+				"_type": "block",
+				"_key": "k00mw",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00mv",
+						"text": "export const revalidate = 60 → Replace with \"use cache\" + cacheLife({ revalidate: 60 })",
+						"marks": []
+					}
+				],
+				"listItem": "number",
+				"level": 1,
+				"listId": "k00mq"
+			},
+			{
+				"_type": "block",
+				"_key": "k00my",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00mx",
+						"text": "cache: 'no-store' on fetch → Delete it. No caching is the default.",
+						"marks": []
+					}
+				],
+				"listItem": "number",
+				"level": 1,
+				"listId": "k00mq"
+			},
+			{
+				"_type": "block",
+				"_key": "k00n0",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00mz",
+						"text": "next: { revalidate: 60 } on fetch → Move to component-level \"use cache\" + cacheLife",
+						"marks": []
+					}
+				],
+				"listItem": "number",
+				"level": 1,
+				"listId": "k00mq"
+			},
+			{
+				"_type": "block",
+				"_key": "k00n2",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00n1",
+						"text": "Real-World Pattern: The SaaS Dashboard",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00n4",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00n3",
+						"text": "Let us put it all together with a real example. A SaaS dashboard page that combines all four strategies — because in production, you never use just one:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00n5",
+				"code": "// app/dashboard/page.tsx\nimport { Suspense } from \"react\";\nimport { cacheLife, cacheTag } from \"next/cache\";\nimport { DashboardCharts } from \"@/components/dashboard-charts\";\n\nexport default function DashboardPage() {\n  return (\n    <main>\n      {/* SSG: Static marketing banner — same for everyone */}\n      <section className=\"bg-primary text-primary-foreground p-4 rounded-lg\">\n        <p>New feature: AI-powered analytics is here!</p>\n      </section>\n\n      {/* ISR: Cached global metrics — updates hourly */}\n      <Suspense fallback={<MetricsSkeleton />}>\n        <GlobalMetrics />\n      </Suspense>\n\n      {/* SSR: User-specific data — fresh on every request */}\n      <Suspense fallback={<ChartsSkeleton />}>\n        <UserAnalytics />\n      </Suspense>\n\n      {/* CSR: Interactive chart controls — client-side only */}\n      <DashboardCharts />\n    </main>\n  );\n}\n\nasync function GlobalMetrics() {\n  \"use cache\";\n  cacheLife(\"hours\");\n  cacheTag(\"global-metrics\");\n\n  const metrics = await fetch(\"https://api.example.com/metrics\")\n    .then((r) => r.json());\n\n  return (\n    <div className=\"grid grid-cols-3 gap-4\">\n      <Stat label=\"Total Users\" value={metrics.users} />\n      <Stat label=\"Revenue\" value={metrics.revenue} />\n      <Stat label=\"Uptime\" value={metrics.uptime} />\n    </div>\n  );\n}\n\nasync function UserAnalytics() {\n  // No \"use cache\" — dynamic by default, runs per-request\n  const session = await getSession();\n  const analytics = await getUserAnalytics(session.userId);\n\n  return (\n    <section>\n      <h2>Your Analytics</h2>\n      <p>Page views this week: {analytics.pageViews}</p>\n      <p>Conversion rate: {analytics.conversionRate}%</p>\n    </section>\n  );\n}",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k00n7",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00n6",
+						"text": "Four rendering strategies. One page. Each component renders exactly the way it should. The static banner ships instantly. The global metrics come from cache. The user analytics stream from the server. The interactive charts hydrate on the client. It is a rendering orchestra, and PPR is the conductor.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00n9",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00n8",
+						"text": "The Bottom Line",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00nb",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00na",
+						"text": "Next.js 16 did something radical: it made the simple thing the default thing. Dynamic rendering requires zero configuration. Caching is opt-in and explicit. Partial Prerendering lets you stop thinking in terms of per-route strategies and start thinking per-component. The rendering menu went from \"pick one\" to \"mix and match.\"",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00nd",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00nc",
+						"text": "The framework finally acknowledged what we all knew: real pages are not purely static or purely dynamic. They are a messy, beautiful mix of both. And now the tooling matches the reality.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00nh",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ne",
+						"text": "So go forth. Enable ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00nf",
+						"text": "cacheComponents: true",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00ng",
+						"text": ". Wrap your dynamic content in Suspense. Cache what deserves caching. Render what needs rendering. And the next time someone asks you \"SSR or SSG?\", smile and say: \"Yes.\"",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00nj",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ni",
+						"text": "Now if you will excuse me, it is 4am and my Lighthouse score still says 34. Turns out the real performance bottleneck was the 4MB hero image I forgot to optimize. Some problems, no rendering strategy can fix.",
+						"marks": []
+					}
+				]
+			}
+		],
+		"author": "Omar Majed",
+		"category": "engineering",
+		"tags": "Next.js\nPerformance\nReact\nFrontend",
+		"publish_date": "2026-02-14T10:00:00.000Z"
+	}
+}

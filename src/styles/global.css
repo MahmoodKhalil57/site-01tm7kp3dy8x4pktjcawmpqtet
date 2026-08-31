@@ -1,0 +1,271 @@
+/*
+  global.css — Tailwind v4 + the shadcn design tokens ported from the
+  SaaSTEMLY Next.js site (the "tangerine" colour scheme). Edit the
+  variables in :root / html[data-theme="dark"] to retheme.
+
+  Dark mode is driven by `data-theme="dark"` on <html>; the layout sets it
+  from the `theme` cookie before paint and the header toggle flips it.
+*/
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is([data-theme='dark'] *));
+
+/* ─── Colour scheme: tangerine ────────────────────────────────────────── */
+:root {
+	--background: oklch(0.9383 0.0042 236.4993);
+	--foreground: oklch(0.3211 0 0);
+	--card: oklch(1 0 0);
+	--card-foreground: oklch(0.3211 0 0);
+	--popover: oklch(1 0 0);
+	--popover-foreground: oklch(0.3211 0 0);
+	--primary: oklch(0.6397 0.172 36.4421);
+	--primary-foreground: oklch(1 0 0);
+	--secondary: oklch(0.967 0.0029 264.5419);
+	--secondary-foreground: oklch(0.4461 0.0263 256.8018);
+	--muted: oklch(0.9846 0.0017 247.8389);
+	--muted-foreground: oklch(0.551 0.0234 264.3637);
+	--accent: oklch(0.9119 0.0222 243.8174);
+	--accent-foreground: oklch(0.3791 0.1378 265.5222);
+	--destructive: oklch(0.6368 0.2078 25.3313);
+	--destructive-foreground: oklch(1 0 0);
+	--border: oklch(0.9022 0.0052 247.8822);
+	--input: oklch(0.97 0.0029 264.542);
+	--ring: oklch(0.6397 0.172 36.4421);
+	--chart-1: oklch(0.7156 0.0605 248.6845);
+	--chart-2: oklch(0.7875 0.0917 35.9616);
+	--chart-3: oklch(0.5778 0.0759 254.1573);
+	--chart-4: oklch(0.5016 0.0849 259.4902);
+	--chart-5: oklch(0.4241 0.0952 264.0306);
+	--font-sans: var(--font-inter, Inter, sans-serif);
+	--font-serif: var(--font-source-serif, "Source Serif 4", serif);
+	--font-mono: var(--font-jetbrains, "JetBrains Mono", monospace);
+	--radius: 0.75rem;
+	--shadow-2xs: 0px 1px 3px 0px hsl(0 0% 0% / 0.05);
+	--shadow-xs: 0px 1px 3px 0px hsl(0 0% 0% / 0.05);
+	--shadow-sm: 0px 1px 3px 0px hsl(0 0% 0% / 0.1), 0px 1px 2px -1px hsl(0 0% 0% / 0.1);
+	--shadow: 0px 1px 3px 0px hsl(0 0% 0% / 0.1), 0px 1px 2px -1px hsl(0 0% 0% / 0.1);
+	--shadow-md: 0px 1px 3px 0px hsl(0 0% 0% / 0.1), 0px 2px 4px -1px hsl(0 0% 0% / 0.1);
+	--shadow-lg: 0px 1px 3px 0px hsl(0 0% 0% / 0.1), 0px 4px 6px -1px hsl(0 0% 0% / 0.1);
+	--shadow-xl: 0px 1px 3px 0px hsl(0 0% 0% / 0.1), 0px 8px 10px -1px hsl(0 0% 0% / 0.1);
+	--shadow-2xl: 0px 1px 3px 0px hsl(0 0% 0% / 0.25);
+	--tracking-normal: 0em;
+	--spacing: 0.25rem;
+}
+
+html[data-theme="dark"] {
+	--background: oklch(0.2598 0.0306 262.6666);
+	--foreground: oklch(0.9219 0 0);
+	--card: oklch(0.3106 0.0301 268.6365);
+	--card-foreground: oklch(0.9219 0 0);
+	--popover: oklch(0.29 0.0249 268.3986);
+	--popover-foreground: oklch(0.9219 0 0);
+	--primary: oklch(0.6397 0.172 36.4421);
+	--primary-foreground: oklch(1 0 0);
+	--secondary: oklch(0.3095 0.0266 266.7132);
+	--secondary-foreground: oklch(0.9219 0 0);
+	--muted: oklch(0.3095 0.0266 266.7132);
+	--muted-foreground: oklch(0.7155 0 0);
+	--accent: oklch(0.338 0.0589 267.5867);
+	--accent-foreground: oklch(0.8823 0.0571 254.1284);
+	--destructive: oklch(0.6368 0.2078 25.3313);
+	--destructive-foreground: oklch(1 0 0);
+	--border: oklch(0.3843 0.0301 269.7337);
+	--input: oklch(0.3843 0.0301 269.7337);
+	--ring: oklch(0.6397 0.172 36.4421);
+	--chart-1: oklch(0.7156 0.0605 248.6845);
+	--chart-2: oklch(0.7693 0.0876 34.1875);
+	--chart-3: oklch(0.5778 0.0759 254.1573);
+	--chart-4: oklch(0.5016 0.0849 259.4902);
+	--chart-5: oklch(0.4241 0.0952 264.0306);
+}
+
+@theme inline {
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-card: var(--card);
+	--color-card-foreground: var(--card-foreground);
+	--color-popover: var(--popover);
+	--color-popover-foreground: var(--popover-foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-secondary: var(--secondary);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+	--color-destructive: var(--destructive);
+	--color-destructive-foreground: var(--destructive-foreground);
+	--color-border: var(--border);
+	--color-input: var(--input);
+	--color-ring: var(--ring);
+	--color-chart-1: var(--chart-1);
+	--color-chart-2: var(--chart-2);
+	--color-chart-3: var(--chart-3);
+	--color-chart-4: var(--chart-4);
+	--color-chart-5: var(--chart-5);
+
+	--font-sans: var(--font-sans);
+	--font-mono: var(--font-mono);
+	--font-serif: var(--font-serif);
+
+	--radius-sm: calc(var(--radius) - 4px);
+	--radius-md: calc(var(--radius) - 2px);
+	--radius-lg: var(--radius);
+	--radius-xl: calc(var(--radius) + 4px);
+
+	--shadow-2xs: var(--shadow-2xs);
+	--shadow-xs: var(--shadow-xs);
+	--shadow-sm: var(--shadow-sm);
+	--shadow: var(--shadow);
+	--shadow-md: var(--shadow-md);
+	--shadow-lg: var(--shadow-lg);
+	--shadow-xl: var(--shadow-xl);
+	--shadow-2xl: var(--shadow-2xl);
+}
+
+@layer base {
+	* {
+		@apply border-border outline-ring/50;
+	}
+	html {
+		color-scheme: light;
+		scroll-behavior: smooth;
+		/* Always reserve the scrollbar gutter so toggling overflow (mobile
+		   menu) doesn't shift content horizontally. */
+		scrollbar-gutter: stable;
+	}
+	html[data-theme="dark"] {
+		color-scheme: dark;
+	}
+	body {
+		@apply bg-background text-foreground font-mono antialiased;
+	}
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+	animation: none;
+	mix-blend-mode: normal;
+}
+
+/* Header scroll-driven background */
+@keyframes header-bg {
+	0% {
+		background: transparent;
+		backdrop-filter: none;
+		border-color: transparent;
+	}
+	100% {
+		background: oklch(from var(--background) l c h / 0.9);
+		backdrop-filter: blur(16px);
+		border-color: oklch(from var(--border) l c h / 0.3);
+	}
+}
+
+.header-scroll {
+	animation: header-bg linear both;
+	animation-timeline: scroll();
+	animation-range: 0px 100px;
+}
+
+/* Noir animations */
+@keyframes scan-line {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(100vh);
+	}
+}
+
+@keyframes flicker {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.97;
+	}
+	75% {
+		opacity: 0.99;
+	}
+}
+
+@keyframes grain-shift {
+	0%,
+	100% {
+		transform: translate(0, 0);
+	}
+	10% {
+		transform: translate(-1%, -1%);
+	}
+	20% {
+		transform: translate(1%, 0%);
+	}
+	30% {
+		transform: translate(0%, 1%);
+	}
+	40% {
+		transform: translate(-1%, 1%);
+	}
+	50% {
+		transform: translate(1%, -1%);
+	}
+}
+
+.animate-flicker {
+	animation: flicker 4s infinite;
+}
+
+.animate-scan-line {
+	animation: scan-line 8s linear infinite;
+}
+
+.noir-grain {
+	animation: grain-shift 0.5s steps(4) infinite;
+}
+
+/* Custom text selection */
+::selection {
+	background: oklch(from var(--primary) l c h / 0.25);
+}
+
+/* Blinking terminal cursor */
+@keyframes blink {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+}
+
+.animate-blink {
+	animation: blink 1.2s step-end infinite;
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.animate-fade-in {
+	animation: fade-in 0.3s ease-in-out;
+}
+
+#main-content {
+	min-height: 100dvh;
+}
+
+/* Code blocks rendered by the CMS Portable Text renderer */
+.prose pre {
+	@apply rounded-sm border border-border/40 bg-card text-sm;
+}

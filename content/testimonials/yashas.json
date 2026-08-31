@@ -1,0 +1,15 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "yashas",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "Yashas",
+		"company": "Kamerly",
+		"quote": "SaaSTEMLY has been instrumental in our growth. Their dedication to get us to market quickly and efficiently has been invaluable. Highly recommend their services.",
+		"order": 2
+	}
+}

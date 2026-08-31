@@ -1,0 +1,1167 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "building-software-with-integrity-the-saastemly-way",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-02-14T14:00:00.000Z",
+	"data": {
+		"title": "Building Software With Integrity: The SaaSTEMLY Way",
+		"excerpt": "We are not the cheapest agency. We are not the fastest. But we are the one that picks up the phone six months after launch. Here is how we build software, why we do it the way we do, and what happens when you actually care about the code you ship.",
+		"cover_image": "https://images.pexels.com/photos/6804068/pexels-photo-6804068.jpeg?auto=compress&cs=tinysrgb&w=1920",
+		"cover_image_alt": "Team of developers working together on computers in a modern tech office",
+		"content": [
+			{
+				"_type": "block",
+				"_key": "k00r6",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00r5",
+						"text": "Every software agency has an origin story. Some start in a garage. Some start in a dorm room. Ours started in a group chat where three friends kept saying \"we could build that better\" every time we saw a poorly made website. Most people say that and then go back to scrolling. We said it and then actually opened a code editor. In hindsight, the group chat was cheaper.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00r8",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00r7",
+						"text": "SaaSTEMLY was born from a simple frustration: businesses were paying premium prices for mediocre software. Agencies were charging by the hour with no incentive to finish. Developers were shipping code they would not want their name on. And clients — the ones writing the checks — had no way to tell the difference between a well-architected system and a house of cards held together by StackOverflow answers and prayer.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00rc",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00r9",
+						"text": "We decided to build an agency that we ourselves would want to hire. Which, as it turns out, is a surprisingly high bar. We call it ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00ra",
+						"text": "The Would-We-Hire-Us Test",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00rb",
+						"text": ". Every proposal, every architecture decision, every line of code gets filtered through it. If the answer is \"honestly, no\" — we go back to the drawing board. It has saved us from shipping bad work more times than we would like to admit.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00re",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00rd",
+						"text": "Our Values (The Real Ones, Not the LinkedIn Ones)",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00rg",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00rf",
+						"text": "Every company has values on their website. Most of them are variations of \"we are innovative\" and \"we put the customer first\" — which is the corporate equivalent of a dating profile saying \"I love to laugh.\" Technically true. Completely meaningless.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ri",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00rh",
+						"text": "Here are our actual values. The ones that cost us money. The ones that make us turn down projects. The ones that keep us up at night when we almost violate them.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00rk",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00rj",
+						"text": "Innovation That Solves Problems, Not Resumes",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00rm",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00rl",
+						"text": "We love new technology. We are genuinely excited about it. But we do not use Kubernetes for a five-page marketing site just because it looks impressive on a case study. Our stack choices are driven by the problem, not by what is trending on Hacker News.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ro",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00rn",
+						"text": "For Kamerly — a room rental platform in the Netherlands — we chose Vue.js, Node.js, and PostgreSQL. Not because they were the newest or the coolest, but because the platform needed real-time messaging, complex search queries, and Stripe integration. Those tools were the right fit. The project ran for 8 months with a team of 6 and delivered a 30% increase in successful bookings.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00rq",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00rp",
+						"text": "For Reco Medical — a healthcare research showcase in the UK — we used Svelte, SvelteKit, and Sanity CMS. The site needed to be fast, SEO-optimized, and compliant with healthcare accessibility standards. We built it in 2 weeks with a team of 3. Not 2 months. 2 weeks. Because the right tool for the job finishes the job faster.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ru",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00rr",
+						"text": "We call this ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00rs",
+						"text": "Technology Empathy",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00rt",
+						"text": " — the ability to choose tools based on the project's needs rather than the developer's preferences. It is surprisingly rare. And it is surprisingly hard. Your brain wants to reach for the familiar. Empathy says \"this project needs something different.\"",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00rw",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00rv",
+						"text": "Quality Over Everything (Yes, Even Speed)",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ry",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00rx",
+						"text": "We have lost bids because our timelines were longer than competitors. We have had clients ask \"why can't you do it in two weeks like Agency X?\" The answer is: we can. But Agency X's version will break the first time someone in Qatar tries to use it in Arabic, and ours won't.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00s0",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00rz",
+						"text": "Every project we ship supports three languages out of the box — English, Arabic (RTL), and Spanish. Not because every client needs it, but because building for internationalization from day one costs 10% more upfront and saves 300% in retrofitting later. We have done the retrofitting. We have the scars. We refuse to do it again.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00s2",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00s1",
+						"text": "Quality also means our headers do not have scroll listeners. Our color systems use OKLCH. Our authentication handles hydration mismatches gracefully. These details are invisible to clients and priceless to users. If you have read our other blog posts, you know we obsess over these things. If you haven't — go read them. We will wait. We wrote them at 2am so you would not have to.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00s4",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00s3",
+						"text": "Integrity, Even When Nobody Is Checking the Code",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00s6",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00s5",
+						"text": "Here is a secret about our industry: most clients will never read your source code. They will never know if you used TypeScript or JavaScript. They will never check if you wrote tests. They will never audit your dependency tree.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00s8",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00s7",
+						"text": "We write clean code anyway. Not because someone is watching, but because sloppy code is a ticking time bomb, and we refuse to hand a client a product with the fuse already lit. Every variable is typed. Every function has a clear purpose. Every commit message explains why, not just what.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00sc",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00s9",
+						"text": "We call this ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00sa",
+						"text": "The Empty Room Test",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00sb",
+						"text": ": would you write this code the same way if you knew nobody would ever review it? If the answer is no, you are writing code for approval, not quality. We write code for empty rooms.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00se",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00sd",
+						"text": "Collaboration, Not Just Communication",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00sg",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00sf",
+						"text": "There is a difference between sending a client a weekly status email and actually collaborating with them. The email says \"we are on track.\" Collaboration says \"we noticed this feature might not work the way you imagined — here is what we found, here are three alternatives, and here is our recommendation.\"",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00si",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00sh",
+						"text": "Our milestone-based workflow ensures clients see real progress, not just promises. Every milestone ends with a deployment they can test. Every deployment includes a review session where the client can poke, prod, and say \"actually, I wanted it to wobble slightly when you hover over it\" — and we will make it wobble.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00sk",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00sj",
+						"text": "Where We Are Going (And Why)",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00sm",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00sl",
+						"text": "Our mission — and I promise this is not the sanitized investor pitch version — is to empower businesses with technology that actually works. Not technology that works in the demo. Not technology that works on the developer's MacBook Pro. Technology that works when a real human in a real country on a real device at a real bandwidth tries to do a real thing.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00so",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00sn",
+						"text": "We have built across every continent and nearly every industry. A logistics platform in Egypt processing over a million orders monthly. An educational management system for Newcastle University that improved student engagement by 70%. A real estate platform in the Netherlands. A medical research site in the UK. A fashion e-commerce platform. A coffee shop ordering system in Norway. A personal portfolio in France. An open-source developer tool used globally.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00sq",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00sp",
+						"text": "Each project taught us something. Mylerz taught us what happens when you scale to a million orders a month. Newcastle School taught us that universities move slowly but think deeply. Kamerly taught us that real estate platforms are just dating apps for apartments. Norbrok Kaffe Bar taught us that you can build a complete ordering system in a week if you use the right stack and do not overthink it.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ss",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00sr",
+						"text": "The pattern across all of them: understand the problem first. Write code second. Ship something testable third. Polish fourth. This order matters. Reverse any two steps and you get a project that looks done but is not, or works but nobody can use.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00su",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00st",
+						"text": "How Working With Us Actually Works",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00sw",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00sv",
+						"text": "I am going to describe our client flow in detail, not because it is revolutionary, but because transparency is free and most agencies treat their process like a state secret. Our flow has seven phases. Each one has a clear purpose and a clear exit condition. No phase is optional.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00sy",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00sx",
+						"text": "Phase 1: You Tell Us Your Idea",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00t0",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00sz",
+						"text": "You submit your project idea. It can be a napkin sketch. It can be a 40-page PRD. It can be a voice note recorded at 11pm after your third coffee. We have seen it all. The format does not matter. What matters is the core problem you are trying to solve.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00t2",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00t1",
+						"text": "Phase 2: We Figure Out If We Understand Each Other",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00t4",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00t3",
+						"text": "If the requirements are clear, great — we move to a detailed discussion. If they are not, we schedule a meeting. Not a sales call. A real meeting where we ask uncomfortable questions like \"who is actually going to use this?\" and \"what happens if this feature is harder than you think?\" We keep meeting until the requirements are clear. This phase has no time limit because shipping the wrong thing fast is worse than shipping the right thing slowly.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00t6",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00t5",
+						"text": "Phase 3: The Scope of Work",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ta",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00t7",
+						"text": "We produce a detailed scope document. It includes features, milestones, timelines, technologies, and — critically — what is ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00t8",
+						"text": "not",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00t9",
+						"text": " included. The \"not included\" section prevents 90% of scope creep arguments. If it is not in the document, it is not in the project. If you want it in the project, it goes in the document first. This is not bureaucracy. This is how adults work.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00tc",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00tb",
+						"text": "Phase 4: Milestone Work Begins",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00te",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00td",
+						"text": "Projects are broken into milestones. Each milestone is a deployable, testable, demo-able chunk of functionality. You pay for each milestone before work begins. This protects both sides: you never pay for undelivered work, and we never build without confirmed commitment.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00tg",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00tf",
+						"text": "We build. We deploy. We show you progress. This is not a three-month black box where you hear nothing until launch day. You see real features on a real URL. If something is wrong, you see it early. Bugs caught in milestone 1 cost 10x less than bugs caught in production.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ti",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00th",
+						"text": "Phase 5: You Review Our Work",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00tk",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00tj",
+						"text": "After each milestone, you review. Three outcomes are possible: it is perfect (rare but it happens), it needs minor changes (we fix those for free — included in the milestone), or it needs major changes (we scope and quote those as additional work). Notice there is no fourth option where we argue about whose fault it is. If it needs changing, we change it. Blame is not a deliverable.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00tm",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00tl",
+						"text": "Phase 6: Final Review and Handoff",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00to",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00tn",
+						"text": "When all milestones are complete, we do a final review. The entire project is examined end-to-end. Final payment happens here. You get the code, the documentation, the deployment credentials, and a team that does not ghost you after the last invoice.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00tq",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00tp",
+						"text": "Phase 7: Maintenance or Next Phase",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ts",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00tr",
+						"text": "After launch, two paths diverge. Maintenance: we keep the lights on, fix bugs, apply security patches, and make minor improvements. Or Next Phase: you have new features in mind and we start the cycle again from Phase 1. Most of our clients end up on both paths simultaneously. They want the current version maintained while we build the next one. This is the sign of a healthy partnership.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00tu",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00tt",
+						"text": "The People Behind the Pixels",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00tw",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00tv",
+						"text": "We are a distributed team across four countries — Denmark, UK, Egypt, and Italy. Our co-founders have been working together since 2020, which in startup years is roughly equivalent to a golden wedding anniversary.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ty",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00tx",
+						"text": "Omar Majed, our COO, has over 4 years in business management and software development with a double major that lets him look at businesses with consultant's eyes. Omar Khorshid, our CMO, blends finance, software, and data-driven marketing to architect growth strategies that actually convert. And Mahmood Ibrahim, our CTO, is responsible for converting client requirements into production-ready software — which is a polite way of saying he turns \"can you make it pop\" into actual TypeScript.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00u0",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00tz",
+						"text": "Our engineering team includes specialists in AI (Kareem Ayad leads our AI division, building RAG systems and LLM fine-tuning frameworks), fullstack development (Amr Elskhawy brings scalable solutions to every project), and product analysis (Omar Mazhar ensures what we build is actually what clients need). On the business side, Tawfik Hesham manages strategic accounts with 5+ years of sales experience.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00u4",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00u1",
+						"text": "We are small enough that everyone knows every project. Large enough that nobody is a single point of failure. This is intentional. We call it ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00u2",
+						"text": "The Bus Factor Sweet Spot",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00u3",
+						"text": ": big enough that if someone gets hit by a bus (metaphorically, hopefully), the project survives. Small enough that no one is anonymous.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00u6",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00u5",
+						"text": "The Uncomfortable Ethics Section",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00u8",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00u7",
+						"text": "Let's talk about the things most agencies do not put in blog posts.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ub",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00u9",
+						"text": "We do not take projects we cannot deliver. ",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00ua",
+						"text": "If your timeline is unrealistic, we will say so. If your budget does not match your feature list, we will say so. If we do not have the expertise, we will say so and recommend someone who does. We have turned down six-figure projects because we could not deliver them at our quality standard. That hurts financially. But shipping bad work hurts our reputation permanently, and reputation is the only asset an agency truly owns.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ue",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00uc",
+						"text": "We do not hold your code hostage. ",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00ud",
+						"text": "You pay for it, you own it. Full source code. Full documentation. No proprietary lock-in. No \"but our framework requires our hosting\" games. If you want to take the codebase and hire your own team tomorrow, you can. We hope you will not, but you can.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00uh",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00uf",
+						"text": "We do not pad timelines or invoices. ",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00ug",
+						"text": "If a feature takes two days, we bill two days. If a feature that was estimated at five days takes two, we tell you and credit the difference. If it takes seven, we explain why and eat the overrun if it was our fault. This is basic honesty. The fact that it is noteworthy in our industry says more about the industry than about us.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00uk",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ui",
+						"text": "We admit mistakes. ",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00uj",
+						"text": "We have shipped bugs. We have underestimated timelines. We have chosen the wrong technology once or twice. When it happens, we tell the client, we fix it, and we learn from it. The alternative — hiding mistakes and hoping nobody notices — is a strategy with a 100% long-term failure rate.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00um",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ul",
+						"text": "Our Work, By the Numbers",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00uo",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00un",
+						"text": "Rather than telling you we are good, here is what the projects say:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ur",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00uq",
+						"text": "Kamerly (Netherlands): Room rental platform. Vue.js, Node.js, PostgreSQL. 8 months, 6 developers. 30% increase in bookings, 95% user satisfaction.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00up"
+			},
+			{
+				"_type": "block",
+				"_key": "k00ut",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00us",
+						"text": "Newcastle School (Egypt): Educational management system. Laravel, Vue.js, MySQL. 10 months, 6 developers. 70% improvement in student engagement.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00up"
+			},
+			{
+				"_type": "block",
+				"_key": "k00uv",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00uu",
+						"text": "Mylerz (Egypt): Logistics platform. React, Node.js, MongoDB. 12 months, 10 developers. 1M+ orders monthly, 40% faster delivery.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00up"
+			},
+			{
+				"_type": "block",
+				"_key": "k00ux",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00uw",
+						"text": "Reco Medical (UK): Healthcare research showcase. Svelte, SvelteKit, Sanity. 2 weeks, 3 developers. 65% increase in brand awareness.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00up"
+			},
+			{
+				"_type": "block",
+				"_key": "k00uz",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00uy",
+						"text": "Norbrok Kaffe Bar (Norway): Coffee shop digital platform. Vue.js, Nuxt. 1 week, 1 developer. 200% increase in digital orders.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00up"
+			},
+			{
+				"_type": "block",
+				"_key": "k00v1",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00v0",
+						"text": "Maqsad Clothing (Global): Fashion e-commerce. Shopify. 2 months, 3 developers. 85% increase in monthly sales.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00up"
+			},
+			{
+				"_type": "block",
+				"_key": "k00v3",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00v2",
+						"text": "Curlture (Global): Haircare e-commerce. Shopify, SvelteKit. 2 months, 3 developers. 45% increase in product sales.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00up"
+			},
+			{
+				"_type": "block",
+				"_key": "k00v5",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00v4",
+						"text": "Some of these took a week. Some took a year. The difference is not quality — it is scope. A one-week project gets the same code review process, the same testing standards, and the same attention to detail as a twelve-month project. The only thing that changes is the size of the scope document.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00v7",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00v6",
+						"text": "Why Any of This Matters",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00v9",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00v8",
+						"text": "If you have read this far, you are either evaluating us as a potential partner or you are one of our developers making sure we did not misrepresent anything. Either way: hello.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00vb",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00va",
+						"text": "The software development industry has a trust problem. Too many projects fail. Too many agencies disappear after launch. Too many codebases are unmaintainable within a year. We do not solve all of these problems. But we solve the ones we can, for the clients who find us, with the team we have.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00vd",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00vc",
+						"text": "We are SaaSTEMLY. We build software with integrity. Not because it is a tagline — but because it is the only way we know how to build software that we would actually want to use ourselves.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00vf",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ve",
+						"text": "And that is The Would-We-Hire-Us Test. Passed, every time.",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			}
+		],
+		"author": "Omar Majed",
+		"category": "engineering",
+		"tags": "Agency\nValues\nProcess\nSaaSTEMLY",
+		"publish_date": "2026-02-14T14:00:00.000Z"
+	}
+}

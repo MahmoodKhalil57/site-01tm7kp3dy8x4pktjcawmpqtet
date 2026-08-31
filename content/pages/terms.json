@@ -1,0 +1,703 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "terms",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "Terms of Service",
+		"last_updated": "February 5, 2026",
+		"description": "Read the Terms of Service for SaaSTEMLY. Understand your rights and responsibilities when using our platform.",
+		"content": [
+			{
+				"_type": "block",
+				"_key": "k00yf",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00yg",
+						"text": "Welcome to SaaSTEMLY. These Terms of Service (\"Terms\") govern your access to and use of our website, products, and services. By accessing or using SaaSTEMLY, you agree to be bound by these Terms.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00yh",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00yi",
+						"text": "1. Acceptance of Terms",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00yj",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00yk",
+						"text": "By accessing or using our services, you confirm that you are at least 18 years old and have the legal capacity to enter into these Terms. If you are using our services on behalf of an organization, you represent that you have the authority to bind that organization to these Terms.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00yl",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ym",
+						"text": "2. Description of Services",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00yn",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00yo",
+						"text": "SaaSTEMLY provides a production-ready Next.js SaaS template with eCommerce capabilities, authentication, payment processing, and related tools and services. Our services include:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00yq",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00yr",
+						"text": "Access to the SaaSTEMLY codebase and template files",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00yp"
+			},
+			{
+				"_type": "block",
+				"_key": "k00ys",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00yt",
+						"text": "Documentation and implementation guides",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00yp"
+			},
+			{
+				"_type": "block",
+				"_key": "k00yu",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00yv",
+						"text": "Updates and improvements to the template",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00yp"
+			},
+			{
+				"_type": "block",
+				"_key": "k00yw",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00yx",
+						"text": "Community support through designated channels",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00yp"
+			},
+			{
+				"_type": "block",
+				"_key": "k00yy",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00yz",
+						"text": "3. License and Usage Rights",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00z0",
+				"style": "normal",
+				"markDefs": [
+					{
+						"_type": "link",
+						"_key": "k00z2",
+						"href": "/license"
+					}
+				],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00z1",
+						"text": "Upon purchasing SaaSTEMLY, you receive a license to use the template according to the terms outlined in our ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00z3",
+						"text": "License Agreement",
+						"marks": [
+							"k00z2"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00z4",
+						"text": ". This license is non-exclusive and subject to the restrictions described therein.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00z5",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00z6",
+						"text": "4. Account Registration",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00z7",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00z8",
+						"text": "To access certain features, you may need to create an account. You agree to:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00za",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00zb",
+						"text": "Provide accurate and complete information during registration",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00z9"
+			},
+			{
+				"_type": "block",
+				"_key": "k00zc",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00zd",
+						"text": "Maintain the security of your account credentials",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00z9"
+			},
+			{
+				"_type": "block",
+				"_key": "k00ze",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00zf",
+						"text": "Promptly notify us of any unauthorized access to your account",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00z9"
+			},
+			{
+				"_type": "block",
+				"_key": "k00zg",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00zh",
+						"text": "Accept responsibility for all activities under your account",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00z9"
+			},
+			{
+				"_type": "block",
+				"_key": "k00zi",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00zj",
+						"text": "5. Payment and Refunds",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00zk",
+				"style": "normal",
+				"markDefs": [
+					{
+						"_type": "link",
+						"_key": "k00zm",
+						"href": "/contact"
+					}
+				],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00zl",
+						"text": "All purchases are processed through Stripe. Prices are displayed in USD and may be subject to applicable taxes. We offer a 14-day money-back guarantee for first-time purchases. Refund requests should be submitted via our ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00zn",
+						"text": "contact form",
+						"marks": [
+							"k00zm"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00zo",
+						"text": ".",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00zp",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00zq",
+						"text": "6. Intellectual Property",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00zr",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00zs",
+						"text": "SaaSTEMLY and its original content, features, and functionality are owned by SaaSTEMLY and are protected by international copyright, trademark, and other intellectual property laws. The template code you purchase is licensed, not sold.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00zt",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00zu",
+						"text": "7. Prohibited Uses",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00zv",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00zw",
+						"text": "You agree not to:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00zy",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00zz",
+						"text": "Redistribute, resell, or sublicense the template without authorization",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00zx"
+			},
+			{
+				"_type": "block",
+				"_key": "k0100",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0101",
+						"text": "Use the services for any unlawful purpose",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00zx"
+			},
+			{
+				"_type": "block",
+				"_key": "k0102",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0103",
+						"text": "Attempt to gain unauthorized access to our systems",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00zx"
+			},
+			{
+				"_type": "block",
+				"_key": "k0104",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0105",
+						"text": "Interfere with or disrupt the integrity of our services",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00zx"
+			},
+			{
+				"_type": "block",
+				"_key": "k0106",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0107",
+						"text": "Upload malicious code or content",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00zx"
+			},
+			{
+				"_type": "block",
+				"_key": "k0108",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0109",
+						"text": "8. Disclaimer of Warranties",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k010a",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k010b",
+						"text": "Our services are provided \"as is\" and \"as available\" without warranties of any kind, whether express or implied. We do not guarantee that the services will be uninterrupted, secure, or error-free.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k010c",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k010d",
+						"text": "9. Limitation of Liability",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k010e",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k010f",
+						"text": "To the maximum extent permitted by law, SaaSTEMLY shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k010g",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k010h",
+						"text": "10. Indemnification",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k010i",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k010j",
+						"text": "You agree to indemnify and hold harmless SaaSTEMLY and its officers, directors, employees, and agents from any claims, damages, losses, or expenses arising from your use of the services or violation of these Terms.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k010k",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k010l",
+						"text": "11. Modifications to Terms",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k010m",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k010n",
+						"text": "We reserve the right to modify these Terms at any time. We will notify users of material changes via email or through our website. Your continued use of the services after such modifications constitutes acceptance of the updated Terms.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k010o",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k010p",
+						"text": "12. Termination",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k010q",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k010r",
+						"text": "We may terminate or suspend your access to our services immediately, without prior notice, for conduct that we believe violates these Terms or is harmful to other users, us, or third parties.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k010s",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k010t",
+						"text": "13. Governing Law",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k010u",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k010v",
+						"text": "These Terms shall be governed by and construed in accordance with the laws of the State of California, United States, without regard to its conflict of law provisions.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k010w",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k010x",
+						"text": "14. Contact Information",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k010y",
+				"style": "normal",
+				"markDefs": [
+					{
+						"_type": "link",
+						"_key": "k0110",
+						"href": "/contact"
+					}
+				],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k010z",
+						"text": "If you have questions about these Terms, please ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0111",
+						"text": "contact us",
+						"marks": [
+							"k0110"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0112",
+						"text": ".",
+						"marks": []
+					}
+				]
+			}
+		]
+	}
+}

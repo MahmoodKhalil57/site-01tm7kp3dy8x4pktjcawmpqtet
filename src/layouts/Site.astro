@@ -1,0 +1,155 @@
+---
+/**
+ * Site layout — the port of the Next.js `(my-app)/layout.tsx`: fixed
+ * scroll-aware header, footer, dark mode, SEO head. Navigation and footer
+ * columns come from the CMS menus (`primary`, `footer_resources`,
+ * `footer_legal`); title / tagline / social links from Site settings.
+ */
+import { getMenu, getSiteSettings } from "@premium-cms/emdash";
+import { EmDashHead } from "@premium-cms/emdash/ui";
+import { createPublicPageContext } from "@premium-cms/emdash/page";
+import { Font } from "astro:assets";
+import { Header } from "@/components/layout/header";
+import { Footer, type SocialLink } from "@/components/layout/footer";
+import Noise from "@/components/Noise";
+import "@/styles/global.css";
+
+interface Props {
+	title?: string;
+	description?: string;
+	image?: string;
+	pageType?: "website" | "article";
+	/** Wrap the page in <main id="main-content"> (default true). Pages that render their own <main> pass false. */
+	main?: boolean;
+}
+
+const { title, description, image, pageType = "website", main = true } = Astro.props;
+const settings = await getSiteSettings();
+const siteTitle = settings?.title || "SaaSTEMLY";
+// Meta titles that already carry the brand (the home page's) are used as-is.
+const fullTitle = title
+	? title.includes(siteTitle)
+		? title
+		: `${title} | ${siteTitle}`
+	: `${siteTitle} - Innovative Software Solutions`;
+const siteDescription =
+	settings?.tagline ||
+	"Innovative software solutions — custom web apps, mobile platforms, and AI-powered systems built to scale your business.";
+
+const [primary, footerResources, footerLegal] = await Promise.all([
+	getMenu("primary"),
+	getMenu("footer_resources"),
+	getMenu("footer_legal"),
+]);
+
+const navLinks = (primary?.items ?? []).map((item) => ({ href: item.url ?? "/", label: item.label ?? "" }));
+const footerColumns = [
+	{ title: "Resources", menu: footerResources },
+	{ title: "Legal", menu: footerLegal },
+]
+	.filter((col) => col.menu && col.menu.items.length > 0)
+	.map((col) => ({
+		title: col.title,
+		links: col.menu!.items.map((item) => ({ label: item.label ?? "", href: item.url ?? "/", target: item.target })),
+	}));
+
+const social = (settings?.social ?? {}) as Record<string, string | undefined>;
+const socialLinks: SocialLink[] = (
+	[
+		["github", "GitHub"],
+		["linkedin", "LinkedIn"],
+		["twitter", "Twitter"],
+		["instagram", "Instagram"],
+		["facebook", "Facebook"],
+		["youtube", "YouTube"],
+	] as const
+)
+	.filter(([key]) => !!social[key])
+	.map(([key, label]) => ({ icon: key, label, href: social[key]! }));
+
+const copyright = `© ${new Date().getFullYear()} ${siteTitle}. All rights reserved.`;
+const ogImage = image || `${Astro.site?.origin ?? ""}/logo/main/pwa-512x512.png`;
+
+const pageCtx = createPublicPageContext({
+	Astro,
+	kind: "custom",
+	pageType,
+	title: fullTitle,
+	pageTitle: title ?? siteTitle,
+	description: description || siteDescription,
+	canonical: Astro.url.href,
+	image: ogImage,
+	seo: { ogImage },
+	siteName: siteTitle,
+});
+
+// Force the custom domain: a static Pages build is publicly reachable at its
+// raw <owner>.github.io/<repo> URL, but only resolves correctly at the domain
+// root (base "/") behind the proxy. Bounce any direct github.io visitor to the
+// canonical origin so the frontend is only ever served through our custom link.
+const canonicalOrigin = Astro.site ? Astro.site.origin : "";
+const canonicalGuard = canonicalOrigin
+	? `(function(){try{var C=${JSON.stringify(canonicalOrigin)};if(location.origin!==C&&/\\.github\\.io$/i.test(location.hostname)){location.replace(C+location.pathname+location.search+location.hash);}}catch(e){}})();`
+	: "";
+
+// Theme is a per-visitor cookie; the static HTML defaults to light and the
+// inline script below corrects it before first paint (no flash).
+const initialTheme = Astro.cookies?.get("theme")?.value;
+---
+
+<!doctype html>
+<html lang="en" data-theme={initialTheme === "dark" ? "dark" : "light"}>
+	<head>
+		{canonicalGuard && <script is:inline set:html={canonicalGuard} />}
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{fullTitle}</title>
+		<link rel="icon" href="/logo/main/favicon.ico" sizes="48x48" />
+		<link rel="icon" href="/logo/main/pwa-64x64.png" sizes="64x64" type="image/png" />
+		<link rel="icon" href="/logo/main/pwa-192x192.png" sizes="192x192" type="image/png" />
+		<link rel="apple-touch-icon" href="/logo/main/apple-touch-icon-180x180.png" sizes="180x180" />
+		<meta name="theme-color" content="#0a0a0a" />
+		<EmDashHead page={pageCtx} />
+		<Font cssVariable="--font-inter" preload />
+		<Font cssVariable="--font-jetbrains" preload />
+		<Font cssVariable="--font-source-serif" />
+		<script is:inline>
+			// Apply the visitor's theme immediately to prevent a flash: cookie,
+			// then localStorage, then the OS preference.
+			(function () {
+				try {
+					var m = document.cookie.match(/(?:^|; )theme=(dark|light)/);
+					var t = m ? m[1] : localStorage.getItem("theme");
+					if (t !== "dark" && t !== "light") {
+						t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+					}
+					document.documentElement.dataset.theme = t;
+				} catch (e) {}
+			})();
+		</script>
+	</head>
+	<body>
+		<Header
+			client:load
+			siteTitle={siteTitle}
+			links={navLinks}
+			pathname={Astro.url.pathname}
+			initialTheme={initialTheme}
+		/>
+
+		{main ? <main id="main-content"><slot /></main> : <slot />}
+
+		<Footer
+			siteTitle={siteTitle}
+			tagline={siteDescription}
+			copyright={copyright}
+			columns={footerColumns}
+			socialLinks={socialLinks}
+		/>
+
+		{/* Film-grain noise overlay */}
+		<div class="pointer-events-none fixed inset-0 z-10">
+			<Noise client:idle patternAlpha={8} patternRefreshInterval={4} />
+		</div>
+	</body>
+</html>

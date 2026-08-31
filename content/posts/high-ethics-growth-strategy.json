@@ -1,0 +1,204 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "high-ethics-growth-strategy",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-03-13T10:00:00.000Z",
+	"data": {
+		"title": "High Ethics Is a Growth Strategy",
+		"excerpt": "Let's talk about the business case, because idealism without ROI is just poetry. The conventional wisdom says quality costs too much to scale. Here's what that wisdom misses: word of mouth has no CAC.",
+		"cover_image": "https://images.pexels.com/photos/8276364/pexels-photo-8276364.jpeg?auto=compress&cs=tinysrgb&w=1920",
+		"cover_image_alt": "Close-up of two professionals shaking hands, symbolizing success and partnership",
+		"content": [
+			{
+				"_type": "block",
+				"_key": "k00xr",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00xq",
+						"text": "Let's talk about the business case, because idealism without ROI is just poetry.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00xt",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00xs",
+						"text": "The conventional wisdom says that quality costs too much to scale. That ethical practices slow you down. That the agencies and SaaS companies eating the most market share are the ones who optimised the funnel, not the craft.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00xx",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00xu",
+						"text": "Here's what that wisdom misses: ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00xv",
+						"text": "word of mouth has no CAC",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00xw",
+						"text": ".",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00xz",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00xy",
+						"text": "Every referral you receive costs you zero in paid acquisition. It arrives warm, pre-qualified, and already inclined to trust you — because someone they trust already does. This is the compounding return on quality investment that never appears in a marketing attribution report, but quietly drives the sustainable businesses that last.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00y1",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00y0",
+						"text": "Consider what happens when you build with high ethics consistently:",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00y4",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00y3",
+						"text": "Clients stay longer. They don't shop for replacements because they've found something rare — an agency that does what it says.",
+						"marks": []
+					}
+				],
+				"listItem": "number",
+				"level": 1,
+				"listId": "k00y2"
+			},
+			{
+				"_type": "block",
+				"_key": "k00y6",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00y5",
+						"text": "Clients talk. Not on review sites (though that too), but in rooms you'll never be in. In Slack channels and boardrooms and over coffee. \"Who built your platform?\" is a question that gets asked far more than most agencies realise.",
+						"marks": []
+					}
+				],
+				"listItem": "number",
+				"level": 1,
+				"listId": "k00y2"
+			},
+			{
+				"_type": "block",
+				"_key": "k00y8",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00y7",
+						"text": "Your team stays sharper. When your internal standard is quality, you attract people who care about quality. The culture self-selects. The work improves.",
+						"marks": []
+					}
+				],
+				"listItem": "number",
+				"level": 1,
+				"listId": "k00y2"
+			},
+			{
+				"_type": "block",
+				"_key": "k00ya",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00y9",
+						"text": "You sleep better. This is underrated. Running a business where the product matches the promise is not just profitable — it is sustainable in a way that no amount of marketing spend can manufacture.",
+						"marks": []
+					}
+				],
+				"listItem": "number",
+				"level": 1,
+				"listId": "k00y2"
+			},
+			{
+				"_type": "block",
+				"_key": "k00yc",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00yb",
+						"text": "The race to the bottom is real, and many will run it. Some will win, briefly. But the businesses remembered five years from now — the ones clients cite by name as the reason they made it — are the ones who refused to enter.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ye",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00yd",
+						"text": "At SaaSTEMLY, we believe the future belongs to those who build things worth building. That costs something in the short term. It returns everything in the long.",
+						"marks": []
+					}
+				]
+			}
+		],
+		"author": "Mahmood Ibrahim",
+		"category": "company",
+		"tags": "Ethics\nGrowth\nAgency\nStrategy",
+		"publish_date": "2026-03-13T10:00:00.000Z"
+	}
+}

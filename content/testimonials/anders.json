@@ -1,0 +1,15 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "anders",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "Anders",
+		"company": "Maqsad",
+		"quote": "Great team, great service! All in all great development cycle.",
+		"order": 3
+	}
+}

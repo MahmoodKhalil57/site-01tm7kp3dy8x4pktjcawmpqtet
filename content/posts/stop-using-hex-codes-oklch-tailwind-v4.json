@@ -1,0 +1,1100 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "stop-using-hex-codes-oklch-tailwind-v4",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-02-10T10:00:00.000Z",
+	"data": {
+		"title": "Stop Using HEX Codes: The Magic of OKLCH in Tailwind v4",
+		"excerpt": "HEX and HSL had a good run. But if your color palettes look muddy in dark mode or shift weirdly across devices, the problem is not your eyes. It is your color space.",
+		"cover_image": "https://images.pexels.com/photos/3845161/pexels-photo-3845161.jpeg?auto=compress&cs=tinysrgb&w=1920",
+		"cover_image_alt": "A glass prism dispersing white light into a vivid rainbow spectrum, illustrating color theory",
+		"content": [
+			{
+				"_type": "block",
+				"_key": "k0004",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0001",
+						"text": "It is 2am. You are seven browser tabs deep into a color picker. Your designer sent over a Figma file with a gorgeous blue for the primary button. You translated it to ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0002",
+						"text": "#4A90D9",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0003",
+						"text": ", and it looked perfect. Then you toggled dark mode. And now your button looks like it was fished out of a swamp.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k000e",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0005",
+						"text": "So you do what every frontend developer has done since the dawn of CSS: you nudge the hex value. ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0006",
+						"text": "#4A90D9",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0007",
+						"text": " becomes ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0008",
+						"text": "#5A9FE8",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0009",
+						"text": ". Better? No, too washed out. ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k000a",
+						"text": "#4C95E0",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k000b",
+						"text": "? Warmer, but now it clashes with the accent. ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k000c",
+						"text": "#5191D4",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k000d",
+						"text": "? You have been staring at swatches so long that you have lost all sense of what blue even is. You are color-blind now. Congratulations.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k000i",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k000f",
+						"text": "This, my friends, is ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k000g",
+						"text": "The 2am Hex Nudge",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k000h",
+						"text": ". We have all performed this ritual. Some of us perform it weekly. And I am here to tell you: it is not your fault. HEX codes are gaslighting you.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k000k",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k000j",
+						"text": "HEX and HSL: A Beautiful Lie",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k000q",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k000l",
+						"text": "Here is a fun party trick (assuming you go to parties where people discuss color spaces — and if you are reading this, let us be honest, you do). Take two HSL colors with the same lightness: ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k000m",
+						"text": "hsl(60, 100%, 50%)",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k000n",
+						"text": " (yellow) and ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k000o",
+						"text": "hsl(240, 100%, 50%)",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k000p",
+						"text": " (blue). According to the math, they are equally light. According to your actual human eyeballs, the yellow is a screaming toddler at a restaurant and the blue is hiding under a table at the same restaurant.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k000s",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k000r",
+						"text": "Same L value. Wildly different perceived brightness. HSL said they were twins. Your retinas said one of them is adopted.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k000u",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k000t",
+						"text": "This is because HSL models how monitors mix light, not how your brain processes it. It is like measuring two songs by their file size and concluding they are equally loud. Technically a metric. Practically useless.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k000w",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k000v",
+						"text": "And HEX? HEX is just HSL wearing a trench coat made of hexadecimal. Same underlying math. Same lies. Fancier outfit.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k000y",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k000x",
+						"text": "OKLCH: The Color Space That Went to Therapy",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0012",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k000z",
+						"text": "OKLCH stands for ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0010",
+						"text": "OK Lightness Chroma Hue",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0011",
+						"text": " — and yes, it literally starts with \"OK\" because it is the first color space that is actually okay at its job. (I did not name it. But I respect whoever did.)",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0014",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0013",
+						"text": "It is a perceptually uniform color space. In normal-person language: if two OKLCH colors have the same L value, they genuinely look equally bright to a human being. Not \"equally bright according to math that was invented for cathode ray tubes.\" Actually, physically, to-your-eyeballs equally bright.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0016",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0015",
+						"text": "The three channels:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0019",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0018",
+						"text": "L (Lightness): 0 is black, 1 is white. And here is the magic — going from 0.5 to 0.6 looks like the same-size jump whether you are looking at red, blue, yellow, or that weird chartreuse your designer insists on using. No more \"why is yellow brighter than blue\" existential crises.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k0017"
+			},
+			{
+				"_type": "block",
+				"_key": "k001b",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k001a",
+						"text": "C (Chroma): How vivid the color is. Zero is a grayscale monk who has renounced worldly saturation. Crank it up and you get punchy, saturated brilliance. Critically, chroma does not mess with perceived lightness. They are independent. Like adults.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k0017"
+			},
+			{
+				"_type": "block",
+				"_key": "k001d",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k001c",
+						"text": "H (Hue): The color wheel angle, 0 to 360. Same concept as HSL, but because L and C are well-behaved, rotating the hue does not randomly detonate your palette. In HSL, changing the hue could secretly change the brightness. OKLCH does not play those games.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k0017"
+			},
+			{
+				"_type": "block",
+				"_key": "k001f",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k001e",
+						"text": "Tailwind v4 Said \"We Are Done Pretending\"",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k001h",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k001g",
+						"text": "When Tailwind CSS v4 dropped, the team made a decision that most people scrolled past in the changelog: the entire default color system is now OKLCH. Every shade of every color. This is not a checkbox feature. This is a philosophical stance.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k001p",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k001i",
+						"text": "In our own codebase, we took the hint. Open ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k001j",
+						"text": "globals.css",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k001k",
+						"text": " and you will see lines like ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k001l",
+						"text": "--primary: oklch(0.4891 0 0)",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k001m",
+						"text": " where the old version had ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k001n",
+						"text": "--primary: #7c7c7c",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k001o",
+						"text": ". Looks like a format change. Feels like a format change. It is not a format change. It is the difference between a hand-drawn map and GPS.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k001r",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k001q",
+						"text": "40 Themes, Zero 2am Hex Nudges",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k001t",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k001s",
+						"text": "Here is where it gets fun. We ship a color scheme selector with 40+ complete themes — and we did not hand-craft a single one. They all come from tweakcn.com, an open-source Shadcn theme editor that generates beautifully balanced OKLCH palettes. Shoutout to the tweakcn team for doing the hard design work so we did not have to. Each theme is defined as a set of OKLCH triples: background, primary, and accent — in both light and dark variants. All stored in a single TypeScript object. No design tokens platform. No paid Figma plugin. Just community-made themes that make sense.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k001z",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k001u",
+						"text": "Take ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k001v",
+						"text": "amber-minimal",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k001w",
+						"text": ". Its light primary is ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k001x",
+						"text": "oklch(0.7686 0.1647 70.0804)",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k001y",
+						"text": ". Looks like a robot sneezed? Let me translate. L of 0.77: bright and airy. C of 0.16: rich saturation without looking like a highlighter. H of 70: warm amber territory. Three numbers, one complete story.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0025",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0020",
+						"text": "Now here is the kicker. The dark variant uses the exact same primary. Same L, same C, same H. The only thing that changes is the background — from ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0021",
+						"text": "oklch(1 0 0)",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0022",
+						"text": " (white) to ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0023",
+						"text": "oklch(0.2046 0 0)",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0024",
+						"text": " (near-black). And it just works. The amber looks gorgeous on both. No nudging. No 2am. No existential dread.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0027",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0026",
+						"text": "With HEX, switching backgrounds meant re-tuning every accent by hand. It was like redecorating your apartment and discovering that your couch, which looked great against white walls, now looks cursed against dark gray. OKLCH is the couch that matches everything. We all deserve that couch.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0029",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0028",
+						"text": "Generating Palettes Without Losing Your Mind",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k002b",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k002a",
+						"text": "The absolute killer feature of OKLCH for palette work: you can lock any channel and sweep the others, and the results are predictable. Want five shades of your brand blue that all feel equally vibrant? Lock the chroma and hue, step the lightness from 0.95 to 0.25. Done. Every shade is perceptually consistent because the math actually respects human vision for once.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k002d",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k002c",
+						"text": "Need a hover state? Bump L by 0.05. Disabled state? Drop C toward zero — the color gracefully desaturates without shifting hue or brightness. Active state? Nudge L down by 0.1. These operations are boring. Predictable. Unsurprising. And after years of The 2am Hex Nudge, \"boring and predictable\" is the most beautiful phrase in the English language.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k002f",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k002e",
+						"text": "Quick aside: remember that designer Figma file from the intro? With OKLCH, you can take their exact primary color, derive every state variant mathematically, and know they will look correct. No round-trip to the designer. No \"can you check this in dark mode?\" Slack message at 11pm. Just math. Sweet, emotionally stable math.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k002h",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k002g",
+						"text": "Your Monitor Can See Colors HEX Cannot",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k002j",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k002i",
+						"text": "Plot twist time. Every iPhone since the 7, every MacBook since 2016, and most recent Android flagships support the Display P3 color gamut — roughly 50% larger than sRGB. That means your users' screens can show colors that HEX codes literally cannot express. You have been leaving colors on the table. Vivid corals, electric teals, saturated magentas — all locked behind a door that HEX does not have the key to.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k002p",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k002k",
+						"text": "OKLCH walks right through that door. When we write ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k002l",
+						"text": "oklch(0.6726 0.2904 341.4084)",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k002m",
+						"text": " for our cyberpunk theme, P3 displays render the full electric magenta. On older sRGB screens, the browser automatically gamut-maps it to the closest representable color. No ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k002n",
+						"text": "@supports",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k002o",
+						"text": " queries. No fallback chains. No \"I will just add a comment saying this might look different on some devices\" cope. It. Just. Works.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k002r",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k002q",
+						"text": "Meanwhile, HEX is still stuck in a color space invented when monitors weighed forty pounds. It is like sending faxes in the age of Slack.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k002t",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k002s",
+						"text": "The Theme Swap That Made Me Emotional",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k002v",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k002u",
+						"text": "This is where it all comes together, and honestly, this is the part that made me unreasonably happy the first time I saw it work.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0033",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k002w",
+						"text": "Our theme system is pure CSS. Each of our 40+ color schemes is a standalone CSS file. Each file redefines the same set of OKLCH-valued custom properties under ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k002x",
+						"text": ":root",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k002y",
+						"text": " for light mode and ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k002z",
+						"text": "html[data-theme=\"dark\"]",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0030",
+						"text": " for dark mode. Tailwind v4 maps these to utility classes through ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0031",
+						"text": "@theme inline",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0032",
+						"text": ". When a user picks a theme, we set a cookie and swap the CSS import. That is it.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k003b",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0034",
+						"text": "Every ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0035",
+						"text": "bg-primary",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0036",
+						"text": ", every ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0037",
+						"text": "text-foreground",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0038",
+						"text": ", every ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0039",
+						"text": "border-accent",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k003a",
+						"text": " across the entire application updates instantly. No JavaScript color manipulation. No runtime recalculation. No React re-renders. Just CSS doing what CSS was born to do, while JavaScript takes a well-deserved nap.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k003d",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k003c",
+						"text": "Forty themes — all sourced from tweakcn.com. Zero lines of color-switching JavaScript. We dropped in a new tweakcn palette last week and had a working theme in twelve minutes. Twelve. I used to spend twelve minutes just on the hover state of a single button. The 2am Hex Nudge is dead, and I danced on its grave.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k003f",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k003e",
+						"text": "\"But I Have 400 HEX Values in My Codebase\"",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k003h",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k003g",
+						"text": "I hear you. The migration sounds terrifying. It is not. If you are already on Tailwind v4, surprise: you are using OKLCH whether you know it or not. The default palette is defined in it. The only thing left is converting your custom colors.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k003j",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k003i",
+						"text": "Here is the game plan:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k003m",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k003l",
+						"text": "Convert CSS variables first. Paste your HEX values into oklch.com and grab the OKLCH equivalents. The visual output is nearly identical — your designer will not notice. (Do not tell them I said that.)",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k003k"
+			},
+			{
+				"_type": "block",
+				"_key": "k003o",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k003n",
+						"text": "Replace the values in your globals.css or theme files. Ship it. Nothing looks different yet, and that is the point.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k003k"
+			},
+			{
+				"_type": "block",
+				"_key": "k003q",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k003p",
+						"text": "Start using the perceptual uniformity. Generate hover, focus, and disabled states by adjusting L and C instead of opening a color picker like an animal.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k003k"
+			},
+			{
+				"_type": "block",
+				"_key": "k003s",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k003r",
+						"text": "Go wild with P3. Crank the chroma past what sRGB allows. Watch your colors wake up on modern displays. Feel alive.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k003k"
+			},
+			{
+				"_type": "block",
+				"_key": "k003u",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k003t",
+						"text": "The whole process took us an afternoon. And unlike most \"quick migrations,\" nothing caught fire.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k003w",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k003v",
+						"text": "The Bottom Line (No, Really, The Actual Bottom)",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k003y",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k003x",
+						"text": "HEX codes are a relic of how monitors work, not how humans see. HSL tried to be friendlier and ended up being the friend who says \"I am fine\" when they are clearly not fine. OKLCH is the color space that finally went to therapy, did the work, and came back as a functional adult.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0040",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k003z",
+						"text": "In Tailwind v4, OKLCH is the foundation of dynamic theming, accessible contrast ratios, P3-wide color, and palettes that survive the jump from light to dark mode without human intervention.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0044",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0041",
+						"text": "So the next time you find yourself hunched over a color picker at 2am, nudging a hex value one digit at a time, whispering \"please look right in dark mode\" — stop. Close the color picker. Open your CSS file. Write ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0042",
+						"text": "oklch()",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0043",
+						"text": ". And go to bed at a reasonable hour. Your eyes, your designer, and your dark mode users will all thank you.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0046",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0045",
+						"text": "The 2am Hex Nudge is over. Long live OKLCH.",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			}
+		],
+		"author": "Omar Majed",
+		"category": "engineering",
+		"tags": "CSS\nTailwind\nDesign Systems\nFrontend",
+		"publish_date": "2026-02-10T10:00:00.000Z"
+	}
+}

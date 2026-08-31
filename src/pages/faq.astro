@@ -1,0 +1,54 @@
+---
+import Site from "@/layouts/Site.astro";
+import { NoirPageHero } from "@/components/noir/noir-page-hero";
+import { BlurFade } from "@/components/ui/blur-fade";
+import { FaqList } from "@/components/landing/faq-section";
+import { getFaqs } from "@/lib/content";
+
+const faqs = await getFaqs();
+---
+
+<Site
+	title="FAQ"
+	description="Answers to common questions about working with SaaSTEMLY — pricing, process, support, and more."
+>
+	<NoirPageHero
+		client:load
+		title="Questions."
+		subtitle="Everything you need to know about working with us. Contact us if you need more help."
+		backHref="/"
+		backLabel="Home"
+		decrypt={false}
+	/>
+
+	<section class="relative overflow-hidden">
+		<div class="h-px bg-linear-to-r from-transparent via-border/40 to-transparent dark:via-border/20" aria-hidden="true"></div>
+
+		<div class="pointer-events-none absolute inset-0" aria-hidden="true">
+			<div class="absolute start-1/2 top-1/3 h-[400px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/5 blur-[120px] dark:bg-primary/3"></div>
+		</div>
+
+		<div class="relative mx-auto max-w-5xl px-4 py-24 sm:px-6 sm:py-32">
+			{
+				faqs.length > 0 ? (
+					<BlurFade client:load delay={0.15} inView>
+						<FaqList faqs={faqs} />
+					</BlurFade>
+				) : (
+					<BlurFade client:load delay={0.15} inView>
+						<div class="text-center py-16">
+							<h2 class="text-xl font-bold text-foreground mb-2">No FAQs available</h2>
+							<p class="text-muted-foreground">
+								Check back soon or{" "}
+								<a href="/contact" class="text-foreground/80 transition-colors hover:text-primary">
+									contact us
+								</a>
+								.
+							</p>
+						</div>
+					</BlurFade>
+				)
+			}
+		</div>
+	</section>
+</Site>

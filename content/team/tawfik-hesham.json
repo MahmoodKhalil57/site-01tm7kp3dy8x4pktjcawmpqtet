@@ -1,0 +1,26 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "tawfik-hesham",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "Tawfik Hesham",
+		"role": "Strategic Account Manager",
+		"department": "Business Development",
+		"bio": "5+ years in sales and account management — building lasting client relationships across global markets.",
+		"full_bio": "Tawfik combines technical understanding with strategic sales expertise to drive revenue growth and expand key accounts. He has a proven track record of leading client relationships in advanced tech and manufacturing, bringing deep industry knowledge and a client-first approach to every engagement.",
+		"experience": "5+ years in sales and account management",
+		"image": "/team/Tawfik_Hesham.png",
+		"image_position": "50% 50%",
+		"location": "Roma, Italy",
+		"join_date": "March 2023",
+		"skills": "Sales Strategy\nAccount Management\nClient Relations\nBusiness Development\nNegotiation",
+		"linkedin": "https://www.linkedin.com/in/tawfikrady21/",
+		"github": "",
+		"home_page": false,
+		"order": 7
+	}
+}

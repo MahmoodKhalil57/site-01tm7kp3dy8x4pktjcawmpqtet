@@ -3,6 +3,15 @@
 	"slug": "faq",
 	"label": "FAQ",
 	"labelSingular": "FAQ entry",
+	"storage": "git",
+	"description": "Questions for the /faq page; the first six active ones also show on the home page.",
+	"admin": {
+		"listColumns": [
+			"order",
+			"is_active"
+		]
+	},
+	"sortOrder": 7,
 	"fields": [
 		{
 			"slug": "title",
@@ -13,7 +22,18 @@
 		{
 			"slug": "answer",
 			"label": "Answer",
-			"type": "text"
+			"type": "text",
+			"required": true
+		},
+		{
+			"slug": "order",
+			"label": "Display order",
+			"type": "integer"
+		},
+		{
+			"slug": "is_active",
+			"label": "Show on the website",
+			"type": "boolean"
 		}
 	]
 }

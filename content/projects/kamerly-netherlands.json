@@ -1,0 +1,29 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "kamerly-netherlands",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "Kamerly - Netherlands",
+		"subtitle": "Room Rental Platform",
+		"description": "A comprehensive room rental platform connecting tenants with quality accommodations across the Netherlands. Features include smart search algorithms, secure booking systems, virtual tours, and integrated payment processing.",
+		"full_description": "Kamerly revolutionizes the Dutch rental market by providing a seamless platform for both tenants and landlords. The platform includes advanced search filters, real-time availability, secure messaging, background verification, and automated lease management.",
+		"image": "/projects/kamerly.png",
+		"url": "https://kamerly.nl/",
+		"tags": "Vue.js\nNode.js\nPostgreSQL\nPayment Integration\nReal Estate",
+		"region": "Europe",
+		"country": "Netherlands",
+		"industry": "Real Estate",
+		"year": "2025",
+		"duration": "8 months",
+		"team_size": "6 developers",
+		"technologies": "Vue.js\nNode.js\nPostgreSQL\nStripe\nGoogle Maps API\nSocket.io",
+		"features": "Advanced property search with ML algorithms\nVirtual tour integration\nSecure payment processing\nBackground verification system\nReal-time messaging\nAutomated lease management",
+		"results": "30% increase in successful bookings\n95% user satisfaction rate\n50% reduction in booking time",
+		"home_page": true,
+		"order": 3
+	}
+}

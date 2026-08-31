@@ -1,0 +1,646 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "scroll-driven-header-glassmorphism-css",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-02-14T10:00:00.000Z",
+	"data": {
+		"title": "Building a Scroll-Driven Header Glassmorphism Effect (Zero JavaScript)",
+		"excerpt": "Your sticky header has a scroll listener. Mine has three lines of CSS. We are not the same. A tutorial on animation-timeline: scroll() and why your header's JavaScript deserves a permanent vacation.",
+		"cover_image": "https://images.pexels.com/photos/374609/pexels-photo-374609.jpeg?auto=compress&cs=tinysrgb&w=1920",
+		"cover_image_alt": "Vibrant abstract glass texture with defocused colorful light, illustrating glassmorphism and blur effects",
+		"content": [
+			{
+				"_type": "block",
+				"_key": "k0048",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0047",
+						"text": "It is a Tuesday. You are building a sticky header. The designer wants it transparent at the top of the page, then frosted glass with a shadow after the user scrolls. Simple, right? You open your component file and write the sacred incantation:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k0049",
+				"code": "const [isScrolled, setIsScrolled] = useState(false);\n\nuseEffect(() => {\n  const onScroll = () => setIsScrolled(window.scrollY > 50);\n  window.addEventListener(\"scroll\", onScroll);\n  return () => window.removeEventListener(\"scroll\", onScroll);\n}, []);",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k004b",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k004a",
+						"text": "And just like that, you have summoned it. The beast. The scroll listener. It arrives with its entourage: state, an effect, a cleanup function you will forget the first time, and a conditional className ternary longer than your commit messages. Eighteen lines of JavaScript to change a background color. The engineering equivalent of hiring a moving company to slide a couch six inches to the left.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k004f",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k004c",
+						"text": "Welcome to ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k004d",
+						"text": "The Scroll Listener Graveyard",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k004e",
+						"text": " — a haunted place where good intentions become performance problems. Every frontend codebase has one. I have personally contributed to at least seven. And I am here to tell you: it is time to stop digging graves.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k004h",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k004g",
+						"text": "Three Lines of CSS That Mass-Retired an Industry of Hooks",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k004l",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k004i",
+						"text": "Here is what we actually ship in ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k004j",
+						"text": "globals.css",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k004k",
+						"text": ". The entire scroll effect. All of it:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k004m",
+				"code": ".header-scroll {\n  animation: header-bg linear both;\n  animation-timeline: scroll();\n  animation-range: 0px 50px;\n}",
+				"language": "css"
+			},
+			{
+				"_type": "block",
+				"_key": "k004o",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k004n",
+						"text": "Three properties. No hooks. No refs. No state. No cleanup. Just CSS telling the browser: \"You are already tracking scroll position for the scrollbar. Use that same data to drive this animation. Thanks. Bye.\"",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k004u",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k004p",
+						"text": "Let us break it down. ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k004q",
+						"text": "animation-timeline: scroll()",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k004r",
+						"text": " is the star. Instead of time driving the animation, scroll position drives it. Scroll to 25% of the range? Animation is at 25%. Scroll back up? It reverses. The browser's compositor thread handles everything — your main thread is on vacation. ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k004s",
+						"text": "animation-range: 0px 50px",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k004t",
+						"text": " defines the scroll window: the full transition completes within the first 50 pixels. Anything beyond that holds at 100%. The header commits to being frosted and does not look back.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k004w",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k004v",
+						"text": "The Keyframes: Five Properties, One Glow-Up",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0050",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k004x",
+						"text": "Here is the keyframe from our ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k004y",
+						"text": "globals.css",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k004z",
+						"text": " that powers the glassmorphism:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k0051",
+				"code": "@keyframes header-bg {\n  0% {\n    background: transparent;\n    backdrop-filter: none;\n    box-shadow: none;\n    border-color: transparent;\n    height: calc(var(--spacing) * 20);\n  }\n  50%,\n  100% {\n    background: oklch(from var(--background) l c h / 0.8);\n    backdrop-filter: blur(24px);\n    box-shadow: var(--shadow-lg);\n    border-color: oklch(from var(--border) l c h / 0.5);\n    height: calc(var(--spacing) * 16);\n  }\n}",
+				"language": "css"
+			},
+			{
+				"_type": "block",
+				"_key": "k0055",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0052",
+						"text": "Five properties animating in concert. The header starts transparent and tall, then gains a semi-transparent background, 24px of frosted blur, a shadow, a border, and shrinks from 80px to 64px. Notice the ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0053",
+						"text": "50%, 100%",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0054",
+						"text": " trick — the animation completes at the halfway point and then plateaus. With a 50px range, the full visual transition happens in 25 pixels. Snappy. Confident. The header says \"you scrolled, I am frosted now, deal with it.\"",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k005b",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0056",
+						"text": "The real magic is ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0057",
+						"text": "oklch(from var(--background) l c h / 0.8)",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0058",
+						"text": ". This relative color syntax takes whatever the current theme's background is — white, dark gray, warm amber, any of our 40+ color schemes — extracts its OKLCH channels, and applies 80% opacity. One expression. Every theme. Zero JavaScript color parsing. The border gets the same treatment with ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0059",
+						"text": "oklch(from var(--border) l c h / 0.5)",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k005a",
+						"text": ". Theme changes propagate through CSS variables and the glassmorphism follows along like a well-trained puppy that runs on the compositor thread.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k005d",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k005c",
+						"text": "The Component: Blissfully Ignorant",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k005j",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k005e",
+						"text": "Here is the actual ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k005f",
+						"text": "<header>",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k005g",
+						"text": " element from our ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k005h",
+						"text": "header.tsx",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k005i",
+						"text": ":",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k005k",
+				"code": "<header\n  className=\"header-scroll fixed top-0 left-0 right-0 z-50\"\n  suppressHydrationWarning\n>\n  <div className=\"mx-auto max-w-7xl h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between\">\n    {/* Logo, nav links, action buttons — no scroll logic anywhere */}\n  </div>\n</header>",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k005w",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k005l",
+						"text": "One CSS class: ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k005m",
+						"text": "header-scroll",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k005n",
+						"text": ". That is the entire integration. No ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k005o",
+						"text": "onScroll",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k005p",
+						"text": ", no ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k005q",
+						"text": "scrollY",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k005r",
+						"text": " state, no ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k005s",
+						"text": "useScrollPosition",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k005t",
+						"text": " hook, no ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k005u",
+						"text": "isScrolled && 'bg-background/80 backdrop-blur-xl'",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k005v",
+						"text": " ternary. The component is blissfully, beautifully ignorant of the scroll position. Compare that to what the JavaScript approach would require:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k005x",
+				"code": "const [isScrolled, setIsScrolled] = useState(false);\n\nuseEffect(() => {\n  const handler = () => {\n    requestAnimationFrame(() => setIsScrolled(window.scrollY > 50));\n  };\n  window.addEventListener(\"scroll\", handler, { passive: true });\n  return () => window.removeEventListener(\"scroll\", handler);\n}, []);\n\n// Then in JSX:\n<header\n  className={`fixed top-0 z-50 ${\n    isScrolled\n      ? \"bg-background/80 backdrop-blur-xl shadow-lg border-border/50\"\n      : \"bg-transparent border-transparent\"\n  }`}\n>",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k0061",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k005y",
+						"text": "Fifteen lines of JavaScript, a state variable, an effect with cleanup, a ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k005z",
+						"text": "requestAnimationFrame",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0060",
+						"text": " wrapper, and a className ternary that makes your linter cry. Or three lines of CSS. I know which one I would pick. The Scroll Listener Graveyard just got its last resident.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0063",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0062",
+						"text": "Performance: Main Thread vs. Compositor Thread",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0065",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0064",
+						"text": "The JavaScript approach fires on the main thread sixty times per second. On a mid-range Android phone with thirty-seven tabs open? You just introduced jank. Congratulations — you are now the reason someone's phone felt slow.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0069",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0066",
+						"text": "Scroll-driven animations run on the ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0067",
+						"text": "compositor thread",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0068",
+						"text": " — the browser's GPU-accelerated layer. Your React components do not re-render. Your state does not update. I profiled both approaches: the JavaScript version showed periodic main thread spikes. The CSS version? Flat line. The main thread was asleep. Dreaming of a world where it never processes another scroll event.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k006b",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k006a",
+						"text": "Browser Support (The Obligatory Section)",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k006d",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k006c",
+						"text": "As of early 2026: Chrome 115+, Edge 115+, Firefox 110+, Safari 18.4+. That covers roughly 92% of global usage. For the rest, the animation simply does not run and the header stays transparent. The site is fully functional. This is textbook progressive enhancement — no fallback JavaScript required. With a JS scroll listener, failure mode is \"who knows.\" With CSS, failure mode is \"no animation.\" I know which bug report I prefer at 3am.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k006f",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k006e",
+						"text": "The Bottom Line (Scrolled All the Way Down Edition)",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k006h",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k006g",
+						"text": "For years we accepted that scroll-based effects required JavaScript. CSS scroll-driven animations changed the game. Three properties. Zero JavaScript. Compositor-thread performance. Automatic reverse on scroll-up. Theme-aware through OKLCH relative color syntax. Progressive enhancement by default.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k006m",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k006i",
+						"text": "So the next time your designer asks for a sticky header that fades to frosted glass on scroll, do not reach for ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k006j",
+						"text": "addEventListener",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k006k",
+						"text": ". Reach for CSS. Write three lines. Ship it. ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k006l",
+						"text": "The Scroll Listener Graveyard is closed for good. Long live scroll-driven CSS.",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			}
+		],
+		"author": "Omar Majed",
+		"category": "engineering",
+		"tags": "CSS\nAnimation\nPerformance\nFrontend",
+		"publish_date": "2026-02-14T10:00:00.000Z"
+	}
+}

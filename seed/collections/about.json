@@ -1,0 +1,189 @@
+{
+	"$schema": "../.schemas/collection.schema.json",
+	"slug": "about",
+	"label": "About page",
+	"labelSingular": "About page",
+	"storage": "git",
+	"description": "Copy for the About page. Team members come from the Team collection.",
+	"sortOrder": 2,
+	"fields": [
+		{
+			"slug": "title",
+			"label": "Title",
+			"type": "string",
+			"required": true
+		},
+		{
+			"slug": "meta_title",
+			"label": "Meta title",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "meta_description",
+			"label": "Meta description",
+			"type": "text",
+			"required": false
+		},
+		{
+			"slug": "page_title",
+			"label": "Page title",
+			"type": "string",
+			"required": true
+		},
+		{
+			"slug": "page_subtitle",
+			"label": "Page subtitle",
+			"type": "text",
+			"required": false
+		},
+		{
+			"slug": "mission_title",
+			"label": "Mission label",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "mission_description",
+			"label": "Mission statement",
+			"type": "text",
+			"required": false
+		},
+		{
+			"slug": "stats",
+			"label": "Stats",
+			"type": "repeater",
+			"validation": {
+				"subFields": [
+					{
+						"slug": "value",
+						"label": "Value",
+						"type": "string",
+						"required": true
+					},
+					{
+						"slug": "label",
+						"label": "Label",
+						"type": "string",
+						"required": true
+					}
+				]
+			}
+		},
+		{
+			"slug": "values_title",
+			"label": "Values heading",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "values",
+			"label": "Values",
+			"type": "repeater",
+			"validation": {
+				"subFields": [
+					{
+						"slug": "icon",
+						"label": "Icon",
+						"type": "select",
+						"options": [
+							"Code",
+							"Smartphone",
+							"Brain",
+							"ShoppingCart",
+							"Cloud",
+							"Palette",
+							"Layers",
+							"RefreshCw",
+							"Users",
+							"Lightbulb",
+							"ShieldCheck",
+							"Eye",
+							"Heart",
+							"Globe",
+							"Rocket",
+							"Shield",
+							"Sparkles",
+							"Star",
+							"Zap"
+						]
+					},
+					{
+						"slug": "title",
+						"label": "Title",
+						"type": "string",
+						"required": true
+					},
+					{
+						"slug": "description",
+						"label": "Description",
+						"type": "text"
+					}
+				]
+			}
+		},
+		{
+			"slug": "team_title",
+			"label": "Team heading",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "team_subtitle",
+			"label": "Team subtitle",
+			"type": "text",
+			"required": false
+		},
+		{
+			"slug": "timeline_title",
+			"label": "Timeline heading",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "timeline",
+			"label": "Timeline",
+			"type": "repeater",
+			"validation": {
+				"subFields": [
+					{
+						"slug": "year",
+						"label": "Year",
+						"type": "string",
+						"required": true
+					},
+					{
+						"slug": "description",
+						"label": "Event",
+						"type": "text",
+						"required": true
+					}
+				]
+			}
+		},
+		{
+			"slug": "cta_title",
+			"label": "CTA title",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "cta_description",
+			"label": "CTA description",
+			"type": "text",
+			"required": false
+		},
+		{
+			"slug": "cta_button",
+			"label": "CTA button label",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "cta_url",
+			"label": "CTA button URL",
+			"type": "string",
+			"required": false
+		}
+	]
+}

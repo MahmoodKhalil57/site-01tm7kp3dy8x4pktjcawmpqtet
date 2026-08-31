@@ -1,0 +1,15 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "what-does-your-development-process-look-like",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "What does your development process look like?",
+		"answer": "We work in agile sprints with regular check-ins. The process: discovery, design, build, test, deploy, and iterate. You see progress every week, not just at the end.",
+		"order": 4,
+		"is_active": true
+	}
+}

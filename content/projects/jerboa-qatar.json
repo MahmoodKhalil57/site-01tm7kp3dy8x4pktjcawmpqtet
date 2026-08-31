@@ -1,0 +1,29 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "jerboa-qatar",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "Jerboa - Qatar",
+		"subtitle": "Eco-Friendly Padel Ball E-commerce",
+		"description": "A premium e-commerce platform for sustainable padel balls, featuring a sleek minimalist design with scroll-driven animations and bilingual support.",
+		"full_description": "Jerboa is an eco-conscious sports brand based in Doha, Qatar, offering high-performance padel balls in recyclable packaging. The platform combines striking visual design with smooth Framer Motion animations, creating an immersive shopping experience that reflects the brand's premium positioning and sustainability commitment.",
+		"image": "/projects/jerboa.png",
+		"url": "https://jerboa2.vercel.app",
+		"tags": "Next.js\nPayload CMS\nE-commerce\nTailwind CSS\nFramer Motion",
+		"region": "Middle East",
+		"country": "Qatar",
+		"industry": "Sports & Retail",
+		"year": "2025",
+		"duration": "2 months",
+		"team_size": "2 developers",
+		"technologies": "Next.js\nReact\nPayload CMS\nTailwind CSS\nFramer Motion\nVercel",
+		"features": "Immersive scroll-driven animations\nBilingual support (English & Arabic)\nIntegrated e-commerce with cart and checkout\nResponsive minimalist design\nOptimized image loading and performance\nNewsletter and community engagement",
+		"results": "70% increase in online conversions\n95% positive customer feedback on UX\n40% reduction in bounce rate",
+		"home_page": true,
+		"order": 1
+	}
+}

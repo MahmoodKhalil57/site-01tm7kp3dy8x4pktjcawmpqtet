@@ -1,49 +1,91 @@
 ---
-import { getEmDashEntry } from "@premium-cms/emdash";
-import Base from "../layouts/Base.astro";
-import MarketingBlocks from "../components/MarketingBlocks.astro";
+import Site from "@/layouts/Site.astro";
+import { HeroSection } from "@/components/landing/hero-section";
+import { LogoMarquee } from "@/components/landing/logo-marquee";
+import { FeaturesSection } from "@/components/landing/features-section";
+import { StatsSection } from "@/components/landing/stats-section";
+import { PortfolioSection } from "@/components/landing/portfolio-section";
+import { PricingSection } from "@/components/landing/pricing-section";
+import { TeamSection } from "@/components/landing/team-section";
+import { TestimonialsSection } from "@/components/landing/testimonials-section";
+import { FaqSection } from "@/components/landing/faq-section";
+import { FinalCta } from "@/components/landing/final-cta";
+import { getFaqs, getHome, getProjects, getTeam, getTestimonials } from "@/lib/content";
 
-const { entry: page, cacheHint } = await getEmDashEntry("pages", "home");
+const [home, team, projects, testimonials, faqs] = await Promise.all([
+	getHome(),
+	getTeam(),
+	getProjects(),
+	getTestimonials(),
+	getFaqs(),
+]);
 
-if (Astro.cache?.enabled) Astro.cache.set(cacheHint);
-
-const pageTitle = page?.data.title;
-const pageContent = page?.data.content;
+const homeTeam = team.filter((m) => m.homePage);
+const homeProjects = projects.filter((p) => p.homePage);
+const homeFaqs = faqs.slice(0, 6);
 ---
 
-<Base
-	title={pageTitle !== "Home" ? pageTitle : undefined}
-	description="Build products people actually want. The all-in-one platform for modern teams."
->
+<Site title={home?.metaTitle || undefined} description={home?.metaDescription || undefined}>
 	{
-		pageContent ? (
-			<MarketingBlocks value={pageContent} />
+		home ? (
+			<>
+				<HeroSection client:load copy={home.hero} />
+				<LogoMarquee client:load items={home.marquee} />
+				{home.services.length > 0 && (
+					<FeaturesSection
+						client:visible
+						title={home.servicesTitle}
+						titleFaded={home.servicesTitleFaded}
+						services={home.services}
+					/>
+				)}
+				{home.stats.length > 0 && <StatsSection client:visible stats={home.stats} />}
+				{homeProjects.length > 0 && (
+					<PortfolioSection
+						client:visible
+						title={home.portfolioTitle}
+						titleFaded={home.portfolioTitleFaded}
+						viewAllLabel={home.portfolioViewAll}
+						projects={homeProjects}
+					/>
+				)}
+				{home.engagementModels.length > 0 && (
+					<PricingSection
+						client:visible
+						title={home.engagementTitle}
+						titleFaded={home.engagementTitleFaded}
+						subtitle={home.engagementSubtitle}
+						models={home.engagementModels}
+					/>
+				)}
+				{homeTeam.length > 0 && (
+					<TeamSection client:visible title={home.teamTitle} titleFaded={home.teamTitleFaded} members={homeTeam} />
+				)}
+				{testimonials.length > 0 && (
+					<TestimonialsSection
+						client:visible
+						title={home.testimonialsTitle}
+						titleFaded={home.testimonialsTitleFaded}
+						testimonials={testimonials}
+					/>
+				)}
+				{homeFaqs.length > 0 && (
+					<FaqSection client:visible title={home.faqTitle} subtitle={home.faqSubtitle} faqs={homeFaqs} />
+				)}
+				<FinalCta client:visible {...home.cta} />
+			</>
 		) : (
-			<div class="empty-state">
-				<h1>Welcome to Acme</h1>
-				<p>Edit the home page content in the admin to get started.</p>
-				<a href="/_emdash/admin" class="btn btn-primary">
+			<div class="mx-auto max-w-3xl px-6 pt-48 pb-32 text-center">
+				<h1 class="text-4xl font-bold tracking-tighter">Welcome</h1>
+				<p class="mt-4 text-muted-foreground">
+					The <code>home</code> collection isn't on the backend yet. Push this repo to <code>main</code> so the
+					platform applies <code>seed/</code> — the landing page then renders from <code>content/home/home.json</code>
+					(live dev picks it up too). Or edit the entry in the admin once the collection exists.
+				</p>
+				<a href="/_emdash/admin" class="mt-8 inline-flex border border-primary/60 px-6 py-3 text-xs uppercase tracking-[0.2em] text-primary">
 					Open Admin
 				</a>
 			</div>
 		)
 	}
-</Base>
-
-<style>
-	.empty-state {
-		text-align: center;
-		padding: var(--spacing-5xl) var(--spacing-lg);
-		max-width: var(--max-width);
-		margin: 0 auto;
-	}
-
-	.empty-state h1 {
-		margin-bottom: var(--spacing-md);
-	}
-
-	.empty-state p {
-		color: var(--color-muted);
-		margin-bottom: var(--spacing-xl);
-	}
-</style>
+</Site>

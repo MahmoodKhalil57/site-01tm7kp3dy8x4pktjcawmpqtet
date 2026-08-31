@@ -1,0 +1,29 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "reco-medical-uk",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "Reco Medical - UK",
+		"subtitle": "Medical Equipment Research",
+		"description": "A showcase platform for Reco Medical, focusing on medical equipment research and development. The site features a content management system for news and updates, ensuring compliance with healthcare regulations.",
+		"full_description": "Reco Medical serves as a digital hub for medical research, providing insights into the latest advancements in medical equipment. The platform is designed to be compliant with healthcare standards, ensuring accessibility and security for sensitive information.",
+		"image": "/projects/reco-medical.png",
+		"url": "https://www.recomedical.co.uk/",
+		"tags": "Svelte\nSveltekit\nSanity\nHealthcare\nCompliance",
+		"region": "United Kingdom",
+		"country": "UK",
+		"industry": "Healthcare Research",
+		"year": "2024",
+		"duration": "2 Weeks",
+		"team_size": "3 developers",
+		"technologies": "Svelte\nSveltekit\nSanity\nNode.js\ntypescipt\nvercel",
+		"features": "Content management system for news and updates\nPWA capability\nSEO optimization for medical research\nAccessibility compliance\nReal-time content updates",
+		"results": "65% increase in brand awareness\n80% improvement in professional audience engagement",
+		"home_page": true,
+		"order": 4
+	}
+}

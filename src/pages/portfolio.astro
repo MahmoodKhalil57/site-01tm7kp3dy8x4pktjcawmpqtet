@@ -1,0 +1,25 @@
+---
+import Site from "@/layouts/Site.astro";
+import { NoirFullscreenParallax } from "@/components/portfolio/noir-fullscreen-parallax";
+import { getProjects } from "@/lib/content";
+
+const projects = await getProjects();
+
+const messages = {
+	pageTitle: "Our work.",
+	pageSubtitle: "Real projects we have shipped for clients across industries and continents.",
+	backToHome: "Back to Home",
+	visitSite: "Visit Site",
+	ctaTitle: "Have a project in mind?",
+	ctaDescription: "Tell us what you are building — we will show you how we can help.",
+	ctaButton: "Get in Touch",
+};
+---
+
+<Site
+	title="Portfolio"
+	description="Explore our portfolio of custom web apps, mobile solutions, and digital platforms built for clients worldwide."
+	main={false}
+>
+	<NoirFullscreenParallax client:load projects={projects} messages={messages} />
+</Site>

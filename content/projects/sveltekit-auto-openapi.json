@@ -1,0 +1,29 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "sveltekit-auto-openapi",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "SvelteKit Auto OpenAPI",
+		"subtitle": "Automatic API Documentation Library",
+		"description": "A developer library that automatically generates OpenAPI schemas and interactive documentation from SvelteKit server routes with full TypeScript type inference.",
+		"full_description": "SvelteKit Auto OpenAPI eliminates the need for manual API documentation by inferring OpenAPI schemas directly from SvelteKit +server.ts files. It provides runtime validation, interactive Scalar-powered docs, and real-time updates during development — all with minimal configuration and full TypeScript support.",
+		"image": "/projects/sveltekit-auto-openapi.png",
+		"url": "https://www.sveltekit-auto-openapi.saastemly.com",
+		"tags": "SvelteKit\nTypeScript\nOpenAPI\nScalar\nDeveloper Tools",
+		"region": "Global",
+		"country": "International",
+		"industry": "Developer Tools",
+		"year": "2025",
+		"duration": "2 months",
+		"team_size": "1 developer",
+		"technologies": "SvelteKit\nTypeScript\nOpenAPI\nScalar",
+		"features": "Automatic schema inference from SvelteKit routes\nInteractive Scalar API documentation\nRuntime request and response validation\nReal-time documentation updates in development",
+		"results": "Zero-config OpenAPI schema generation from code\nType-safe runtime validation for all endpoints\nInteractive API docs with Scalar integration",
+		"home_page": false,
+		"order": 8
+	}
+}

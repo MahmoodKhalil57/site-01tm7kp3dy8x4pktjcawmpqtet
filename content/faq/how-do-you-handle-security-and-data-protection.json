@@ -1,0 +1,15 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "how-do-you-handle-security-and-data-protection",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "How do you handle security and data protection?",
+		"answer": "Security is built into every project from day one. We follow secure coding standards, conduct regular audits, encrypt data at rest and in transit, and comply with GDPR and other relevant regulations.",
+		"order": 8,
+		"is_active": true
+	}
+}

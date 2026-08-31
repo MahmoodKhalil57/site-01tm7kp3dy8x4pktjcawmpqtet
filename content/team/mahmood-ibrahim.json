@@ -1,0 +1,26 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "mahmood-ibrahim",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "Mahmood Ibrahim",
+		"role": "Co-founder & CTO",
+		"department": "Executive",
+		"bio": "5+ years in full-stack development — has built and shipped multiple products from the ground up.",
+		"full_bio": "Mahmood leads the technical architecture at SaaSTEMLY, turning client requirements and user stories into production-ready software. He specializes in building scalable web applications and systems, with deep expertise in modern frameworks and clean architecture. A strong advocate for best practices, Mahmood brings the discipline of maintainable, well-tested code to every project.",
+		"experience": "5+ years in software development and software consulting",
+		"image": "/team/Mahmood_Ibrahim.png",
+		"image_position": "50% 30%",
+		"location": "Brighton, UK",
+		"join_date": "February 2020",
+		"skills": "Strategy\nProduct Vision\nBuilding Systems\nBuilding Teams\nSoftware Development",
+		"linkedin": "",
+		"github": "",
+		"home_page": false,
+		"order": 2
+	}
+}

@@ -1,0 +1,37 @@
+---
+import Site from "@/layouts/Site.astro";
+import { NoirPageHero } from "@/components/noir/noir-page-hero";
+import { NoirSection } from "@/components/noir/noir-section";
+import { PostList } from "@/components/blog/post-list";
+import { categoryLabel, getPosts } from "@/lib/content";
+
+const posts = (await getPosts()).map((p) => ({
+	slug: p.slug,
+	title: p.title,
+	excerpt: p.excerpt,
+	coverImage: p.coverImage,
+	coverImageAlt: p.coverImageAlt,
+	author: p.author,
+	categoryLabel: categoryLabel(p.category),
+	publishedAt: p.publishedAt,
+	upcoming: p.upcoming,
+}));
+---
+
+<Site
+	title="Blog"
+	description="Insights, tutorials, and updates from the SaaSTEMLY team. Learn about building modern SaaS applications."
+>
+	<NoirPageHero
+		client:load
+		title="Blog."
+		subtitle="Tutorials, updates, and thoughts on building SaaS."
+		decrypt={false}
+		backHref="/"
+		backLabel="Back to Home"
+	/>
+
+	<NoirSection>
+		<PostList client:load posts={posts} />
+	</NoirSection>
+</Site>

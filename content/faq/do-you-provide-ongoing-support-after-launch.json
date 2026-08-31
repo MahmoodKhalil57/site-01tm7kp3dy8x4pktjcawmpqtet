@@ -1,0 +1,15 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "do-you-provide-ongoing-support-after-launch",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "Do you provide ongoing support after launch?",
+		"answer": "Yes. We offer maintenance packages that include bug fixes, security updates, performance tuning, and feature additions — with service-level agreements to match your needs.",
+		"order": 3,
+		"is_active": true
+	}
+}

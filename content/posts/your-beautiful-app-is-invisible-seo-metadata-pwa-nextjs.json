@@ -1,0 +1,936 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "your-beautiful-app-is-invisible-seo-metadata-pwa-nextjs",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-02-14T10:00:00.000Z",
+	"data": {
+		"title": "Your Beautiful App Is Invisible: SEO, Metadata & PWA in Next.js 16",
+		"excerpt": "You built a gorgeous app. Animations are silky. Colors are OKLCH-approved. And Google has no idea it exists. Let us fix that.",
+		"cover_image": "https://images.pexels.com/photos/15395510/pexels-photo-15395510.jpeg?auto=compress&cs=tinysrgb&w=1920",
+		"cover_image_alt": "White blocks with letters spelling Google on a surface, symbolizing search and SEO concepts",
+		"content": [
+			{
+				"_type": "block",
+				"_key": "k00nl",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00nk",
+						"text": "You shipped it. The landing page is gorgeous. Animations are silky. Color palette is OKLCH-approved (you read our last blog, right?). You shared the link on Twitter with a witty caption and waited for the organic traffic to wash over you like a warm validation bath.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00nn",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00nm",
+						"text": "Days pass. You check Google. Your site does not exist. You search your own brand name. Page three. Behind a Stack Overflow answer from 2019 and someone's abandoned WordPress blog about artisanal soap.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00np",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00no",
+						"text": "The Googlebot visited your site. It looked around. And it left without swiping right.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00nt",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00nq",
+						"text": "This, dear developer, is the consequence of building a beautiful house with no address. You optimized the pixels but forgot the paperwork. And in the ruthless dating game that is search engine optimization, ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00nr",
+						"text": "paperwork is everything",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00ns",
+						"text": ".",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00nv",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00nu",
+						"text": "The metadata Export: Your Site's Dating Profile",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00nz",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00nw",
+						"text": "In Next.js 16, every page can export a ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00nx",
+						"text": "metadata",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00ny",
+						"text": " object. Think of it as filling out your site's dating profile — except instead of \"I love hiking and dogs,\" you are writing things the Googlebot actually cares about.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00o0",
+				"code": "import type { Metadata } from \"next\";\n\nexport const metadata: Metadata = {\n  title: \"My SaaS App | The Best Tool You Will Ever Use\",\n  description:\n    \"A concise, compelling description under 160 characters. \" +\n    \"Yes, there is a character limit. No, your marketing team will not respect it.\",\n  keywords: [\"saas\", \"productivity\", \"next.js\"],\n};",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k00o6",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00o1",
+						"text": "That ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00o2",
+						"text": "title",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00o3",
+						"text": " tag? It is the first thing Google reads. The ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00o4",
+						"text": "description",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00o5",
+						"text": "? It is the two-sentence pitch that appears in search results and determines whether anyone clicks. Get it wrong and you are the profile that says \"I am a hard worker who loves to laugh.\" Get it right and you are the one that actually gets clicks.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00oa",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00o7",
+						"text": "The ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00o8",
+						"text": "Metadata",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00o9",
+						"text": " type from Next.js gives you autocomplete for every field that exists. Open Graph images, Twitter cards, robots directives, canonical URLs, alternates for i18n — it is all there. You do not have to memorize the meta tag zoo. TypeScript does it for you. The Googlebot appreciates the effort.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00oc",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ob",
+						"text": "Open Graph: Stop Your Links Looking Like a Ransom Note",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00oe",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00od",
+						"text": "You know the feeling. You paste your shiny new URL into Slack. Instead of a beautiful card with an image and a description, you get a naked URL. Just sitting there. Unadorned. Like showing up to a job interview in pajamas.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00og",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00of",
+						"text": "Open Graph tags are what make your links look professional when shared on social media, messaging apps, and basically anywhere that unfurls URLs. And Next.js makes them embarrassingly easy.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00oh",
+				"code": "export const metadata: Metadata = {\n  openGraph: {\n    title: \"My SaaS App\",\n    description: \"The tool your competitors are already using.\",\n    url: \"https://myapp.com\",\n    siteName: \"My SaaS App\",\n    images: [{ url: \"/og-image.png\", width: 1200, height: 630 }],\n    type: \"website\",\n  },\n  twitter: {\n    card: \"summary_large_image\",\n    title: \"My SaaS App\",\n    description: \"The tool your competitors are already using.\",\n    images: [\"/og-image.png\"],\n  },\n};",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k00or",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00oi",
+						"text": "The ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00oj",
+						"text": "openGraph",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00ok",
+						"text": " field handles Facebook, LinkedIn, and most chat apps. The ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00ol",
+						"text": "twitter",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00om",
+						"text": " field handles, well, Twitter — or X, or whatever it is called this week. The running gag of the internet itself. Set ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00on",
+						"text": "card",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00oo",
+						"text": " to \"",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00op",
+						"text": "summary_large_image",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00oq",
+						"text": "\" and your link gets the big beautiful preview instead of the tiny thumbnail that makes people think you are linking to malware.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ot",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00os",
+						"text": "Pro tip: 1200 x 630 pixels for OG images. Burn this into your memory. Tattoo it on your forearm. Every platform expects it and none of them will tell you when you get it wrong. They will just silently crop your image into something that looks like modern art. The Googlebot, of course, does not care about image dimensions. It has no eyes. But your users do.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ov",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ou",
+						"text": "generateMetadata: For When Your Pages Have Opinions",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00ox",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ow",
+						"text": "Static metadata is great for your homepage and about page. But what about blog posts? Product pages? The 47 routes that are generated from your CMS?",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00p1",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00oy",
+						"text": "This is where ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00oz",
+						"text": "generateMetadata",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00p0",
+						"text": " shines. It is an async function that receives the route params and returns metadata dynamically. And it is beautiful.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00p2",
+				"code": "import type { Metadata } from \"next\";\n\ntype Props = { params: Promise<{ slug: string }> };\n\nexport async function generateMetadata({ params }: Props): Promise<Metadata> {\n  const { slug } = await params;\n  const post = await getPost(slug);\n\n  return {\n    title: post.title,\n    description: post.excerpt,\n    openGraph: {\n      title: post.title,\n      description: post.excerpt,\n      images: [{ url: post.coverImage }],\n      type: \"article\",\n      publishedTime: post.publishedAt,\n    },\n  };\n}",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k00p6",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00p3",
+						"text": "Notice a few things. First, it is async — you can fetch data. Second, it runs at build time for static pages and at request time for dynamic ones. Third, it returns the same ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00p4",
+						"text": "Metadata",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00p5",
+						"text": " type, so you get the same autocomplete. And fourth — and this is the part that makes me unreasonably happy — Next.js deduplicates the fetch. If your page component also fetches the same blog post, Next.js is smart enough not to fetch it twice. The framework is doing your job better than you are. Let it.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00pa",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00p7",
+						"text": "The Googlebot is finally starting to notice you. You have a title. A description. An image. You are no longer the naked URL at the party. You are the one with a name tag ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00p8",
+						"text": "and",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00p9",
+						"text": " a conversation starter.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00pc",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00pb",
+						"text": "JSON-LD: Whispering Sweet Nothings to Search Engines",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00pe",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00pd",
+						"text": "Metadata gets you in the door. JSON-LD gets you the VIP booth.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00pi",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00pf",
+						"text": "JSON-LD (JavaScript Object Notation for Linked Data) is structured data that tells search engines exactly what your page is about in a format they can parse without guessing. It is the difference between Google thinking \"this page mentions prices\" and Google ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00pg",
+						"text": "knowing",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00ph",
+						"text": " \"this is a product that costs $29 with 4.5 stars and free shipping.\"",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00pj",
+				"code": "export default function ProductPage({ product }) {\n  const jsonLd = {\n    \"@context\": \"https://schema.org\",\n    \"@type\": \"Product\",\n    name: product.name,\n    description: product.description,\n    image: product.image,\n    offers: {\n      \"@type\": \"Offer\",\n      price: product.price,\n      priceCurrency: \"USD\",\n      availability: \"https://schema.org/InStock\",\n    },\n  };\n\n  return (\n    <>\n      <script\n        type=\"application/ld+json\"\n        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}\n      />\n      {/* rest of your page */}\n    </>\n  );\n}",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k00pl",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00pk",
+						"text": "Drop that script tag in your page component and suddenly Google can show rich snippets — star ratings, prices, FAQ accordions, breadcrumbs, event dates. You know those fancy search results that take up way more space than everyone else's? That is JSON-LD working overtime. It is like showing up to the party with a spotlight and a confetti cannon.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00pn",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00pm",
+						"text": "The Googlebot still will not swipe right. But it will absolutely put you at the top of the results. Which is basically the search engine equivalent of a superlike.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00pp",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00po",
+						"text": "PWA: The App Your Users Can Take Home",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00pr",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00pq",
+						"text": "Here is where things get romantic. A Progressive Web App is a website that commits. It can be installed on the home screen. It works offline. It sends push notifications. It is the app that actually calls back. Unlike the Googlebot. Still waiting, by the way.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00pz",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ps",
+						"text": "In Next.js 16, PWA support starts with a manifest file. You can create a ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00pt",
+						"text": "manifest.ts",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00pu",
+						"text": " (or ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00pv",
+						"text": "manifest.json",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00pw",
+						"text": ") at the root of your app directory and Next.js will serve it at ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00px",
+						"text": "/manifest.webmanifest",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00py",
+						"text": " automatically.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00q0",
+				"code": "import type { MetadataRoute } from \"next\";\n\nexport default function manifest(): MetadataRoute.Manifest {\n  return {\n    name: \"My SaaS App\",\n    short_name: \"MySaaS\",\n    start_url: \"/\",\n    display: \"standalone\",\n    background_color: \"#000000\",\n    theme_color: \"#000000\",\n    icons: [\n      { src: \"/icon-192.png\", sizes: \"192x192\", type: \"image/png\" },\n      { src: \"/icon-512.png\", sizes: \"512x512\", type: \"image/png\" },\n    ],\n  };\n}",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k00q4",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00q1",
+						"text": "The manifest tells the browser \"hey, I am not just a website. I am an app. I have a name, icons, a theme color, and I would like to be installed, please.\" Once you add a service worker for caching (via ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00q2",
+						"text": "next-pwa",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00q3",
+						"text": " or its community forks), your app gains offline superpowers — precached pages, cached API responses, and a fallback page for when the network ghosts your user. Much like the Googlebot ghosts you.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00q6",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00q5",
+						"text": "The beauty of PWA in Next.js is that it is additive. Your app is still a website. It still has URLs. It still gets indexed. But now it also has superpowers. It lives on the home screen next to Instagram and that game your user downloaded but never plays.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00q8",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00q7",
+						"text": "sitemap.ts and robots.ts: Being Polite to Robots",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00qa",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00q9",
+						"text": "SEO is not just about looking good. It is about being findable. And for that, you need to hand the Googlebot a map and say \"here is everything, please do not get lost.\"",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00qb",
+				"code": "// app/sitemap.ts\nimport type { MetadataRoute } from \"next\";\n\nexport default async function sitemap(): Promise<MetadataRoute.Sitemap> {\n  const posts = await getAllPosts();\n\n  return [\n    { url: \"https://myapp.com\", lastModified: new Date() },\n    { url: \"https://myapp.com/about\", lastModified: new Date() },\n    ...posts.map((post) => ({\n      url: `https://myapp.com/blog/${post.slug}`,\n      lastModified: new Date(post.updatedAt),\n    })),\n  ];\n}",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k00qd",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00qc",
+						"text": "Next.js lets you define your sitemap as a TypeScript function. Dynamic pages from your CMS? Fetch them. Static pages? List them. The output is properly formatted XML that every crawler can consume.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00qh",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00qe",
+						"text": "And then there is ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00qf",
+						"text": "robots.ts",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00qg",
+						"text": " — the \"please knock before entering\" sign of the web.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "code",
+				"_key": "k00qi",
+				"code": "// app/robots.ts\nimport type { MetadataRoute } from \"next\";\n\nexport default function robots(): MetadataRoute.Robots {\n  return {\n    rules: { userAgent: \"*\", allow: \"/\" },\n    sitemap: \"https://myapp.com/sitemap.xml\",\n  };\n}",
+				"language": "typescript"
+			},
+			{
+				"_type": "block",
+				"_key": "k00qk",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00qj",
+						"text": "You are telling crawlers \"index everything, here is my sitemap, have a nice day.\" Basic etiquette. Like holding the door open. The Googlebot appreciates manners. It still will not call you back, but at least it will index your pages.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00qm",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00ql",
+						"text": "The Bottom Line (The Googlebot Is Listening)",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00qo",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00qn",
+						"text": "SEO is not glamorous. Nobody has ever looked at a metadata export and said \"wow, this is beautiful.\" No designer has ever high-fived over a sitemap. And no one has ever tweeted \"just wrote the cleanest JSON-LD of my career.\" (Actually, I might have done that. Do not look it up.)",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00qq",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00qp",
+						"text": "But here is the thing: none of your beautiful UI matters if nobody can find it. Your OKLCH colors, your glassmorphism header, your perfectly-timed animations — all invisible to the billions of people who discover websites through search engines.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00r0",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00qr",
+						"text": "Next.js 16 gives you the tools to fix that. Static ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00qs",
+						"text": "metadata",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00qt",
+						"text": " for simple pages. ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00qu",
+						"text": "generateMetadata",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00qv",
+						"text": " for dynamic ones. Open Graph for social clout. JSON-LD for rich snippets. A ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00qw",
+						"text": "manifest.ts",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00qx",
+						"text": " for PWA superpowers. And ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00qy",
+						"text": "sitemap.ts",
+						"marks": [
+							"code"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00qz",
+						"text": " for being a good internet citizen.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00r2",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00r1",
+						"text": "The Googlebot will never love you back. It is a robot. It does not have feelings. But with proper metadata, at least it will index you. And in the world of SEO, that is basically a marriage proposal.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00r4",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00r3",
+						"text": "Now go add a metadata export to your homepage. Your Lighthouse score will thank you. Your users will find you. And the Googlebot? Well, it might finally swipe right.",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			}
+		],
+		"author": "Omar Majed",
+		"category": "tutorial",
+		"tags": "Next.js\nSEO\nPWA\nTutorial",
+		"publish_date": "2026-02-14T10:00:00.000Z"
+	}
+}

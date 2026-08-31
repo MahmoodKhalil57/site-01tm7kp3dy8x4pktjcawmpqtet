@@ -1,0 +1,35 @@
+---
+/**
+ * Long-form pages from the `pages` collection (Terms, Privacy, License…):
+ * every published entry renders at /<slug> inside the legal layout.
+ */
+import { PortableText } from "@premium-cms/emdash/ui";
+import { getEmDashCollection } from "@premium-cms/emdash";
+import Site from "@/layouts/Site.astro";
+import { LegalPageLayout } from "@/components/legal/legal-page-layout";
+import { getPage } from "@/lib/content";
+
+export async function getStaticPaths() {
+	// getStaticPaths runs in isolation (no access to the frontmatter scope).
+	// Routes owned by dedicated pages/collections — never let a `pages` entry shadow them.
+	const reserved = new Set(["about", "portfolio", "blogs", "contact", "faq", "404"]);
+	let slugs: string[] = [];
+	try {
+		const { entries } = await getEmDashCollection("pages", { status: "published", limit: 200 });
+		slugs = (entries ?? []).map((e: any) => String(e.slug ?? "")).filter((s) => s && !reserved.has(s));
+	} catch (error) {
+		console.error("[pages] getStaticPaths failed:", error);
+	}
+	return slugs.map((slug) => ({ params: { slug } }));
+}
+
+const { slug } = Astro.params;
+const page = await getPage(slug!);
+if (!page) return Astro.redirect("/404");
+---
+
+<Site title={page.title} description={page.description || undefined} main={false}>
+	<LegalPageLayout client:load title={page.title} lastUpdated={page.lastUpdated} lastUpdatedLabel="Last updated:">
+		<PortableText value={page.content as any} />
+	</LegalPageLayout>
+</Site>

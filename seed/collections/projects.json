@@ -1,0 +1,124 @@
+{
+	"$schema": "../.schemas/collection.schema.json",
+	"slug": "projects",
+	"label": "Projects",
+	"labelSingular": "Project",
+	"storage": "git",
+	"description": "Portfolio projects. All appear on /portfolio; the flagged ones on the home page.",
+	"admin": {
+		"listColumns": [
+			"subtitle",
+			"year",
+			"home_page",
+			"order"
+		]
+	},
+	"sortOrder": 5,
+	"fields": [
+		{
+			"slug": "title",
+			"label": "Title",
+			"type": "string",
+			"required": true
+		},
+		{
+			"slug": "subtitle",
+			"label": "Subtitle",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "description",
+			"label": "Description",
+			"type": "text",
+			"required": false
+		},
+		{
+			"slug": "full_description",
+			"label": "Full description",
+			"type": "text",
+			"required": false
+		},
+		{
+			"slug": "image",
+			"label": "Screenshot URL (e.g. /projects/name.png)",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "url",
+			"label": "Live site URL",
+			"type": "url"
+		},
+		{
+			"slug": "tags",
+			"label": "Tags (one per line)",
+			"type": "text",
+			"required": false
+		},
+		{
+			"slug": "region",
+			"label": "Region",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "country",
+			"label": "Country",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "industry",
+			"label": "Industry",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "year",
+			"label": "Year",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "duration",
+			"label": "Duration",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "team_size",
+			"label": "Team size",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "technologies",
+			"label": "Technologies (one per line)",
+			"type": "text",
+			"required": false
+		},
+		{
+			"slug": "features",
+			"label": "Key features (one per line)",
+			"type": "text",
+			"required": false
+		},
+		{
+			"slug": "results",
+			"label": "Key results (one per line)",
+			"type": "text",
+			"required": false
+		},
+		{
+			"slug": "home_page",
+			"label": "Show on the home page",
+			"type": "boolean"
+		},
+		{
+			"slug": "order",
+			"label": "Display order",
+			"type": "integer"
+		}
+	]
+}

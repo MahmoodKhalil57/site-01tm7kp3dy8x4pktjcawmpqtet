@@ -1,0 +1,176 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "build-with-a-soul",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-03-10T10:00:00.000Z",
+	"data": {
+		"title": "What It Means to Build With a Soul",
+		"excerpt": "\"Soul\" is a strange word to use in a technical context. But it's the most honest one we have. When you use a product built with soul, you feel it. The transitions are smooth not because they're flashy, but because someone thought about how a real user moves through a screen.",
+		"cover_image": "https://images.pexels.com/photos/7222238/pexels-photo-7222238.jpeg?auto=compress&cs=tinysrgb&w=1920",
+		"cover_image_alt": "A craftsman carefully examines rows of ceramic bowls in a workshop setting",
+		"content": [
+			{
+				"_type": "block",
+				"_key": "k00x6",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00x5",
+						"text": "\"Soul\" is a strange word to use in a technical context. But it's the most honest one we have.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00xa",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00x7",
+						"text": "When you use a product built with soul, you feel it. The transitions are smooth not because they're flashy, but because someone thought about how a real user moves through a screen. The documentation is clear not because it was auto-generated, but because someone anticipated your confusion and answered it before you asked. The loading states, the error messages, the empty states — everything signals: ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00x8",
+						"text": "a thoughtful person was here",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00x9",
+						"text": ".",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00xc",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00xb",
+						"text": "This is not romanticism. It is the difference between software that retains users and software that loses them at onboarding.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00xe",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00xd",
+						"text": "Building with soul means:",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00xh",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00xg",
+						"text": "Treating every project as a case study. Not just as a deliverable, but as evidence of what you believe.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00xf"
+			},
+			{
+				"_type": "block",
+				"_key": "k00xj",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00xi",
+						"text": "Asking harder questions in the discovery phase. Not just 'what do you want built?' but 'what does your user actually need?'",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00xf"
+			},
+			{
+				"_type": "block",
+				"_key": "k00xl",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00xk",
+						"text": "Caring about the post-launch experience. A product isn't done when it ships. It's done when it serves its purpose in the real world.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00xf"
+			},
+			{
+				"_type": "block",
+				"_key": "k00xn",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00xm",
+						"text": "Owning the outcome. Not in a legal sense, but in a moral one — if something doesn't work, you want to know, and you want to fix it.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00xf"
+			},
+			{
+				"_type": "block",
+				"_key": "k00xp",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00xo",
+						"text": "Every project we take on at SaaSTEMLY — whether it's an AI-powered platform, an e-commerce store, or a medical research tool — is an expression of this standard. We are not the cheapest option. We are not trying to be. We are trying to be the agency that a client recommends without being asked.",
+						"marks": []
+					}
+				]
+			}
+		],
+		"author": "Mahmood Ibrahim",
+		"category": "company",
+		"tags": "Values\nDesign\nAgency\nCraftsmanship",
+		"publish_date": "2026-03-10T10:00:00.000Z"
+	}
+}

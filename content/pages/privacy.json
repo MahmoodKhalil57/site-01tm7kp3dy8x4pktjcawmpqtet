@@ -1,0 +1,1250 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "privacy",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "Privacy Policy",
+		"last_updated": "February 5, 2026",
+		"description": "Learn how SaaSTEMLY collects, uses, and protects your personal information. Your privacy matters to us.",
+		"content": [
+			{
+				"_type": "block",
+				"_key": "k0113",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0114",
+						"text": "At SaaSTEMLY, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0115",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0116",
+						"text": "1. Information We Collect",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0117",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0118",
+						"text": "Personal Information",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0119",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k011a",
+						"text": "We may collect personal information that you voluntarily provide when you:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k011c",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k011d",
+						"text": "Create an account or make a purchase",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k011b"
+			},
+			{
+				"_type": "block",
+				"_key": "k011e",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k011f",
+						"text": "Subscribe to our newsletter",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k011b"
+			},
+			{
+				"_type": "block",
+				"_key": "k011g",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k011h",
+						"text": "Contact us through our support channels",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k011b"
+			},
+			{
+				"_type": "block",
+				"_key": "k011i",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k011j",
+						"text": "Participate in surveys or promotions",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k011b"
+			},
+			{
+				"_type": "block",
+				"_key": "k011k",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k011l",
+						"text": "This information may include:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k011n",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k011o",
+						"text": "Name and email address",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k011m"
+			},
+			{
+				"_type": "block",
+				"_key": "k011p",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k011q",
+						"text": "Billing address and payment information",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k011m"
+			},
+			{
+				"_type": "block",
+				"_key": "k011r",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k011s",
+						"text": "Company name and job title",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k011m"
+			},
+			{
+				"_type": "block",
+				"_key": "k011t",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k011u",
+						"text": "Any other information you choose to provide",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k011m"
+			},
+			{
+				"_type": "block",
+				"_key": "k011v",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k011w",
+						"text": "Automatically Collected Information",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k011x",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k011y",
+						"text": "When you access our services, we may automatically collect certain information, including:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0120",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0121",
+						"text": "IP address and browser type",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k011z"
+			},
+			{
+				"_type": "block",
+				"_key": "k0122",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0123",
+						"text": "Device information and operating system",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k011z"
+			},
+			{
+				"_type": "block",
+				"_key": "k0124",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0125",
+						"text": "Pages visited and time spent on our site",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k011z"
+			},
+			{
+				"_type": "block",
+				"_key": "k0126",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0127",
+						"text": "Referring website addresses",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k011z"
+			},
+			{
+				"_type": "block",
+				"_key": "k0128",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0129",
+						"text": "2. How We Use Your Information",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k012a",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k012b",
+						"text": "We use the information we collect to:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k012d",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k012e",
+						"text": "Process transactions and deliver purchased products",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k012c"
+			},
+			{
+				"_type": "block",
+				"_key": "k012f",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k012g",
+						"text": "Send administrative information and service updates",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k012c"
+			},
+			{
+				"_type": "block",
+				"_key": "k012h",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k012i",
+						"text": "Respond to inquiries and provide customer support",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k012c"
+			},
+			{
+				"_type": "block",
+				"_key": "k012j",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k012k",
+						"text": "Improve our website and services",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k012c"
+			},
+			{
+				"_type": "block",
+				"_key": "k012l",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k012m",
+						"text": "Send marketing communications (with your consent)",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k012c"
+			},
+			{
+				"_type": "block",
+				"_key": "k012n",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k012o",
+						"text": "Protect against fraudulent or unauthorized activity",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k012c"
+			},
+			{
+				"_type": "block",
+				"_key": "k012p",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k012q",
+						"text": "Comply with legal obligations",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k012c"
+			},
+			{
+				"_type": "block",
+				"_key": "k012r",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k012s",
+						"text": "3. Information Sharing",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k012t",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k012u",
+						"text": "We may share your information with:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k012z",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k012v",
+						"text": "Service Providers:",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0130",
+						"text": " Third-party vendors who assist us in operating our business (payment processors, email services, analytics providers)",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k012y"
+			},
+			{
+				"_type": "block",
+				"_key": "k0131",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k012w",
+						"text": "Legal Requirements:",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0132",
+						"text": " When required by law or to respond to legal process",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k012y"
+			},
+			{
+				"_type": "block",
+				"_key": "k0133",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k012x",
+						"text": "Business Transfers:",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0134",
+						"text": " In connection with a merger, acquisition, or sale of assets",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k012y"
+			},
+			{
+				"_type": "block",
+				"_key": "k0135",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0136",
+						"text": "We do not sell, rent, or trade your personal information to third parties for marketing purposes.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0137",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0138",
+						"text": "4. Third-Party Services",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0139",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k013a",
+						"text": "Our services integrate with third-party providers, including:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k013f",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k013b",
+						"text": "Stripe:",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k013g",
+						"text": " For payment processing. Stripe's privacy policy governs payment data.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k013e"
+			},
+			{
+				"_type": "block",
+				"_key": "k013h",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k013c",
+						"text": "Analytics Services:",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k013i",
+						"text": " To understand how users interact with our site.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k013e"
+			},
+			{
+				"_type": "block",
+				"_key": "k013j",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k013d",
+						"text": "Email Services:",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k013k",
+						"text": " To send transactional and marketing emails.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k013e"
+			},
+			{
+				"_type": "block",
+				"_key": "k013l",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k013m",
+						"text": "We encourage you to review the privacy policies of these third-party services.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k013n",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k013o",
+						"text": "5. Cookies and Tracking Technologies",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k013p",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k013q",
+						"text": "We use cookies and similar tracking technologies to enhance your experience. These may include:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k013v",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k013r",
+						"text": "Essential Cookies:",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k013w",
+						"text": " Required for basic site functionality",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k013u"
+			},
+			{
+				"_type": "block",
+				"_key": "k013x",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k013s",
+						"text": "Analytics Cookies:",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k013y",
+						"text": " Help us understand site usage",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k013u"
+			},
+			{
+				"_type": "block",
+				"_key": "k013z",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k013t",
+						"text": "Preference Cookies:",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0140",
+						"text": " Remember your settings and preferences",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k013u"
+			},
+			{
+				"_type": "block",
+				"_key": "k0141",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0142",
+						"text": "You can control cookies through your browser settings. Note that disabling certain cookies may affect site functionality.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0143",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0144",
+						"text": "6. Data Security",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0145",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0146",
+						"text": "We implement appropriate technical and organizational measures to protect your personal information, including:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0148",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0149",
+						"text": "Encryption of data in transit and at rest",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k0147"
+			},
+			{
+				"_type": "block",
+				"_key": "k014a",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k014b",
+						"text": "Regular security assessments",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k0147"
+			},
+			{
+				"_type": "block",
+				"_key": "k014c",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k014d",
+						"text": "Access controls and authentication",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k0147"
+			},
+			{
+				"_type": "block",
+				"_key": "k014e",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k014f",
+						"text": "Secure development practices",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k0147"
+			},
+			{
+				"_type": "block",
+				"_key": "k014g",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k014h",
+						"text": "However, no method of transmission over the Internet is 100% secure, and we cannot guarantee absolute security.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k014i",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k014j",
+						"text": "7. Data Retention",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k014k",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k014l",
+						"text": "We retain your personal information for as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required by law. When information is no longer needed, we will securely delete or anonymize it.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k014m",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k014n",
+						"text": "8. Your Rights",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k014o",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k014p",
+						"text": "Depending on your location, you may have the right to:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k014r",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k014s",
+						"text": "Access the personal information we hold about you",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k014q"
+			},
+			{
+				"_type": "block",
+				"_key": "k014t",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k014u",
+						"text": "Request correction of inaccurate information",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k014q"
+			},
+			{
+				"_type": "block",
+				"_key": "k014v",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k014w",
+						"text": "Request deletion of your personal information",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k014q"
+			},
+			{
+				"_type": "block",
+				"_key": "k014x",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k014y",
+						"text": "Object to or restrict certain processing",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k014q"
+			},
+			{
+				"_type": "block",
+				"_key": "k014z",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0150",
+						"text": "Data portability",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k014q"
+			},
+			{
+				"_type": "block",
+				"_key": "k0151",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0152",
+						"text": "Withdraw consent at any time",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k014q"
+			},
+			{
+				"_type": "block",
+				"_key": "k0153",
+				"style": "normal",
+				"markDefs": [
+					{
+						"_type": "link",
+						"_key": "k0155",
+						"href": "/contact"
+					}
+				],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0154",
+						"text": "To exercise these rights, please ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0156",
+						"text": "contact us",
+						"marks": [
+							"k0155"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0157",
+						"text": ".",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0158",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0159",
+						"text": "9. Children's Privacy",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k015a",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k015b",
+						"text": "Our services are not directed to individuals under 18 years of age. We do not knowingly collect personal information from children. If we become aware that we have collected information from a child, we will take steps to delete it promptly.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k015c",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k015d",
+						"text": "10. International Data Transfers",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k015e",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k015f",
+						"text": "Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place for such transfers in compliance with applicable data protection laws.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k015g",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k015h",
+						"text": "11. Changes to This Policy",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k015i",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k015j",
+						"text": "We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new policy on this page and updating the \"Last updated\" date. We encourage you to review this policy periodically.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k015k",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k015l",
+						"text": "12. Contact Us",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k015m",
+				"style": "normal",
+				"markDefs": [
+					{
+						"_type": "link",
+						"_key": "k015o",
+						"href": "/contact"
+					}
+				],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k015n",
+						"text": "If you have questions or concerns about this Privacy Policy or our data practices, please ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k015p",
+						"text": "contact us",
+						"marks": [
+							"k015o"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k015q",
+						"text": ".",
+						"marks": []
+					}
+				]
+			}
+		]
+	}
+}

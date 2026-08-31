@@ -1,0 +1,29 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "mylerz-egypt",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "Mylerz - Egypt",
+		"subtitle": "Logistics & Delivery Platform",
+		"description": "A comprehensive logistics and delivery platform revolutionizing e-commerce fulfillment across Egypt and the Middle East region.",
+		"full_description": "Mylerz transforms the logistics landscape by providing end-to-end delivery solutions for businesses of all sizes. From last-mile delivery to warehousing, the platform offers seamless integration with e-commerce platforms and real-time tracking capabilities.",
+		"image": "/projects/mylerz.png",
+		"url": "https://www.mylerz.com/",
+		"tags": "React\nNode.js\nLogistics\nE-commerce\nMobile",
+		"region": "Middle East",
+		"country": "Egypt",
+		"industry": "Logistics & Delivery",
+		"year": "2024",
+		"duration": "12 months",
+		"team_size": "10 developers",
+		"technologies": "React\nNode.js\nMongoDB\nRedis\nGoogle Maps API\nReact Native",
+		"features": "Real-time package tracking\nMulti-platform e-commerce integration\nSmart warehouse management system\nRoute optimization algorithms\nComprehensive merchant dashboard\nAdvanced fleet management system",
+		"results": "1M+ orders processed monthly\n40% reduction in delivery time\n55% increase in customer satisfaction",
+		"home_page": false,
+		"order": 7
+	}
+}

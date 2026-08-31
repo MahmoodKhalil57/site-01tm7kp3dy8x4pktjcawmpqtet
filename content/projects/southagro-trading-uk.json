@@ -1,0 +1,29 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "southagro-trading-uk",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "South Agro Trading - UK",
+		"subtitle": "Hydroponic Produce Company",
+		"description": "A modern showcase website for a premium hydroponic produce company specializing in sustainable leafy greens, baby leaf mixes, and microgreens grown in solar-powered greenhouses.",
+		"full_description": "South Agro Trading Ltd operates a state-of-the-art hydroponic greenhouse facility in Fayoum, producing 11 varieties of premium leafy greens and microgreens. The website showcases their seed-to-shelf process, sustainability commitment with 95% water recirculation and 100% solar power, and their same-day delivery model for the freshest produce.",
+		"image": "/projects/southagro.png",
+		"url": "https://www.southagrotrading.uk",
+		"tags": "Next.js\nTailwind CSS\nAgriculture\nSustainability\nShowcase",
+		"region": "United Kingdom",
+		"country": "UK",
+		"industry": "Agriculture & AgriTech",
+		"year": "2025",
+		"duration": "1 month",
+		"team_size": "2 developers",
+		"technologies": "Next.js\nReact\nTailwind CSS\nTypeScript\nVercel",
+		"features": "Product catalog with 11 hydroponic varieties\nInteractive seed-to-shelf process showcase\nSustainability metrics and impact dashboard\nResponsive design with smooth animations\nSEO-optimized content for agriculture sector",
+		"results": "80% increase in B2B partnership inquiries\n60% improvement in brand credibility online\n3x growth in website-driven wholesale orders",
+		"home_page": true,
+		"order": 2
+	}
+}

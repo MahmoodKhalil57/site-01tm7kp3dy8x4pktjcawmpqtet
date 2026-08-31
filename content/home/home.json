@@ -1,0 +1,135 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "home",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "Home",
+		"meta_title": "SaaSTEMLY - Innovative Software Solutions | Web Apps, Mobile & AI",
+		"meta_description": "Custom web applications, mobile solutions, and AI-powered platforms — from idea to launch. SaaSTEMLY builds scalable software for businesses worldwide.",
+		"hero_tagline": "Software Partner for Growing Businesses",
+		"hero_title": "Your vision.",
+		"hero_title_faded": "Our engineering.",
+		"hero_description": "We design, build, and ship custom software — web apps, mobile platforms, and AI systems — so you can focus on scaling your business.",
+		"hero_primary_cta": "Start Your Project",
+		"hero_primary_cta_url": "/contact",
+		"hero_secondary_cta": "View Our Work",
+		"hero_secondary_cta_url": "/portfolio",
+		"marquee": "WEB APPS\nMOBILE\nAI & ML\nE-COMMERCE\nCLOUD\nUI/UX",
+		"services_title": "What we",
+		"services_title_faded": "deliver.",
+		"services": [
+			{
+				"icon": "Code",
+				"title": "Web Applications",
+				"description": "Responsive, production-grade web apps that handle real traffic and grow with your business. Built with React, Next.js, and Vue."
+			},
+			{
+				"icon": "Smartphone",
+				"title": "Mobile Apps",
+				"description": "Cross-platform apps for iOS and Android that feel native, load fast, and keep users coming back."
+			},
+			{
+				"icon": "Brain",
+				"title": "AI & Machine Learning",
+				"description": "RAG pipelines, LLM integration, intelligent automation — we build AI features that solve real problems, not demos."
+			},
+			{
+				"icon": "ShoppingCart",
+				"title": "E-commerce",
+				"description": "End-to-end online stores with secure payments, inventory management, and checkout flows that convert."
+			},
+			{
+				"icon": "Cloud",
+				"title": "Cloud & DevOps",
+				"description": "Reliable infrastructure on AWS, GCP, or Azure — with CI/CD, monitoring, and deployments you never worry about."
+			},
+			{
+				"icon": "Palette",
+				"title": "UI/UX Design",
+				"description": "Interfaces designed to earn trust and drive action. Clean, intuitive, and tested with real users."
+			}
+		],
+		"stats": [
+			{
+				"value": 15,
+				"suffix": "+",
+				"label": "Projects",
+				"static": false
+			},
+			{
+				"value": 7,
+				"suffix": "",
+				"label": "Team Members",
+				"static": false
+			},
+			{
+				"value": 8,
+				"suffix": "+",
+				"label": "Countries Served",
+				"static": false
+			},
+			{
+				"value": 2020,
+				"suffix": "",
+				"label": "Founded",
+				"static": true
+			}
+		],
+		"portfolio_title": "Our",
+		"portfolio_title_faded": "work.",
+		"portfolio_view_all": "View All Projects",
+		"engagement_title": "How we",
+		"engagement_title_faded": "work.",
+		"engagement_subtitle": "Three ways to work with us — pick the model that fits your stage and budget.",
+		"engagement_models": [
+			{
+				"icon": "Layers",
+				"name": "Project-Based",
+				"description": "A fixed scope, timeline, and price. You tell us what you need — we deliver it. No surprises.",
+				"best_for_label": "Best for",
+				"best_for": "MVPs, redesigns, and one-off builds",
+				"features": "Fixed scope & price\nMilestone-based delivery\nDetailed project roadmap\nDedicated project manager",
+				"cta": "Discuss Your Project",
+				"cta_url": "/contact",
+				"featured": false
+			},
+			{
+				"icon": "RefreshCw",
+				"name": "Monthly Retainer",
+				"description": "Ongoing development hours with priority access. Your dedicated team, always available — for products that keep evolving.",
+				"best_for_label": "Best for",
+				"best_for": "SaaS products and growing platforms",
+				"features": "Guaranteed monthly hours\nPriority support & fast turnaround\nContinuous iteration & improvement\nFlexible scope adjustments",
+				"cta": "Start a Retainer",
+				"cta_url": "/contact",
+				"featured": true
+			},
+			{
+				"icon": "Users",
+				"name": "Team Augmentation",
+				"description": "Our engineers join your team directly. Same tools, same standups, same goals — just more capacity when you need it.",
+				"best_for_label": "Best for",
+				"best_for": "Scaling teams and filling skill gaps",
+				"features": "Engineers embedded in your workflow\nFull-time or part-time availability\nYour tools, your processes\nRapid onboarding",
+				"cta": "Augment Your Team",
+				"cta_url": "/contact",
+				"featured": false
+			}
+		],
+		"team_title": "Meet the",
+		"team_title_faded": "team.",
+		"testimonials_title": "Client",
+		"testimonials_title_faded": "stories.",
+		"faq_title": "Questions.",
+		"faq_subtitle": "Everything you need to know.",
+		"cta_title": "Ready to build",
+		"cta_title_faded": "something real?",
+		"cta_button": "Get in Touch",
+		"cta_url": "/contact",
+		"cta_footnote": "Free consultation — no commitment required"
+	}
+}

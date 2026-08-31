@@ -1,0 +1,159 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "what-cutting-corners-costs",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-03-01T10:00:00.000Z",
+	"data": {
+		"title": "What \"Cut Corners\" Actually Costs You",
+		"excerpt": "Ship faster, spend less, improve later. Lean methodology, right? Except in practice, \"fix things later\" becomes a debt that compounds daily. Here is what cutting corners in software development actually costs.",
+		"cover_image": "https://images.pexels.com/photos/5900075/pexels-photo-5900075.jpeg?auto=compress&cs=tinysrgb&w=1920",
+		"cover_image_alt": "Woman experiencing stress while reviewing household expenses at home",
+		"content": [
+			{
+				"_type": "block",
+				"_key": "k00vz",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00vy",
+						"text": "The pitch sounds reasonable enough: ship faster, spend less, grow the customer base, then improve later. Lean methodology, right? Move fast and fix things.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00w1",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00w0",
+						"text": "Except in practice, \"fix things later\" becomes a debt that compounds daily.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00w3",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00w2",
+						"text": "Consider what actually happens when a software agency cuts corners:",
+						"marks": [
+							"strong"
+						]
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00w6",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00w5",
+						"text": "Technical debt accumulates silently. A quick workaround in week two becomes an architectural crisis in month six. Refactoring that would have taken two hours at the start now takes two weeks — and costs your client real money.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00w4"
+			},
+			{
+				"_type": "block",
+				"_key": "k00w8",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00w7",
+						"text": "User trust erodes at the seams. Users rarely articulate why a product feels cheap. They just stop using it. A slow load here, a confusing UX pattern there, a support ticket that goes unanswered — none of these seem fatal in isolation. Together, they communicate something devastating: we didn't care enough.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00w4"
+			},
+			{
+				"_type": "block",
+				"_key": "k00wa",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00w9",
+						"text": "The referral pipeline dries up. Word of mouth — the most powerful and cheapest growth channel in existence — only flows when people are genuinely delighted. A client who feels like they received exactly what was promised does not refer. A client who felt they received more than expected becomes an evangelist.",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k00w4"
+			},
+			{
+				"_type": "block",
+				"_key": "k00wc",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00wb",
+						"text": "The corners that get cut in software projects are rarely visible on the invoice. They live in the codebase, in the user experience, in the post-launch silences. And eventually, they appear on the churn report.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00wg",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00wd",
+						"text": "At SaaSTEMLY, our projects — from Kamerly's rental platform in the Netherlands to Reco Medical's healthcare research showcase in the UK — are built with a single internal standard: ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00we",
+						"text": "would we be proud to put this in our portfolio?",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00wf",
+						"text": " That question has saved us from more shortcuts than any QA checklist ever could.",
+						"marks": []
+					}
+				]
+			}
+		],
+		"author": "Mahmood Ibrahim",
+		"category": "company",
+		"tags": "Quality\nTechnical Debt\nAgency\nEngineering",
+		"publish_date": "2026-03-01T10:00:00.000Z"
+	}
+}

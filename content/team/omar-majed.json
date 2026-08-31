@@ -1,0 +1,26 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "omar-majed",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "Omar Majed",
+		"role": "Co-founder & COO",
+		"department": "Executive",
+		"bio": "4+ years leading operations and development — bridging business strategy with technical execution.",
+		"full_bio": "With a double major in Business Management and Computer Science, Omar brings a rare combination of commercial thinking and engineering skill. He approaches every project with a consultant's perspective — not just solving the immediate problem, but identifying ways to improve quality, efficiency, and long-term value for clients.",
+		"experience": "4+ years in business management and software development",
+		"image": "/team/omar_majed3.jpg",
+		"image_position": "50% 10%",
+		"location": "Copenhagen, Denmark",
+		"join_date": "February 2020",
+		"skills": "Business Management\nSoftware Development\nProblem Solving\nConsulting\nTeam Leadership",
+		"linkedin": "https://www.linkedin.com/in/omar-el-youssef-76878a178/",
+		"github": "https://github.com/Omegz",
+		"home_page": true,
+		"order": 1
+	}
+}

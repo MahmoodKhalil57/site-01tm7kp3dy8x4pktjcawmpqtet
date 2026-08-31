@@ -1,0 +1,15 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "how-does-pricing-work",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "How does pricing work?",
+		"answer": "We offer fixed-price projects, hourly time-and-materials, and monthly retainers. Reach out for a free consultation and we will provide a detailed quote based on your scope.",
+		"order": 6,
+		"is_active": true
+	}
+}

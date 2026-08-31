@@ -1,0 +1,171 @@
+---
+import { PortableText } from "@premium-cms/emdash/ui";
+import { ArrowLeft } from "lucide-react";
+import Site from "@/layouts/Site.astro";
+import { BlurFade } from "@/components/ui/blur-fade";
+import { PostNext } from "@/components/blog/post-next";
+import { categoryLabel, getLivePosts, getPosts, nextPost as findNext, type Post } from "@/lib/content";
+import { formatDate } from "@/lib/utils";
+
+export async function getStaticPaths() {
+	const posts = await getLivePosts();
+	return posts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
+}
+
+const { post } = Astro.props as { post: Post };
+const allPosts = await getPosts();
+const next = findNext(allPosts, post);
+
+const siteTitle = "SaaSTEMLY";
+const siteUrl = Astro.site?.origin ?? "";
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@type": "Article",
+	headline: post.title,
+	description: post.excerpt,
+	author: { "@type": "Person", name: post.author },
+	publisher: { "@type": "Organization", name: siteTitle, url: siteUrl },
+	datePublished: post.publishedAt || undefined,
+	dateModified: post.updatedAt || post.publishedAt || undefined,
+	mainEntityOfPage: { "@type": "WebPage", "@id": `${siteUrl}/blogs/${post.slug}` },
+	...(post.coverImage ? { image: { "@type": "ImageObject", url: post.coverImage } } : {}),
+};
+
+const GRAIN_BG =
+	"url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48ZmlsdGVyIGlkPSJhIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjc1IiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=')";
+
+const prose =
+	"prose prose-lg prose-neutral dark:prose-invert max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-5 prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-6 prose-li:text-muted-foreground prose-ul:my-6 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground prose-code:text-primary prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none";
+---
+
+<Site title={post.title} description={post.excerpt} image={post.coverImage || undefined} pageType="article">
+	<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+	{/* Header */}
+	<section class="relative overflow-hidden pt-40 pb-16 sm:pt-48 sm:pb-20">
+		<div class="pointer-events-none absolute inset-0" aria-hidden="true">
+			<div class="absolute start-1/4 top-1/2 h-75 w-125 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/5 blur-[120px] dark:bg-primary/3"></div>
+		</div>
+
+		<div class="relative mx-auto max-w-4xl px-4 sm:px-6">
+			<BlurFade client:load delay={0.05} inView>
+				<a
+					href="/blogs"
+					class="mb-10 inline-flex items-center gap-2 text-xs tracking-[0.15em] text-muted-foreground uppercase transition-colors hover:text-foreground"
+				>
+					<ArrowLeft className="size-3.5" />
+					All posts
+				</a>
+			</BlurFade>
+
+			<BlurFade client:load delay={0.15} inView>
+				<div class="flex items-center gap-3 text-[10px] text-muted-foreground/70 mb-6 dark:text-muted-foreground/50">
+					<span class="font-bold uppercase tracking-[0.2em] text-primary/60">{categoryLabel(post.category)}</span>
+					{post.publishedAt && (
+						<>
+							<span class="text-border/60">/</span>
+							<span>{formatDate(post.publishedAt)}</span>
+						</>
+					)}
+					<span class="text-border/60">/</span>
+					<span>{post.author}</span>
+				</div>
+			</BlurFade>
+
+			<BlurFade client:load delay={0.25} inView>
+				<h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-[0.9] tracking-tighter text-foreground">{post.title}</h1>
+			</BlurFade>
+
+			{post.excerpt && (
+				<BlurFade client:load delay={0.35} inView>
+					<p class="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground/70 sm:text-lg dark:text-muted-foreground/60">
+						{post.excerpt}
+					</p>
+				</BlurFade>
+			)}
+		</div>
+	</section>
+
+	{/* Cover image */}
+	{
+		post.coverImage && (
+			<BlurFade client:load delay={0.4} inView>
+				<div class="mx-auto max-w-4xl px-4 sm:px-6">
+					<div class="relative aspect-video w-full overflow-hidden rounded-sm border border-border/40 bg-muted dark:border-border/20">
+						<img
+							src={post.coverImage}
+							alt={post.coverImageAlt || post.title}
+							class="absolute inset-0 h-full w-full object-cover"
+							loading="eager"
+						/>
+					</div>
+				</div>
+			</BlurFade>
+		)
+	}
+
+	{/* Article content */}
+	<section class="relative overflow-hidden">
+		<div
+			class="noir-grain pointer-events-none absolute inset-0 opacity-[0.015]"
+			style={{ backgroundImage: GRAIN_BG }}
+			aria-hidden="true"
+		>
+		</div>
+
+		<div class="relative mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20">
+			<BlurFade client:visible delay={0.1} inView>
+				<article class={prose}>
+					<PortableText value={post.content as any} />
+				</article>
+			</BlurFade>
+
+			{/* Tags */}
+			{
+				post.tags.length > 0 && (
+					<BlurFade client:visible delay={0.15} inView>
+						<div class="mt-12 flex flex-wrap items-center gap-2 border-t border-border/40 pt-8 dark:border-border/20">
+							{post.tags.map((tag) => (
+								<span class="border border-border/40 px-2.5 py-1 text-[10px] uppercase tracking-wider text-muted-foreground dark:border-border/20 dark:text-muted-foreground/60">
+									{tag}
+								</span>
+							))}
+						</div>
+					</BlurFade>
+				)
+			}
+
+			{/* Next post card */}
+			{
+				next && (
+					<PostNext
+						client:visible
+						post={{
+							slug: next.slug,
+							title: next.title,
+							excerpt: next.excerpt,
+							coverImage: next.coverImage,
+							coverImageAlt: next.coverImageAlt,
+							author: next.author,
+							categoryLabel: categoryLabel(next.category),
+							publishedAt: next.publishedAt,
+							upcoming: next.upcoming,
+						}}
+					/>
+				)
+			}
+
+			{/* Footer nav */}
+			<BlurFade client:visible delay={0.25} inView>
+				<div class="mt-12 flex items-center justify-between border-t border-border/40 pt-8 dark:border-border/20">
+					<a href="/blogs" class="text-xs uppercase tracking-[0.15em] text-muted-foreground transition-colors hover:text-foreground">
+						More posts
+					</a>
+					<a href="/contact" class="text-xs uppercase tracking-[0.15em] text-muted-foreground transition-colors hover:text-foreground">
+						Get in touch
+					</a>
+				</div>
+			</BlurFade>
+		</div>
+	</section>
+</Site>

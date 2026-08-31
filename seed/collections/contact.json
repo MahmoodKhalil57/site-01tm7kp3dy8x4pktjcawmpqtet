@@ -1,0 +1,107 @@
+{
+	"$schema": "../.schemas/collection.schema.json",
+	"slug": "contact",
+	"label": "Contact page",
+	"labelSingular": "Contact page",
+	"storage": "git",
+	"description": "Copy for the Contact page. The form itself is managed under Forms; submissions arrive in Forms → Submissions.",
+	"sortOrder": 3,
+	"fields": [
+		{
+			"slug": "title",
+			"label": "Title",
+			"type": "string",
+			"required": true
+		},
+		{
+			"slug": "meta_title",
+			"label": "Meta title",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "meta_description",
+			"label": "Meta description",
+			"type": "text",
+			"required": false
+		},
+		{
+			"slug": "page_title",
+			"label": "Page title",
+			"type": "string",
+			"required": true
+		},
+		{
+			"slug": "page_subtitle",
+			"label": "Page subtitle",
+			"type": "text",
+			"required": false
+		},
+		{
+			"slug": "email",
+			"label": "Email address",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "email_note",
+			"label": "Email note",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "location",
+			"label": "Location",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "location_note",
+			"label": "Location note",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "hours",
+			"label": "Hours",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "hours_note",
+			"label": "Hours note",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "note",
+			"label": "Note under the contact cards",
+			"type": "text",
+			"required": false
+		},
+		{
+			"slug": "note_link_label",
+			"label": "Note link label",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "note_link_url",
+			"label": "Note link URL",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "form_title",
+			"label": "Form title",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "form_subtitle",
+			"label": "Form subtitle",
+			"type": "string",
+			"required": false
+		}
+	]
+}

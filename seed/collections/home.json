@@ -1,0 +1,350 @@
+{
+	"$schema": "../.schemas/collection.schema.json",
+	"slug": "home",
+	"label": "Home page",
+	"labelSingular": "Home page",
+	"storage": "git",
+	"description": "Copy for the landing page sections. Team, projects, testimonials and FAQ entries come from their own collections.",
+	"sortOrder": 1,
+	"fields": [
+		{
+			"slug": "title",
+			"label": "Title",
+			"type": "string",
+			"required": true
+		},
+		{
+			"slug": "meta_title",
+			"label": "Meta title",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "meta_description",
+			"label": "Meta description",
+			"type": "text",
+			"required": false
+		},
+		{
+			"slug": "hero_tagline",
+			"label": "Hero tagline",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "hero_title",
+			"label": "Hero title",
+			"type": "string",
+			"required": true
+		},
+		{
+			"slug": "hero_title_faded",
+			"label": "Hero title (faded second line)",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "hero_description",
+			"label": "Hero description",
+			"type": "text",
+			"required": false
+		},
+		{
+			"slug": "hero_primary_cta",
+			"label": "Hero primary button label",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "hero_primary_cta_url",
+			"label": "Hero primary button URL",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "hero_secondary_cta",
+			"label": "Hero secondary button label",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "hero_secondary_cta_url",
+			"label": "Hero secondary button URL",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "marquee",
+			"label": "Scrolling marquee words (one per line)",
+			"type": "text",
+			"required": false
+		},
+		{
+			"slug": "services_title",
+			"label": "Services heading",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "services_title_faded",
+			"label": "Services heading (faded)",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "services",
+			"label": "Services",
+			"type": "repeater",
+			"validation": {
+				"subFields": [
+					{
+						"slug": "icon",
+						"label": "Icon",
+						"type": "select",
+						"options": [
+							"Code",
+							"Smartphone",
+							"Brain",
+							"ShoppingCart",
+							"Cloud",
+							"Palette",
+							"Layers",
+							"RefreshCw",
+							"Users",
+							"Lightbulb",
+							"ShieldCheck",
+							"Eye",
+							"Heart",
+							"Globe",
+							"Rocket",
+							"Shield",
+							"Sparkles",
+							"Star",
+							"Zap"
+						]
+					},
+					{
+						"slug": "title",
+						"label": "Title",
+						"type": "string",
+						"required": true
+					},
+					{
+						"slug": "description",
+						"label": "Description",
+						"type": "text"
+					}
+				]
+			}
+		},
+		{
+			"slug": "stats",
+			"label": "Stats",
+			"type": "repeater",
+			"validation": {
+				"subFields": [
+					{
+						"slug": "value",
+						"label": "Number",
+						"type": "number",
+						"required": true
+					},
+					{
+						"slug": "suffix",
+						"label": "Suffix (e.g. +)",
+						"type": "string"
+					},
+					{
+						"slug": "label",
+						"label": "Label",
+						"type": "string",
+						"required": true
+					},
+					{
+						"slug": "static",
+						"label": "Show as-is (no count-up, e.g. a year)",
+						"type": "boolean"
+					}
+				]
+			}
+		},
+		{
+			"slug": "portfolio_title",
+			"label": "Portfolio heading",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "portfolio_title_faded",
+			"label": "Portfolio heading (faded)",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "portfolio_view_all",
+			"label": "Portfolio 'view all' label",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "engagement_title",
+			"label": "Engagement heading",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "engagement_title_faded",
+			"label": "Engagement heading (faded)",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "engagement_subtitle",
+			"label": "Engagement subtitle",
+			"type": "text",
+			"required": false
+		},
+		{
+			"slug": "engagement_models",
+			"label": "Engagement models",
+			"type": "repeater",
+			"validation": {
+				"subFields": [
+					{
+						"slug": "icon",
+						"label": "Icon",
+						"type": "select",
+						"options": [
+							"Code",
+							"Smartphone",
+							"Brain",
+							"ShoppingCart",
+							"Cloud",
+							"Palette",
+							"Layers",
+							"RefreshCw",
+							"Users",
+							"Lightbulb",
+							"ShieldCheck",
+							"Eye",
+							"Heart",
+							"Globe",
+							"Rocket",
+							"Shield",
+							"Sparkles",
+							"Star",
+							"Zap"
+						]
+					},
+					{
+						"slug": "name",
+						"label": "Name",
+						"type": "string",
+						"required": true
+					},
+					{
+						"slug": "description",
+						"label": "Description",
+						"type": "text"
+					},
+					{
+						"slug": "best_for_label",
+						"label": "'Best for' label",
+						"type": "string"
+					},
+					{
+						"slug": "best_for",
+						"label": "Best for",
+						"type": "string"
+					},
+					{
+						"slug": "features",
+						"label": "Features (one per line)",
+						"type": "text"
+					},
+					{
+						"slug": "cta",
+						"label": "Button label",
+						"type": "string"
+					},
+					{
+						"slug": "cta_url",
+						"label": "Button URL",
+						"type": "string"
+					},
+					{
+						"slug": "featured",
+						"label": "Highlight this model",
+						"type": "boolean"
+					}
+				]
+			}
+		},
+		{
+			"slug": "team_title",
+			"label": "Team heading",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "team_title_faded",
+			"label": "Team heading (faded)",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "testimonials_title",
+			"label": "Testimonials heading",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "testimonials_title_faded",
+			"label": "Testimonials heading (faded)",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "faq_title",
+			"label": "FAQ heading",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "faq_subtitle",
+			"label": "FAQ subtitle",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "cta_title",
+			"label": "Closing CTA title",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "cta_title_faded",
+			"label": "Closing CTA title (faded)",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "cta_button",
+			"label": "Closing CTA button label",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "cta_url",
+			"label": "Closing CTA button URL",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "cta_footnote",
+			"label": "Closing CTA footnote",
+			"type": "string",
+			"required": false
+		}
+	]
+}

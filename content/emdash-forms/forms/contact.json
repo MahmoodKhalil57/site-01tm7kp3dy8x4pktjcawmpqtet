@@ -1,0 +1,71 @@
+{
+	"name": "Contact form",
+	"slug": "contact",
+	"status": "active",
+	"pages": [
+		{
+			"fields": [
+				{
+					"id": "name",
+					"type": "text",
+					"name": "name",
+					"label": "Name",
+					"placeholder": "John Doe",
+					"required": true,
+					"width": "half",
+					"validation": {
+						"maxLength": 150
+					}
+				},
+				{
+					"id": "email",
+					"type": "email",
+					"name": "email",
+					"label": "Email",
+					"placeholder": "john@example.com",
+					"required": true,
+					"width": "half"
+				},
+				{
+					"id": "subject",
+					"type": "text",
+					"name": "subject",
+					"label": "Subject",
+					"placeholder": "How can we help?",
+					"required": true,
+					"width": "full",
+					"validation": {
+						"maxLength": 200
+					}
+				},
+				{
+					"id": "message",
+					"type": "textarea",
+					"name": "message",
+					"label": "Message",
+					"placeholder": "Tell us more about your question or project...",
+					"required": true,
+					"width": "full",
+					"validation": {
+						"maxLength": 5000
+					}
+				}
+			]
+		}
+	],
+	"settings": {
+		"confirmationMessage": "Thank you for reaching out. We'll get back to you within 24 hours.",
+		"notifyEmails": [
+			"contact@saastemly.com"
+		],
+		"digestEnabled": false,
+		"digestHour": 9,
+		"retentionDays": 0,
+		"spamProtection": "honeypot",
+		"submitLabel": "Send Message"
+	},
+	"submissionCount": 0,
+	"lastSubmissionAt": null,
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z"
+}

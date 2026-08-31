@@ -1,0 +1,26 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "amr-elskhawy",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "Amr Elskhawy",
+		"role": "Software Engineer",
+		"department": "Software Development",
+		"bio": "Full-stack developer with a track record of shipping scalable solutions for startups and growing teams.",
+		"full_bio": "Amr has contributed to projects across multiple industries — streamlining operations, improving user experience, and driving product success. He thrives in collaborative environments and brings a focus on efficiency, maintainability, and thoughtful architecture to every solution he builds.",
+		"experience": "3+ years in software development and product delivery",
+		"image": "/team/Amr_ElSkhawy.jpeg",
+		"image_position": "50% 30%",
+		"location": "Kafr Elsheikh, Egypt",
+		"join_date": "January 2025",
+		"skills": "Problem Solving\nSystem Design\nWeb Development\nCollaboration\nProject Execution",
+		"linkedin": "https://linkedin.com/in/amr-elskhawy",
+		"github": "https://github.com/amrelskhawy",
+		"home_page": true,
+		"order": 4
+	}
+}

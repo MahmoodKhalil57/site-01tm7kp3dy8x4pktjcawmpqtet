@@ -3,13 +3,30 @@
 	"version": "1",
 	"defaultLocale": "en",
 	"meta": {
-		"name": "Exported Seed",
-		"description": "Exported from existing EmDash database"
+		"name": "SaaSTEMLY",
+		"description": "Company brochure site: landing, about, portfolio, blog, contact, legal pages. Ported from the Next.js saastemlysaastarter app."
 	},
-	"settings": {},
+	"settings": {
+		"title": "SaaSTEMLY",
+		"tagline": "Custom software for businesses that need it built right — web apps, mobile platforms, and AI systems.",
+		"social": {
+			"github": "https://github.com/saastemly",
+			"linkedin": "https://www.linkedin.com/company/saastemly"
+		},
+		"seo": {
+			"titleSeparator": " | "
+		}
+	},
 	"order": {
 		"collections": [
+			"home",
+			"about",
+			"contact",
+			"team",
+			"projects",
+			"testimonials",
 			"faq",
+			"posts",
 			"pages"
 		],
 		"taxonomies": [
@@ -17,17 +34,10 @@
 			"tag"
 		],
 		"menus": [
-			"footer_company",
-			"footer_product",
-			"footer_support",
-			"primary"
+			"primary",
+			"footer_resources",
+			"footer_legal"
 		],
-		"content": {
-			"pages": [
-				"contact",
-				"pricing",
-				"home"
-			]
-		}
+		"content": {}
 	}
 }

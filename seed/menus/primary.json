@@ -6,13 +6,23 @@
 	"items": [
 		{
 			"type": "custom",
-			"label": "Features",
-			"url": "/#features"
+			"label": "Home",
+			"url": "/"
 		},
 		{
 			"type": "custom",
-			"label": "Pricing",
-			"url": "/pricing"
+			"label": "About",
+			"url": "/about"
+		},
+		{
+			"type": "custom",
+			"label": "Portfolio",
+			"url": "/portfolio"
+		},
+		{
+			"type": "custom",
+			"label": "Blog",
+			"url": "/blogs"
 		},
 		{
 			"type": "custom",

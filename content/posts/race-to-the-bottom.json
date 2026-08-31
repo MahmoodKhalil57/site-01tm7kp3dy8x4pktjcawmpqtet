@@ -1,0 +1,148 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "race-to-the-bottom",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-03-01T10:00:00.000Z",
+	"data": {
+		"title": "The Race to the Bottom Is a Race Nobody Wins",
+		"excerpt": "There is a quiet agreement spreading across the software industry — move fast, charge less, and automate everything. This is the logic of the race to the bottom. At SaaSTEMLY, we chose not to enter.",
+		"cover_image": "https://images.pexels.com/photos/31772338/pexels-photo-31772338.jpeg?auto=compress&cs=tinysrgb&w=1920",
+		"cover_image_alt": "Three businessmen in suits crouched at the starting line on an outdoor running track",
+		"content": [
+			{
+				"_type": "block",
+				"_key": "k00vh",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00vg",
+						"text": "There is a quiet agreement spreading across the software industry, and most people haven't noticed they signed it.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00vj",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00vi",
+						"text": "It goes something like this: move fast, market louder, charge less, deliver whatever it takes to close the deal. Automate everything you can. Outsource what you can't. If a customer churns, that's fine — the funnel will replace them. Growth is a numbers game, and numbers don't care about craftsmanship.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00vl",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00vk",
+						"text": "This is the logic of the race to the bottom.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00vn",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00vm",
+						"text": "It didn't appear overnight. It grew slowly from the pressures of modern capitalism — from VC-backed startups obsessing over CAC and LTV before they've written a single line of honest code, from marketplaces that turned software agencies into commodity vendors competing on price alone, from the cult of \"scale\" that taught an entire generation of founders to treat quality as a luxury rather than a foundation.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00vp",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00vo",
+						"text": "The result? Products that feel hollow. Services that feel transactional. Clients who feel processed.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00vt",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00vq",
+						"text": "And somewhere in all that efficiency, something got lost: the sense that the work was ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k00vr",
+						"text": "made by a human, for a human",
+						"marks": [
+							"strong",
+							"em"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k00vs",
+						"text": ".",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00vv",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00vu",
+						"text": "At SaaSTEMLY, we build custom web apps, mobile solutions, and AI-powered platforms. We could compete in the race to the bottom. We've seen what that looks like. We chose not to enter.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k00vx",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k00vw",
+						"text": "This blog series is about why — and why we think that choice is not just the ethical one, but the smarter one.",
+						"marks": []
+					}
+				]
+			}
+		],
+		"author": "Mahmood Ibrahim",
+		"category": "company",
+		"tags": "Agency\nValues\nQuality\nSaaSTEMLY",
+		"publish_date": "2026-03-01T10:00:00.000Z"
+	}
+}

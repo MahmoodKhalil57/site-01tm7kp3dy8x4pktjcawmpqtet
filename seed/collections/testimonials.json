@@ -1,0 +1,40 @@
+{
+	"$schema": "../.schemas/collection.schema.json",
+	"slug": "testimonials",
+	"label": "Testimonials",
+	"labelSingular": "Testimonial",
+	"storage": "git",
+	"description": "Client quotes on the home page — the first one is featured large.",
+	"admin": {
+		"listColumns": [
+			"company",
+			"order"
+		]
+	},
+	"sortOrder": 6,
+	"fields": [
+		{
+			"slug": "title",
+			"label": "Name",
+			"type": "string",
+			"required": true
+		},
+		{
+			"slug": "company",
+			"label": "Company",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "quote",
+			"label": "Quote",
+			"type": "text",
+			"required": true
+		},
+		{
+			"slug": "order",
+			"label": "Display order",
+			"type": "integer"
+		}
+	]
+}

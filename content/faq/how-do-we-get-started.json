@@ -1,0 +1,15 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "how-do-we-get-started",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "How do we get started?",
+		"answer": "Reach out through our contact page or email contact@saastemly.com. We will schedule a free consultation to discuss your requirements, then provide a clear proposal with scope, timeline, and pricing.",
+		"order": 7,
+		"is_active": true
+	}
+}

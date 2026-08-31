@@ -7,3 +7,4 @@ saastemlysaastarter
 .env
 .env.*
 !.env.example
+.emdash/migrations.json

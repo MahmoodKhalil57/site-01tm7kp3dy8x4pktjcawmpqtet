@@ -1,0 +1,29 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "newcastle-school-egypt",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "Newcastle School in Egypt",
+		"subtitle": "Educational Management System",
+		"description": "A comprehensive educational management system for Newcastle University Egypt campus, enhancing student experience and academic excellence through digital transformation.",
+		"full_description": "The Newcastle University Egypt platform serves as the digital backbone for the prestigious institution, providing students, faculty, and administration with seamless access to academic resources and services.",
+		"image": "/projects/newcastle-school.png",
+		"url": "https://www.newcastle.edu.eg/",
+		"tags": "Laravel\nMySQL\nEducation\nLMS\nMobile App",
+		"region": "Middle East",
+		"country": "Egypt",
+		"industry": "Higher Education",
+		"year": "2023",
+		"duration": "10 months",
+		"team_size": "6 developers",
+		"technologies": "Laravel\nVue.js\nMySQL\nRedis\nDocker\nMoodle Integration",
+		"features": "Comprehensive student management system\nIntegrated e-learning platform\nAutomated course registration system\nReal-time grade and attendance tracking\nParent portal access\nDigital library system",
+		"results": "70% improvement in student engagement\n85% streamlined administrative processes\n60% increase in overall satisfaction",
+		"home_page": false,
+		"order": 5
+	}
+}

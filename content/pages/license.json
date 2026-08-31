@@ -1,0 +1,1110 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "license",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "License Agreement",
+		"last_updated": "February 5, 2026",
+		"description": "Understand the license terms for using SaaSTEMLY. Learn what you can and cannot do with our template.",
+		"content": [
+			{
+				"_type": "block",
+				"_key": "k015r",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k015s",
+						"text": "This License Agreement (\"Agreement\") is a legal agreement between you (\"Licensee\") and SaaSTEMLY (\"Licensor\") governing the use of the SaaSTEMLY template and associated materials.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k015t",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k015u",
+						"text": "1. Grant of License",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k015v",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k015w",
+						"text": "Upon purchase, SaaSTEMLY grants you a non-exclusive, non-transferable license to use the template subject to the terms of this Agreement.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k015x",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k015y",
+						"text": "Standard License",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k015z",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0160",
+						"text": "The Standard License permits you to:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0163",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0164",
+						"text": "Use the template to create ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k0161",
+						"text": "one (1) end product",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k0165",
+						"text": " for yourself or a client",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k0162"
+			},
+			{
+				"_type": "block",
+				"_key": "k0166",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0167",
+						"text": "Modify the template to suit your project requirements",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k0162"
+			},
+			{
+				"_type": "block",
+				"_key": "k0168",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0169",
+						"text": "Use the template in a product that end users are charged for",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k0162"
+			},
+			{
+				"_type": "block",
+				"_key": "k016a",
+				"style": "h3",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k016b",
+						"text": "Extended License",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k016c",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k016d",
+						"text": "The Extended License includes all Standard License rights, plus the ability to:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k016g",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k016h",
+						"text": "Use the template to create ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k016e",
+						"text": "unlimited end products",
+						"marks": [
+							"strong"
+						]
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k016f"
+			},
+			{
+				"_type": "block",
+				"_key": "k016i",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k016j",
+						"text": "Use the template for multiple clients or projects",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k016f"
+			},
+			{
+				"_type": "block",
+				"_key": "k016k",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k016l",
+						"text": "Create products where the template forms the basis of a product offered to multiple end users",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k016f"
+			},
+			{
+				"_type": "block",
+				"_key": "k016m",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k016n",
+						"text": "2. Permitted Uses",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k016o",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k016p",
+						"text": "You may:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k016r",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k016s",
+						"text": "Create personal or commercial projects using the template",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k016q"
+			},
+			{
+				"_type": "block",
+				"_key": "k016t",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k016u",
+						"text": "Modify, adapt, and customize the code for your projects",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k016q"
+			},
+			{
+				"_type": "block",
+				"_key": "k016v",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k016w",
+						"text": "Use the template as a starting point for client work (one project per Standard License)",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k016q"
+			},
+			{
+				"_type": "block",
+				"_key": "k016x",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k016y",
+						"text": "Deploy your end product to any hosting platform",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k016q"
+			},
+			{
+				"_type": "block",
+				"_key": "k016z",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0170",
+						"text": "Use the template in combination with other tools and libraries",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k016q"
+			},
+			{
+				"_type": "block",
+				"_key": "k0171",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0172",
+						"text": "3. Prohibited Uses",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0173",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0174",
+						"text": "You may NOT:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k017c",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0175",
+						"text": "Redistribute or resell",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k017d",
+						"text": " the template or any derivative in a way that allows others to extract the original template",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k017b"
+			},
+			{
+				"_type": "block",
+				"_key": "k017e",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0176",
+						"text": "Share, sublicense, or transfer",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k017f",
+						"text": " your license to another person or entity",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k017b"
+			},
+			{
+				"_type": "block",
+				"_key": "k017g",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0177",
+						"text": "Create competing products",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k017h",
+						"text": " that are substantially similar to the template for sale or distribution",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k017b"
+			},
+			{
+				"_type": "block",
+				"_key": "k017i",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0178",
+						"text": "Use in multiple projects",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k017j",
+						"text": " beyond what your license permits",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k017b"
+			},
+			{
+				"_type": "block",
+				"_key": "k017k",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0179",
+						"text": "Remove or alter",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k017l",
+						"text": " any proprietary notices, labels, or marks",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k017b"
+			},
+			{
+				"_type": "block",
+				"_key": "k017m",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k017a",
+						"text": "Use for illegal purposes",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k017n",
+						"text": " or in violation of any applicable laws",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k017b"
+			},
+			{
+				"_type": "block",
+				"_key": "k017o",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k017p",
+						"text": "4. Ownership",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k017q",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k017r",
+						"text": "The template and all associated intellectual property rights remain the exclusive property of SaaSTEMLY. This Agreement grants you a license to use the template; it does not transfer ownership.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k017s",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k017t",
+						"text": "You retain ownership of any custom code, content, or modifications you create while using the template.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k017u",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k017v",
+						"text": "5. Third-Party Components",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k017w",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k017x",
+						"text": "The template includes third-party open-source components, each governed by their respective licenses. These include but are not limited to:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k017z",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0180",
+						"text": "Next.js (MIT License)",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k017y"
+			},
+			{
+				"_type": "block",
+				"_key": "k0181",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0182",
+						"text": "React (MIT License)",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k017y"
+			},
+			{
+				"_type": "block",
+				"_key": "k0183",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0184",
+						"text": "Tailwind CSS (MIT License)",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k017y"
+			},
+			{
+				"_type": "block",
+				"_key": "k0185",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0186",
+						"text": "shadcn/ui components (MIT License)",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k017y"
+			},
+			{
+				"_type": "block",
+				"_key": "k0187",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0188",
+						"text": "Radix UI (MIT License)",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k017y"
+			},
+			{
+				"_type": "block",
+				"_key": "k0189",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k018a",
+						"text": "Framer Motion (MIT License)",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k017y"
+			},
+			{
+				"_type": "block",
+				"_key": "k018b",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k018c",
+						"text": "You must comply with the licenses of these third-party components when using the template.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k018d",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k018e",
+						"text": "6. Support and Updates",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k018f",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k018g",
+						"text": "Your purchase includes:",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k018l",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k018h",
+						"text": "Lifetime access",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k018m",
+						"text": " to the version purchased and all future updates",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k018k"
+			},
+			{
+				"_type": "block",
+				"_key": "k018n",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k018i",
+						"text": "Community support",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k018o",
+						"text": " through our designated channels",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k018k"
+			},
+			{
+				"_type": "block",
+				"_key": "k018p",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k018j",
+						"text": "Documentation",
+						"marks": [
+							"strong"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k018q",
+						"text": " and implementation guides",
+						"marks": []
+					}
+				],
+				"listItem": "bullet",
+				"level": 1,
+				"listId": "k018k"
+			},
+			{
+				"_type": "block",
+				"_key": "k018r",
+				"style": "normal",
+				"markDefs": [
+					{
+						"_type": "link",
+						"_key": "k018t",
+						"href": "/terms"
+					}
+				],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k018s",
+						"text": "Priority support is available to Pro plan customers as outlined in our ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k018u",
+						"text": "Terms of Service",
+						"marks": [
+							"k018t"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k018v",
+						"text": ".",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k018w",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k018x",
+						"text": "7. Warranty Disclaimer",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k018y",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k018z",
+						"text": "The template is provided \"as is\" without warranty of any kind, express or implied. SaaSTEMLY does not warrant that the template will meet your requirements, be uninterrupted, or be error-free.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0190",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0191",
+						"text": "You assume all responsibility and risk for the use of the template and your reliance thereon.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0192",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0193",
+						"text": "8. Limitation of Liability",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0194",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0195",
+						"text": "In no event shall SaaSTEMLY be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of the template, even if advised of the possibility of such damages.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0196",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0197",
+						"text": "SaaSTEMLY's total liability shall not exceed the amount paid by you for the template.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k0198",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k0199",
+						"text": "9. Termination",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k019a",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k019b",
+						"text": "This license is effective until terminated. Your rights under this Agreement will terminate automatically without notice if you fail to comply with any of its terms.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k019c",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k019d",
+						"text": "Upon termination, you must cease all use of the template and destroy any copies in your possession.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k019e",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k019f",
+						"text": "10. Refunds",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k019g",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k019h",
+						"text": "We offer a 14-day money-back guarantee for first-time purchases. If you're not satisfied with the template, contact us within 14 days of purchase for a full refund. Refund requests after this period will be evaluated on a case-by-case basis.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k019i",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k019j",
+						"text": "11. License Verification",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k019k",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k019l",
+						"text": "SaaSTEMLY reserves the right to verify license compliance. Unauthorized use of the template may result in legal action and liability for damages.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k019m",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k019n",
+						"text": "12. Governing Law",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k019o",
+				"style": "normal",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k019p",
+						"text": "This Agreement shall be governed by and construed in accordance with the laws of the State of California, United States. Any disputes arising under this Agreement shall be resolved in the courts of California.",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k019q",
+				"style": "h2",
+				"markDefs": [],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k019r",
+						"text": "13. Contact",
+						"marks": []
+					}
+				]
+			},
+			{
+				"_type": "block",
+				"_key": "k019s",
+				"style": "normal",
+				"markDefs": [
+					{
+						"_type": "link",
+						"_key": "k019u",
+						"href": "/contact"
+					}
+				],
+				"children": [
+					{
+						"_type": "span",
+						"_key": "k019t",
+						"text": "For questions about this License Agreement or to report unauthorized use, please ",
+						"marks": []
+					},
+					{
+						"_type": "span",
+						"_key": "k019v",
+						"text": "contact us",
+						"marks": [
+							"k019u"
+						]
+					},
+					{
+						"_type": "span",
+						"_key": "k019w",
+						"text": ".",
+						"marks": []
+					}
+				]
+			}
+		]
+	}
+}

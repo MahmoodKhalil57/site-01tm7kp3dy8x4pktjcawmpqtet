@@ -1,0 +1,85 @@
+{
+	"$schema": "../.schemas/collection.schema.json",
+	"slug": "posts",
+	"label": "Blog posts",
+	"labelSingular": "Blog post",
+	"storage": "git",
+	"description": "Blog. A future publish date shows the post as 'Coming soon' until the date passes.",
+	"supports": [
+		"seo",
+		"search"
+	],
+	"dateField": "publish_date",
+	"admin": {
+		"listColumns": [
+			"author",
+			"category",
+			"publish_date"
+		]
+	},
+	"sortOrder": 8,
+	"fields": [
+		{
+			"slug": "title",
+			"label": "Title",
+			"type": "string",
+			"required": true
+		},
+		{
+			"slug": "excerpt",
+			"label": "Excerpt",
+			"type": "text",
+			"required": true
+		},
+		{
+			"slug": "cover_image",
+			"label": "Cover image URL",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "cover_image_alt",
+			"label": "Cover image alt text",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "content",
+			"label": "Content",
+			"type": "portableText",
+			"required": true
+		},
+		{
+			"slug": "author",
+			"label": "Author",
+			"type": "string",
+			"required": true
+		},
+		{
+			"slug": "category",
+			"label": "Category",
+			"type": "select",
+			"required": true,
+			"validation": {
+				"options": [
+					"engineering",
+					"product",
+					"company",
+					"tutorial",
+					"announcement"
+				]
+			}
+		},
+		{
+			"slug": "tags",
+			"label": "Tags (one per line)",
+			"type": "text",
+			"required": false
+		},
+		{
+			"slug": "publish_date",
+			"label": "Publish date",
+			"type": "datetime"
+		}
+	]
+}

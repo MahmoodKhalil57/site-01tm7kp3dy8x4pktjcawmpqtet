@@ -3,17 +3,30 @@
 	"slug": "pages",
 	"label": "Pages",
 	"labelSingular": "Page",
+	"storage": "git",
+	"description": "Long-form pages (Terms, Privacy, License) rendered at /<slug>.",
 	"supports": [
-		"drafts",
-		"revisions",
 		"seo"
 	],
+	"sortOrder": 9,
 	"fields": [
 		{
 			"slug": "title",
 			"label": "Title",
 			"type": "string",
 			"required": true
+		},
+		{
+			"slug": "last_updated",
+			"label": "Last updated (shown under the title)",
+			"type": "string",
+			"required": false
+		},
+		{
+			"slug": "description",
+			"label": "Meta description",
+			"type": "text",
+			"required": false
 		},
 		{
 			"slug": "content",

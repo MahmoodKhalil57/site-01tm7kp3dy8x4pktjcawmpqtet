@@ -1,69 +1,30 @@
 ---
-import Base from "../layouts/Base.astro";
+import Site from "@/layouts/Site.astro";
 ---
 
-<Base title="Page not found">
-	<div class="not-found">
-		<div class="not-found-code">404</div>
-		<h1>Page not found</h1>
-		<p>The page you're looking for doesn't exist or has been moved.</p>
-		<div class="not-found-actions">
-			<a href="/" class="btn btn-primary btn-lg">Go home</a>
-			<a href="/contact" class="btn btn-secondary btn-lg">Contact us</a>
+<Site title="Page not found">
+	<div class="mx-auto max-w-3xl px-6 pt-48 pb-32 text-center">
+		<div
+			class="text-[clamp(6rem,20vw,10rem)] font-black leading-none tracking-tighter text-foreground/10 select-none"
+			aria-hidden="true"
+		>
+			404
+		</div>
+		<h1 class="mt-6 text-3xl font-bold tracking-tighter text-foreground sm:text-4xl">Page not found</h1>
+		<p class="mt-4 text-muted-foreground">The page you're looking for doesn't exist or has been moved.</p>
+		<div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+			<a
+				href="/"
+				class="inline-flex items-center gap-2 border border-primary/80 bg-primary/10 px-8 py-3.5 text-xs uppercase tracking-[0.2em] text-primary transition-all hover:bg-primary/20"
+			>
+				Go home
+			</a>
+			<a
+				href="/contact"
+				class="inline-flex items-center gap-2 border border-border/60 px-8 py-3.5 text-xs uppercase tracking-[0.2em] text-muted-foreground transition-all hover:border-border hover:text-foreground"
+			>
+				Contact us
+			</a>
 		</div>
 	</div>
-</Base>
-
-<style>
-	.not-found {
-		text-align: center;
-		padding: var(--spacing-5xl) var(--spacing-lg);
-		max-width: var(--max-width);
-		margin: 0 auto;
-	}
-
-	.not-found-code {
-		font-size: 10rem;
-		font-weight: var(--font-weight-display);
-		line-height: 1;
-		letter-spacing: -0.05em;
-		background: var(--gradient-brand);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		opacity: 0.3;
-		margin-bottom: var(--spacing-lg);
-	}
-
-	.not-found h1 {
-		font-size: var(--font-size-3xl);
-		margin-bottom: var(--spacing-md);
-	}
-
-	.not-found p {
-		font-size: var(--font-size-lg);
-		color: var(--color-muted);
-		margin-bottom: var(--spacing-2xl);
-	}
-
-	.not-found-actions {
-		display: flex;
-		gap: var(--spacing-md);
-		justify-content: center;
-		flex-wrap: wrap;
-	}
-
-	@media (max-width: 480px) {
-		.not-found-code {
-			font-size: 6rem;
-		}
-
-		.not-found-actions {
-			flex-direction: column;
-		}
-
-		.not-found-actions .btn {
-			width: 100%;
-		}
-	}
-</style>
+</Site>

@@ -1,0 +1,26 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "omar-khorshid",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "Omar Khorshid",
+		"role": "Co-founder & CMO",
+		"department": "Business Development",
+		"bio": "Growth strategist with expertise across finance, software, and data-driven marketing.",
+		"full_bio": "Omar drives business growth through strategic marketing, advertising, content, and sales operations. He plays a key role in high-level product decisions — from improving retention and activation to crafting brand narratives that resonate with real users and drive meaningful conversions.",
+		"experience": "4+ years in marketing, business development, and software solutions",
+		"image": "/team/Omar_Khorshid.jpg",
+		"image_position": "50% 20%",
+		"location": "Cairo, Egypt",
+		"join_date": "February 2020",
+		"skills": "Digital Marketing\nMedia Buying\nData Analysis\nContent Creation\nBranding\nAccount Management",
+		"linkedin": "https://www.linkedin.com/in/okhorshid/",
+		"github": "https://github.com/OKhorshid",
+		"home_page": true,
+		"order": 3
+	}
+}

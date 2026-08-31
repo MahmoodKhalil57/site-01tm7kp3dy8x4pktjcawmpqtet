@@ -1,0 +1,28 @@
+{
+	"$schema": "../.schemas/menu.schema.json",
+	"id": "menu:footer_resources",
+	"name": "footer_resources",
+	"label": "Footer — Resources",
+	"items": [
+		{
+			"type": "custom",
+			"label": "About",
+			"url": "/about"
+		},
+		{
+			"type": "custom",
+			"label": "Portfolio",
+			"url": "/portfolio"
+		},
+		{
+			"type": "custom",
+			"label": "Blog",
+			"url": "/blogs"
+		},
+		{
+			"type": "custom",
+			"label": "FAQ",
+			"url": "/faq"
+		}
+	]
+}

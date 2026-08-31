@@ -1,0 +1,15 @@
+{
+	"$schema": "../../seed/.schemas/content-entry.schema.json",
+	"slug": "can-you-integrate-with-our-existing-systems",
+	"status": "published",
+	"locale": "en",
+	"createdAt": "2026-08-30T12:00:00.000Z",
+	"updatedAt": "2026-08-30T12:00:00.000Z",
+	"publishedAt": "2026-08-30T12:00:00.000Z",
+	"data": {
+		"title": "Can you integrate with our existing systems?",
+		"answer": "Yes. We regularly work with existing codebases, databases, APIs, and third-party services — ensuring seamless integration without disrupting what already works.",
+		"order": 5,
+		"is_active": true
+	}
+}
