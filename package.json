@@ -12,7 +12,7 @@
 	"dependencies": {
 		"@astrojs/react": "^6.0.4",
 		"@iconify-json/ph": "^1.2.2",
-		"@premium-cms/emdash": "^0.35.5",
+		"@premium-cms/emdash": "^0.35.53",
 		"astro": "^7.0.0",
 		"astro-iconset": "^0.0.4",
 		"better-sqlite3": "^12.11.1",
