@@ -11,8 +11,11 @@ import { getPage } from "@/lib/content";
 
 export async function getStaticPaths() {
 	// getStaticPaths runs in isolation (no access to the frontmatter scope).
-	// Routes owned by dedicated pages/collections — never let a `pages` entry shadow them.
-	const reserved = new Set(["about", "portfolio", "blogs", "contact", "faq", "404"]);
+	// Routes owned by dedicated pages/collections — never let a `pages` entry
+	// shadow them. "home" and "pricing" are stale db-era rows from the old
+	// template seed that still ride along in the backend snapshot (the
+	// collection is git-backed now, so the admin can't list or delete them).
+	const reserved = new Set(["about", "portfolio", "blogs", "contact", "faq", "404", "home", "index", "pricing"]);
 	let slugs: string[] = [];
 	try {
 		const { entries } = await getEmDashCollection("pages", { status: "published", limit: 200 });
