@@ -8,7 +8,7 @@
 // client-side features and the editor session work same-origin.
 import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
-import { defineConfig, fontProviders } from "astro/config";
+import { defineConfig, fontProviders, sessionDrivers } from "astro/config";
 import emdash from "@premium-cms/emdash/astro";
 import { readFileSync } from "node:fs";
 
@@ -85,6 +85,10 @@ export default defineConfig({
   output: "static",
   site: _site,
   base: _base,
+  // emdash 0.35.56 renders routes on-demand in `astro dev` so the editor
+  // toolbar can read its session cookie; give Astro.session a store so that
+  // path doesn't warn. Dev-only in practice (the static build has no sessions).
+  session: { driver: sessionDrivers.fsLite({ base: ".astro/session" }) },
   image: { layout: "constrained", responsiveStyles: true },
   // The dev server forwards backend API calls (forms, commerce, auth, the
   // editor session) to the live instance; ignored by `astro build`.
